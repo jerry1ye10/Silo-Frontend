@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "191463496402",
+    "firebase_url": "https://labyrinthe-4608a.firebaseio.com",
+    "project_id": "labyrinthe",
+    "storage_bucket": "labyrinthe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:191463496402:android:5e498c46d49613deac2b0b",
+        "android_client_info": {
+          "package_name": "com.labyrintheapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "191463496402-673gmgajkkvp6c2sueq22c7hu2rplu4n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDe7E0OREA0dz9HlMayqF3JPlnZ7-P2Sg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "191463496402-673gmgajkkvp6c2sueq22c7hu2rplu4n.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "191463496402-krjrlmna9scrfb62a5vsvu4njnjld32a.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.labyrinthe.app"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

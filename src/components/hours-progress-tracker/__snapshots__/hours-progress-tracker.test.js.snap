@@ -1,0 +1,2269 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HoursProgressTracker /> 1 total 0 used 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "black",
+      "height": 60,
+      "paddingHorizontal": 7,
+      "paddingVertical": 5,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "white",
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "marginHorizontal": 3,
+      }
+    }
+  >
+    Hours Remaining:
+  </Text>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "height": 5,
+        "marginBottom": 2,
+        "marginHorizontal": 6,
+        "marginTop": 8,
+      }
+    }
+    testID="bars-container"
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "marginHorizontal": 3,
+      }
+    }
+    testID="digits-container"
+  >
+    <Text
+      style={
+        Object {
+          "color": "green",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      1
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      0
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`<HoursProgressTracker /> 2 total 0 used 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "black",
+      "height": 60,
+      "paddingHorizontal": 7,
+      "paddingVertical": 5,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "white",
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "marginHorizontal": 3,
+      }
+    }
+  >
+    Hours Remaining:
+  </Text>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "height": 5,
+        "marginBottom": 2,
+        "marginHorizontal": 6,
+        "marginTop": 8,
+      }
+    }
+    testID="bars-container"
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "marginHorizontal": 3,
+      }
+    }
+    testID="digits-container"
+  >
+    <Text
+      style={
+        Object {
+          "color": "green",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      2
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      1
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      0
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`<HoursProgressTracker /> 2 total 1 used 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "black",
+      "height": 60,
+      "paddingHorizontal": 7,
+      "paddingVertical": 5,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "white",
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "marginHorizontal": 3,
+      }
+    }
+  >
+    Hours Remaining:
+  </Text>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "height": 5,
+        "marginBottom": 2,
+        "marginHorizontal": 6,
+        "marginTop": 8,
+      }
+    }
+    testID="bars-container"
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "green",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "marginHorizontal": 3,
+      }
+    }
+    testID="digits-container"
+  >
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      2
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "green",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      1
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      0
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`<HoursProgressTracker /> 3 total 0 used 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "black",
+      "height": 60,
+      "paddingHorizontal": 7,
+      "paddingVertical": 5,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "white",
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "marginHorizontal": 3,
+      }
+    }
+  >
+    Hours Remaining:
+  </Text>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "height": 5,
+        "marginBottom": 2,
+        "marginHorizontal": 6,
+        "marginTop": 8,
+      }
+    }
+    testID="bars-container"
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "marginHorizontal": 3,
+      }
+    }
+    testID="digits-container"
+  >
+    <Text
+      style={
+        Object {
+          "color": "green",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      3
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      2
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      1
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      0
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`<HoursProgressTracker /> 3 total 1 used 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "black",
+      "height": 60,
+      "paddingHorizontal": 7,
+      "paddingVertical": 5,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "white",
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "marginHorizontal": 3,
+      }
+    }
+  >
+    Hours Remaining:
+  </Text>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "height": 5,
+        "marginBottom": 2,
+        "marginHorizontal": 6,
+        "marginTop": 8,
+      }
+    }
+    testID="bars-container"
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "green",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "marginHorizontal": 3,
+      }
+    }
+    testID="digits-container"
+  >
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      3
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "green",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      2
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      1
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      0
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`<HoursProgressTracker /> 3 total 2 used 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "black",
+      "height": 60,
+      "paddingHorizontal": 7,
+      "paddingVertical": 5,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "white",
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "marginHorizontal": 3,
+      }
+    }
+  >
+    Hours Remaining:
+  </Text>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "height": 5,
+        "marginBottom": 2,
+        "marginHorizontal": 6,
+        "marginTop": 8,
+      }
+    }
+    testID="bars-container"
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "green",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "green",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "marginHorizontal": 3,
+      }
+    }
+    testID="digits-container"
+  >
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      3
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      2
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "green",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      1
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      0
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`<HoursProgressTracker /> 4 total 2 used 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "black",
+      "height": 60,
+      "paddingHorizontal": 7,
+      "paddingVertical": 5,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "white",
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "marginHorizontal": 3,
+      }
+    }
+  >
+    Hours Remaining:
+  </Text>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "height": 5,
+        "marginBottom": 2,
+        "marginHorizontal": 6,
+        "marginTop": 8,
+      }
+    }
+    testID="bars-container"
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "green",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "green",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "marginHorizontal": 3,
+      }
+    }
+    testID="digits-container"
+  >
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      4
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      3
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "green",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      2
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      1
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      0
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`<HoursProgressTracker /> 5 total 1 used 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "black",
+      "height": 60,
+      "paddingHorizontal": 7,
+      "paddingVertical": 5,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "white",
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "marginHorizontal": 3,
+      }
+    }
+  >
+    Hours Remaining:
+  </Text>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "height": 5,
+        "marginBottom": 2,
+        "marginHorizontal": 6,
+        "marginTop": 8,
+      }
+    }
+    testID="bars-container"
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "green",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "marginHorizontal": 3,
+      }
+    }
+    testID="digits-container"
+  >
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      5
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "green",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      4
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      3
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      2
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      1
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      0
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`<HoursProgressTracker /> 6 total 5 used 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "black",
+      "height": 60,
+      "paddingHorizontal": 7,
+      "paddingVertical": 5,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "white",
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "marginHorizontal": 3,
+      }
+    }
+  >
+    Hours Remaining:
+  </Text>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "height": 5,
+        "marginBottom": 2,
+        "marginHorizontal": 6,
+        "marginTop": 8,
+      }
+    }
+    testID="bars-container"
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "green",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "green",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "green",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "green",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "green",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "marginHorizontal": 3,
+      }
+    }
+    testID="digits-container"
+  >
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      6
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      5
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      4
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      3
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      2
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "green",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      1
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      0
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`<HoursProgressTracker /> 7 total 0 used 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "black",
+      "height": 60,
+      "paddingHorizontal": 7,
+      "paddingVertical": 5,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "white",
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "marginHorizontal": 3,
+      }
+    }
+  >
+    Hours Remaining:
+  </Text>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "height": 5,
+        "marginBottom": 2,
+        "marginHorizontal": 6,
+        "marginTop": 8,
+      }
+    }
+    testID="bars-container"
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "marginHorizontal": 3,
+      }
+    }
+    testID="digits-container"
+  >
+    <Text
+      style={
+        Object {
+          "color": "green",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      7
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      6
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      5
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      4
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      3
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      2
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      1
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      0
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`<HoursProgressTracker /> 8 total 2 used 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "black",
+      "height": 60,
+      "paddingHorizontal": 7,
+      "paddingVertical": 5,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "white",
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "marginHorizontal": 3,
+      }
+    }
+  >
+    Hours Remaining:
+  </Text>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "height": 5,
+        "marginBottom": 2,
+        "marginHorizontal": 6,
+        "marginTop": 8,
+      }
+    }
+    testID="bars-container"
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "green",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "green",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "marginHorizontal": 3,
+      }
+    }
+    testID="digits-container"
+  >
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      8
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      7
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "green",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      6
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      5
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      4
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      3
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      2
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      1
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      0
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`<HoursProgressTracker /> 9 total 6 used 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "black",
+      "height": 60,
+      "paddingHorizontal": 7,
+      "paddingVertical": 5,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "white",
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "marginHorizontal": 3,
+      }
+    }
+  >
+    Hours Remaining:
+  </Text>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "height": 5,
+        "marginBottom": 2,
+        "marginHorizontal": 6,
+        "marginTop": 8,
+      }
+    }
+    testID="bars-container"
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "green",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "green",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "green",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "green",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "green",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "green",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "marginHorizontal": 3,
+      }
+    }
+    testID="digits-container"
+  >
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      9
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      8
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      7
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      6
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      5
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      4
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "green",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      3
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      2
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      1
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      0
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`<HoursProgressTracker /> 10 total 5 used 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "black",
+      "height": 60,
+      "paddingHorizontal": 7,
+      "paddingVertical": 5,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "white",
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "marginHorizontal": 3,
+      }
+    }
+  >
+    Hours Remaining:
+  </Text>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "height": 5,
+        "marginBottom": 2,
+        "marginHorizontal": 6,
+        "marginTop": 8,
+      }
+    }
+    testID="bars-container"
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "green",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "green",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "green",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "green",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "green",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderColor": "black",
+          "borderWidth": 1,
+          "flex": 1,
+        }
+      }
+      testID="bar"
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "marginHorizontal": 3,
+      }
+    }
+    testID="digits-container"
+  >
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      10
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      9
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      8
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      7
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      6
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "green",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      5
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      4
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      3
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      2
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      1
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 12,
+          "fontWeight": "bold",
+        }
+      }
+      testID="digit"
+    >
+      0
+    </Text>
+  </View>
+</View>
+`;

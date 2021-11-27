@@ -1,0 +1,158 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RectangleWithCornerBorders /> snapshot 1`] = `
+<View
+  style={
+    Object {
+      "aspectRatio": 1,
+      "backgroundColor": "transparent",
+      "width": 286,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "green",
+        "height": 3,
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "width": 50,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "green",
+        "height": 50,
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "width": 3,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "green",
+        "height": 3,
+        "left": 236,
+        "position": "absolute",
+        "top": 0,
+        "width": 50,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "green",
+        "height": 50,
+        "left": 283,
+        "position": "absolute",
+        "top": 0,
+        "width": 3,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "green",
+        "height": 3,
+        "left": 0,
+        "position": "absolute",
+        "top": 283,
+        "width": 50,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "green",
+        "height": 50,
+        "left": 0,
+        "position": "absolute",
+        "top": 236,
+        "width": 3,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "green",
+        "height": 3,
+        "left": 236,
+        "position": "absolute",
+        "top": 283,
+        "width": 50,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "green",
+        "height": 50,
+        "left": 283,
+        "position": "absolute",
+        "top": 236,
+        "width": 3,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "rgba(0,0,0,0.8)",
+        "height": 186,
+        "left": 0,
+        "position": "absolute",
+        "top": 50,
+        "width": 3,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "rgba(0,0,0,0.8)",
+        "height": 3,
+        "left": 50,
+        "position": "absolute",
+        "top": 0,
+        "width": 186,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "rgba(0,0,0,0.8)",
+        "height": 186,
+        "left": 283,
+        "position": "absolute",
+        "top": 50,
+        "width": 3,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "rgba(0,0,0,0.8)",
+        "height": 3,
+        "left": 50,
+        "position": "absolute",
+        "top": 283,
+        "width": 186,
+      }
+    }
+  />
+</View>
+`;

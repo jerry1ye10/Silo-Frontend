@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Labyrinthe</string>
+    <string moduleConfig="true" name="CodePushDeploymentKey">e5f9N73OLSOc9drsTaJzWhygvsowHrhTVUj0n</string>
+    <string name="facebook_app_id">277616727297413</string>
+</resources>

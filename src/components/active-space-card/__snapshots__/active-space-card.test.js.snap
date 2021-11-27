@@ -1,0 +1,227 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ActiveSpaceCard /> card text correct 1 1`] = `
+<View
+  style={
+    Object {
+      "alignSelf": "center",
+      "backgroundColor": "white",
+      "borderRadius": 2,
+      "elevation": 10,
+      "marginVertical": 20,
+      "shadowColor": "#000",
+      "shadowOffset": Object {
+        "height": 5,
+        "width": 0,
+      },
+      "shadowOpacity": 0.34,
+      "shadowRadius": 6.27,
+      "width": "90%",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "paddingHorizontal": 20,
+        "paddingVertical": 20,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "fontSize": 18,
+            "fontWeight": "bold",
+          }
+        }
+        testID="top-left-text"
+      >
+        Desk 3
+      </Text>
+      <View
+        style={
+          Object {
+            "height": 5,
+          }
+        }
+      />
+      <Text
+        style={
+          Object {
+            "fontSize": 14,
+          }
+        }
+        testID="bottom-left-text"
+      >
+        Start Time: Jan 3, 4:08 PM
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "height": 60,
+      }
+    }
+  >
+    <View
+      accessible={true}
+      clickable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "red",
+          "flex": 1,
+          "justifyContent": "center",
+          "opacity": 1,
+        }
+      }
+      testID="end-button"
+    >
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "fontSize": 18,
+            "fontWeight": "bold",
+          }
+        }
+        testID="button-text"
+      >
+        End Session
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`<ActiveSpaceCard /> card text correct 2 1`] = `
+<View
+  style={
+    Object {
+      "alignSelf": "center",
+      "backgroundColor": "white",
+      "borderRadius": 2,
+      "elevation": 10,
+      "marginVertical": 20,
+      "shadowColor": "#000",
+      "shadowOffset": Object {
+        "height": 5,
+        "width": 0,
+      },
+      "shadowOpacity": 0.34,
+      "shadowRadius": 6.27,
+      "width": "90%",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "paddingHorizontal": 20,
+        "paddingVertical": 20,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "fontSize": 18,
+            "fontWeight": "bold",
+          }
+        }
+        testID="top-left-text"
+      >
+        Desk 10
+      </Text>
+      <View
+        style={
+          Object {
+            "height": 5,
+          }
+        }
+      />
+      <Text
+        style={
+          Object {
+            "fontSize": 14,
+          }
+        }
+        testID="bottom-left-text"
+      >
+        Start Time: Feb 27, 10:44 PM
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "height": 60,
+      }
+    }
+  >
+    <View
+      accessible={true}
+      clickable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "red",
+          "flex": 1,
+          "justifyContent": "center",
+          "opacity": 1,
+        }
+      }
+      testID="end-button"
+    >
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "fontSize": 18,
+            "fontWeight": "bold",
+          }
+        }
+        testID="button-text"
+      >
+        End Session
+      </Text>
+    </View>
+  </View>
+</View>
+`;
