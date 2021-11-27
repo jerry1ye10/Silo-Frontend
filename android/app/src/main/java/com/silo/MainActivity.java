@@ -1,4 +1,4 @@
-package com.labyrinthe;
+package com.silo;
 
 import com.facebook.react.ReactActivity;
 import io.branch.rnbranch.*;
@@ -12,7 +12,7 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "Labyrinthe";
+    return "Silo";
   }
 
   // Override onStart, onNewIntent:

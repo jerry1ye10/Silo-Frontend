@@ -86,7 +86,7 @@ const PhoneNumberScreen = ({ route }) => {
         disabled={submitting}
       />
       <CustomText style={styles.disclaimerText}>
-        Labyrinthe will send you a text message to verify your identity.
+        Silo will send you a text message to verify your identity.
       </CustomText>
     </KeyboardAwareScrollView>
   );

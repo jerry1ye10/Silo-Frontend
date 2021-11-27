@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>Labyrinthe</string>
+	<string>Silo</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -26,10 +26,10 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>labyrinthe</string>
+			<string>silo</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>labyrinthe</string>
+				<string>silo</string>
 			</array>
 		</dict>
 	</array>
@@ -40,7 +40,7 @@
 	<key>FacebookAppID</key>
 	<string>277616727297413</string>
 	<key>FacebookDisplayName</key>
-	<string>Labyrinthe</string>
+	<string>Silo</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 	<key>LSRequiresIPhoneOS</key>
@@ -118,7 +118,7 @@
 	</dict>
 	<key>branch_universal_link_domains</key>
 	<array>
-		<string>labyrinthe.app.link</string>
+		<string>silo.app.link</string>
 	</array>
 </dict>
 </plist>

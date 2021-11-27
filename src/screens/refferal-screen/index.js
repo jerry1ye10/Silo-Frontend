@@ -8,7 +8,7 @@ import { black, coral, darkGreen, eggshell } from '../../utilities/colors';
 
 const RefferalScreen = () => {
   const user = useSelector((state) => state.user);
-  const refferalLink = `https://labyr.app.link/ref?id=${user.id.substring(0, 6)}`;
+  const refferalLink = `https://silo.app.link/ref?id=${user.id.substring(0, 6)}`;
 
   const onPress = async () => {
     await Share.share({ message: refferalLink });

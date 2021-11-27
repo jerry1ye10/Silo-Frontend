@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-               BuildableName = "Labyrinthe-tvOS.app"
-               BlueprintName = "Labyrinthe-tvOS"
-               ReferencedContainer = "container:Labyrinthe.xcodeproj">
+               BuildableName = "Silo-tvOS.app"
+               BlueprintName = "Silo-tvOS"
+               ReferencedContainer = "container:Silo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
-               BuildableName = "Labyrinthe-tvOSTests.xctest"
-               BlueprintName = "Labyrinthe-tvOSTests"
-               ReferencedContainer = "container:Labyrinthe.xcodeproj">
+               BuildableName = "Silo-tvOSTests.xctest"
+               BlueprintName = "Silo-tvOSTests"
+               ReferencedContainer = "container:Silo.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "Labyrinthe-tvOS.app"
-            BlueprintName = "Labyrinthe-tvOS"
-            ReferencedContainer = "container:Labyrinthe.xcodeproj">
+            BuildableName = "Silo-tvOS.app"
+            BlueprintName = "Silo-tvOS"
+            ReferencedContainer = "container:Silo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "Labyrinthe-tvOS.app"
-            BlueprintName = "Labyrinthe-tvOS"
-            ReferencedContainer = "container:Labyrinthe.xcodeproj">
+            BuildableName = "Silo-tvOS.app"
+            BlueprintName = "Silo-tvOS"
+            ReferencedContainer = "container:Silo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

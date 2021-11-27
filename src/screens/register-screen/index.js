@@ -143,7 +143,7 @@ const RegisterScreen = ({ route }) => {
         <CustomText
           style={styles.hyperlinkText}
           onPress={() => {
-            Linking.openURL('https://labyrinthe.co/privacy-policy');
+            Linking.openURL('https://silo.co/privacy-policy');
           }}>
           Privacy Policy
         </CustomText>{' '}
@@ -151,7 +151,7 @@ const RegisterScreen = ({ route }) => {
         <CustomText
           style={styles.hyperlinkText}
           onPress={() => {
-            Linking.openURL('https://labyrinthe.co/terms-conditions');
+            Linking.openURL('https://silo.co/terms-conditions');
           }}>
           Terms of Use
         </CustomText>

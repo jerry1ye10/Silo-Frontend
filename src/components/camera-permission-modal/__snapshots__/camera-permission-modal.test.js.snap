@@ -166,7 +166,7 @@ exports[`<CameraPermissionModal /> modal visibility 1 1`] = `
                 }
               }
             >
-              Labyrinthe needs access to your
+              Silo needs access to your
               
 
               camera to unlock desks in store.
@@ -422,7 +422,7 @@ exports[`<CameraPermissionModal /> modal visibility 2 1`] = `
                 }
               }
             >
-              Labyrinthe needs access to your
+              Silo needs access to your
               
 
               camera to unlock desks in store.

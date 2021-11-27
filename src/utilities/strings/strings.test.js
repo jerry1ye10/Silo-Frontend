@@ -10,17 +10,17 @@ import moment from 'moment';
 
 describe('strings.js', () => {
   it('isEmailValid', () => {
-    expect(isEmailValid('eric@labyrintheinc.com')).toEqual(true);
-    expect(isEmailValid('eric@labyrintheinc.net')).toEqual(true);
+    expect(isEmailValid('eric@siloinc.com')).toEqual(true);
+    expect(isEmailValid('eric@siloinc.net')).toEqual(true);
     expect(isEmailValid('a@a.net')).toEqual(true);
     expect(isEmailValid('eric@gmail.com')).toEqual(true);
     expect(isEmailValid('eric123@gmail.com')).toEqual(true);
     expect(isEmailValid('eric123@eric.me')).toEqual(true);
-    expect(isEmailValid('ericlabyrintheinc.com')).toEqual(false);
-    expect(isEmailValid('eric@labyrintheinccom')).toEqual(false);
-    expect(isEmailValid('eric@labyrintheinc.c')).toEqual(false);
-    expect(isEmailValid('@labyrintheinc.com')).toEqual(false);
-    expect(isEmailValid('labyrintheinc.com')).toEqual(false);
+    expect(isEmailValid('ericsiloinc.com')).toEqual(false);
+    expect(isEmailValid('eric@siloinccom')).toEqual(false);
+    expect(isEmailValid('eric@siloinc.c')).toEqual(false);
+    expect(isEmailValid('@siloinc.com')).toEqual(false);
+    expect(isEmailValid('siloinc.com')).toEqual(false);
   });
 
   it('isPhoneNumberValid', () => {

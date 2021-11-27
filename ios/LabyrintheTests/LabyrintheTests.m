@@ -7,11 +7,11 @@
 #define TIMEOUT_SECONDS 600
 #define TEXT_TO_LOOK_FOR @"Welcome to React"
 
-@interface LabyrintheTests : XCTestCase
+@interface SiloTests : XCTestCase
 
 @end
 
-@implementation LabyrintheTests
+@implementation SiloTests
 
 - (BOOL)findSubviewInView:(UIView *)view matching:(BOOL(^)(UIView *view))test
 {

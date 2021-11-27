@@ -7,27 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* LabyrintheTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* LabyrintheTests.m */; };
-		0C14C07F756B0CC28DEC43B3 /* libPods-Labyrinthe-LabyrintheTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1121BD54E59A42FD5C4ACEE3 /* libPods-Labyrinthe-LabyrintheTests.a */; };
+		00E356F31AD99517003FC87E /* SiloTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* SiloTests.m */; };
+		0C14C07F756B0CC28DEC43B3 /* libPods-Silo-SiloTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1121BD54E59A42FD5C4ACEE3 /* libPods-Silo-SiloTests.a */; };
 		0C65DC7882814317A06B0FB7 /* CircularStd-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D07555277B4C4F98B56EE183 /* CircularStd-Black.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		1BDD96ACADC50B83321E8911 /* libPods-Labyrinthe-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8FF69EB8E022017F9CE2F9 /* libPods-Labyrinthe-tvOS.a */; };
+		1BDD96ACADC50B83321E8911 /* libPods-Silo-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8FF69EB8E022017F9CE2F9 /* libPods-Silo-tvOS.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		2DCD954D1E0B4F2C00145EB5 /* LabyrintheTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* LabyrintheTests.m */; };
+		2DCD954D1E0B4F2C00145EB5 /* SiloTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* SiloTests.m */; };
 		3F56F3A56F1D4D91BB122CF5 /* CircularStd-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1106CF37B37441ADB61AB753 /* CircularStd-Book.ttf */; };
 		4F8DF558C0E74034B38162C3 /* CircularStd-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53A4891C05444B00836602C8 /* CircularStd-Medium.ttf */; };
 		55F710B7DD5248458260D06C /* CircularStd-BookItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AADE3E5B746849E9B1F12050 /* CircularStd-BookItalic.ttf */; };
-		652DBB90EF3EE22CB50BD3F5 /* libPods-Labyrinthe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4562AAB7ECF16AB77A5108B7 /* libPods-Labyrinthe.a */; };
+		652DBB90EF3EE22CB50BD3F5 /* libPods-Silo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4562AAB7ECF16AB77A5108B7 /* libPods-Silo.a */; };
 		70A18AD062934D24A1E82E01 /* CircularStd-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 74D1BCE2C7034387B55F4E59 /* CircularStd-Bold.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		AB0D807BF976B90E8D2635A1 /* libPods-Labyrinthe-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FF50E9F12094DAA4DB963B3 /* libPods-Labyrinthe-tvOSTests.a */; };
+		AB0D807BF976B90E8D2635A1 /* libPods-Silo-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FF50E9F12094DAA4DB963B3 /* libPods-Silo-tvOSTests.a */; };
 		ACC719B429AF41C6A875F3D1 /* CircularStd-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19F44D929CA9482A86D75295 /* CircularStd-MediumItalic.ttf */; };
 		D3D657E4AFCF4AC7BA26D548 /* CircularStd-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7B5C86EF733B4ABB8FC82945 /* CircularStd-BlackItalic.ttf */; };
-		F40FE838258846BB00DDCDEC /* Labyrinthe.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = F4C23993252FDF97004D50FA /* Labyrinthe.entitlements */; };
+		F40FE838258846BB00DDCDEC /* Silo.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = F4C23993252FDF97004D50FA /* Silo.entitlements */; };
 		F45BF11B261F732700845948 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45BF11A261F732700845948 /* File.swift */; };
 		F4C23A84252FF048004D50FA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4C23A83252FF048004D50FA /* GoogleService-Info.plist */; };
 		F4C23C3225300EAC004D50FA /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = F4C23C3125300EAC004D50FA /* Fonts */; };
@@ -40,71 +40,71 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = Labyrinthe;
+			remoteInfo = Silo;
 		};
 		2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
-			remoteInfo = "Labyrinthe-tvOS";
+			remoteInfo = "Silo-tvOS";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00E356EE1AD99517003FC87E /* LabyrintheTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LabyrintheTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* SiloTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SiloTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* LabyrintheTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LabyrintheTests.m; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* SiloTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SiloTests.m; sourceTree = "<group>"; };
 		06F776A5581A4E4CA2FCD1FB /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
-		0D8FF69EB8E022017F9CE2F9 /* libPods-Labyrinthe-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Labyrinthe-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D8FF69EB8E022017F9CE2F9 /* libPods-Silo-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Silo-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1106CF37B37441ADB61AB753 /* CircularStd-Book.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "CircularStd-Book.ttf"; path = "../assets/fonts/CircularStd-Book.ttf"; sourceTree = "<group>"; };
-		1121BD54E59A42FD5C4ACEE3 /* libPods-Labyrinthe-LabyrintheTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Labyrinthe-LabyrintheTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		13641641282C2675DD491414 /* Pods-Labyrinthe-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Labyrinthe-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-Labyrinthe-tvOS/Pods-Labyrinthe-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* Labyrinthe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Labyrinthe.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Labyrinthe/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Labyrinthe/AppDelegate.m; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Labyrinthe/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Labyrinthe/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Labyrinthe/main.m; sourceTree = "<group>"; };
+		1121BD54E59A42FD5C4ACEE3 /* libPods-Silo-SiloTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Silo-SiloTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		13641641282C2675DD491414 /* Pods-Silo-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Silo-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-Silo-tvOS/Pods-Silo-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* Silo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Silo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Silo/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Silo/AppDelegate.m; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Silo/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Silo/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Silo/main.m; sourceTree = "<group>"; };
 		19F44D929CA9482A86D75295 /* CircularStd-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "CircularStd-MediumItalic.ttf"; path = "../assets/fonts/CircularStd-MediumItalic.ttf"; sourceTree = "<group>"; };
-		1CFC932B5E47E39789E6B541 /* Pods-Labyrinthe-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Labyrinthe-tvOS.release.xcconfig"; path = "Target Support Files/Pods-Labyrinthe-tvOS/Pods-Labyrinthe-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		1CFC932B5E47E39789E6B541 /* Pods-Silo-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Silo-tvOS.release.xcconfig"; path = "Target Support Files/Pods-Silo-tvOS/Pods-Silo-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		214F206738F443B293EC4963 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
 		25058DF9310F4DABA788BB2C /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
 		281044A1EC7E47B6AD85BA5A /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
-		2D02E47B1E0B4A5D006451C7 /* Labyrinthe-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Labyrinthe-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E4901E0B4A5D006451C7 /* Labyrinthe-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Labyrinthe-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E47B1E0B4A5D006451C7 /* Silo-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Silo-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E4901E0B4A5D006451C7 /* Silo-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Silo-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		330E4DC237FA44F0B697B6FC /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
 		3C74891A0BF84DDEB02C707B /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
 		3FE28987C7B149089EE9CA4D /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
 		403DCC6F768442288B5C70E1 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
-		40964D1B63D71D73EBFD4DDA /* Pods-Labyrinthe-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Labyrinthe-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-Labyrinthe-tvOSTests/Pods-Labyrinthe-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		4562AAB7ECF16AB77A5108B7 /* libPods-Labyrinthe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Labyrinthe.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		40964D1B63D71D73EBFD4DDA /* Pods-Silo-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Silo-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-Silo-tvOSTests/Pods-Silo-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4562AAB7ECF16AB77A5108B7 /* libPods-Silo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Silo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		53A4891C05444B00836602C8 /* CircularStd-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "CircularStd-Medium.ttf"; path = "../assets/fonts/CircularStd-Medium.ttf"; sourceTree = "<group>"; };
 		5DABD6A5B6A7443FAD04AEF3 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
 		687A6F9D4EED4D3AA83D1A11 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		6ADAADDD9F3D40559C57945F /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
-		72E518AC05F6F698B53EE342 /* Pods-Labyrinthe-LabyrintheTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Labyrinthe-LabyrintheTests.release.xcconfig"; path = "Target Support Files/Pods-Labyrinthe-LabyrintheTests/Pods-Labyrinthe-LabyrintheTests.release.xcconfig"; sourceTree = "<group>"; };
+		72E518AC05F6F698B53EE342 /* Pods-Silo-SiloTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Silo-SiloTests.release.xcconfig"; path = "Target Support Files/Pods-Silo-SiloTests/Pods-Silo-SiloTests.release.xcconfig"; sourceTree = "<group>"; };
 		74D1BCE2C7034387B55F4E59 /* CircularStd-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "CircularStd-Bold.ttf"; path = "../assets/fonts/CircularStd-Bold.ttf"; sourceTree = "<group>"; };
 		7B5C86EF733B4ABB8FC82945 /* CircularStd-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "CircularStd-BlackItalic.ttf"; path = "../assets/fonts/CircularStd-BlackItalic.ttf"; sourceTree = "<group>"; };
-		7FF50E9F12094DAA4DB963B3 /* libPods-Labyrinthe-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Labyrinthe-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Labyrinthe/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7FF50E9F12094DAA4DB963B3 /* libPods-Silo-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Silo-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Silo/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92944DB9733A44BBAF4BC152 /* CircularStd-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "CircularStd-BoldItalic.ttf"; path = "../assets/fonts/CircularStd-BoldItalic.ttf"; sourceTree = "<group>"; };
 		AADE3E5B746849E9B1F12050 /* CircularStd-BookItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "CircularStd-BookItalic.ttf"; path = "../assets/fonts/CircularStd-BookItalic.ttf"; sourceTree = "<group>"; };
-		ADF0A5B10E4BE8DD3E8FEB3D /* Pods-Labyrinthe-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Labyrinthe-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-Labyrinthe-tvOSTests/Pods-Labyrinthe-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		B59058470B87BB25E0D13473 /* Pods-Labyrinthe-LabyrintheTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Labyrinthe-LabyrintheTests.debug.xcconfig"; path = "Target Support Files/Pods-Labyrinthe-LabyrintheTests/Pods-Labyrinthe-LabyrintheTests.debug.xcconfig"; sourceTree = "<group>"; };
+		ADF0A5B10E4BE8DD3E8FEB3D /* Pods-Silo-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Silo-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-Silo-tvOSTests/Pods-Silo-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		B59058470B87BB25E0D13473 /* Pods-Silo-SiloTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Silo-SiloTests.debug.xcconfig"; path = "Target Support Files/Pods-Silo-SiloTests/Pods-Silo-SiloTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B96AEC35E9DD45CE81F78FCE /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Solid.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
-		BD6CA789C170DA168F91FE13 /* Pods-Labyrinthe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Labyrinthe.debug.xcconfig"; path = "Target Support Files/Pods-Labyrinthe/Pods-Labyrinthe.debug.xcconfig"; sourceTree = "<group>"; };
+		BD6CA789C170DA168F91FE13 /* Pods-Silo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Silo.debug.xcconfig"; path = "Target Support Files/Pods-Silo/Pods-Silo.debug.xcconfig"; sourceTree = "<group>"; };
 		C5572ADF6376470CB5CCE599 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		C7E2B98E52404BDE86AB378C /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		D07555277B4C4F98B56EE183 /* CircularStd-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "CircularStd-Black.ttf"; path = "../assets/fonts/CircularStd-Black.ttf"; sourceTree = "<group>"; };
 		DC2C7FF131844C6AA14EF8DD /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
-		E5FE56E0AA8B07F58A51C433 /* Pods-Labyrinthe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Labyrinthe.release.xcconfig"; path = "Target Support Files/Pods-Labyrinthe/Pods-Labyrinthe.release.xcconfig"; sourceTree = "<group>"; };
+		E5FE56E0AA8B07F58A51C433 /* Pods-Silo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Silo.release.xcconfig"; path = "Target Support Files/Pods-Silo/Pods-Silo.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		F45BF119261F732100845948 /* Labyrinthe-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Labyrinthe-Bridging-Header.h"; sourceTree = "<group>"; };
+		F45BF119261F732100845948 /* Silo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Silo-Bridging-Header.h"; sourceTree = "<group>"; };
 		F45BF11A261F732700845948 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
-		F4C23993252FDF97004D50FA /* Labyrinthe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = Labyrinthe.entitlements; path = Labyrinthe/Labyrinthe.entitlements; sourceTree = "<group>"; };
-		F4C23A83252FF048004D50FA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Labyrinthe/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F4C23993252FDF97004D50FA /* Silo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = Silo.entitlements; path = Silo/Silo.entitlements; sourceTree = "<group>"; };
+		F4C23A83252FF048004D50FA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Silo/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F4C23C3125300EAC004D50FA /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
 		FB996CA484324F49A1525452 /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,7 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C14C07F756B0CC28DEC43B3 /* libPods-Labyrinthe-LabyrintheTests.a in Frameworks */,
+				0C14C07F756B0CC28DEC43B3 /* libPods-Silo-SiloTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,7 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				652DBB90EF3EE22CB50BD3F5 /* libPods-Labyrinthe.a in Frameworks */,
+				652DBB90EF3EE22CB50BD3F5 /* libPods-Silo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,7 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BDD96ACADC50B83321E8911 /* libPods-Labyrinthe-tvOS.a in Frameworks */,
+				1BDD96ACADC50B83321E8911 /* libPods-Silo-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,20 +138,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB0D807BF976B90E8D2635A1 /* libPods-Labyrinthe-tvOSTests.a in Frameworks */,
+				AB0D807BF976B90E8D2635A1 /* libPods-Silo-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* LabyrintheTests */ = {
+		00E356EF1AD99517003FC87E /* SiloTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* LabyrintheTests.m */,
+				00E356F21AD99517003FC87E /* SiloTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = LabyrintheTests;
+			path = SiloTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -162,35 +162,35 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* Labyrinthe */ = {
+		13B07FAE1A68108700A75B9A /* Silo */ = {
 			isa = PBXGroup;
 			children = (
 				F4C23A83252FF048004D50FA /* GoogleService-Info.plist */,
-				F4C23993252FDF97004D50FA /* Labyrinthe.entitlements */,
+				F4C23993252FDF97004D50FA /* Silo.entitlements */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				F45BF11A261F732700845948 /* File.swift */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
-				F45BF119261F732100845948 /* Labyrinthe-Bridging-Header.h */,
+				F45BF119261F732100845948 /* Silo-Bridging-Header.h */,
 				13B07FB71A68108700A75B9A /* main.m */,
 				F4C23C3125300EAC004D50FA /* Fonts */,
 			);
-			name = Labyrinthe;
+			name = Silo;
 			sourceTree = "<group>";
 		};
 		295F635FFD186AC69B0B3908 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BD6CA789C170DA168F91FE13 /* Pods-Labyrinthe.debug.xcconfig */,
-				E5FE56E0AA8B07F58A51C433 /* Pods-Labyrinthe.release.xcconfig */,
-				B59058470B87BB25E0D13473 /* Pods-Labyrinthe-LabyrintheTests.debug.xcconfig */,
-				72E518AC05F6F698B53EE342 /* Pods-Labyrinthe-LabyrintheTests.release.xcconfig */,
-				13641641282C2675DD491414 /* Pods-Labyrinthe-tvOS.debug.xcconfig */,
-				1CFC932B5E47E39789E6B541 /* Pods-Labyrinthe-tvOS.release.xcconfig */,
-				40964D1B63D71D73EBFD4DDA /* Pods-Labyrinthe-tvOSTests.debug.xcconfig */,
-				ADF0A5B10E4BE8DD3E8FEB3D /* Pods-Labyrinthe-tvOSTests.release.xcconfig */,
+				BD6CA789C170DA168F91FE13 /* Pods-Silo.debug.xcconfig */,
+				E5FE56E0AA8B07F58A51C433 /* Pods-Silo.release.xcconfig */,
+				B59058470B87BB25E0D13473 /* Pods-Silo-SiloTests.debug.xcconfig */,
+				72E518AC05F6F698B53EE342 /* Pods-Silo-SiloTests.release.xcconfig */,
+				13641641282C2675DD491414 /* Pods-Silo-tvOS.debug.xcconfig */,
+				1CFC932B5E47E39789E6B541 /* Pods-Silo-tvOS.release.xcconfig */,
+				40964D1B63D71D73EBFD4DDA /* Pods-Silo-tvOSTests.debug.xcconfig */,
+				ADF0A5B10E4BE8DD3E8FEB3D /* Pods-Silo-tvOSTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -200,10 +200,10 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				4562AAB7ECF16AB77A5108B7 /* libPods-Labyrinthe.a */,
-				1121BD54E59A42FD5C4ACEE3 /* libPods-Labyrinthe-LabyrintheTests.a */,
-				0D8FF69EB8E022017F9CE2F9 /* libPods-Labyrinthe-tvOS.a */,
-				7FF50E9F12094DAA4DB963B3 /* libPods-Labyrinthe-tvOSTests.a */,
+				4562AAB7ECF16AB77A5108B7 /* libPods-Silo.a */,
+				1121BD54E59A42FD5C4ACEE3 /* libPods-Silo-SiloTests.a */,
+				0D8FF69EB8E022017F9CE2F9 /* libPods-Silo-tvOS.a */,
+				7FF50E9F12094DAA4DB963B3 /* libPods-Silo-tvOSTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -218,9 +218,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* Labyrinthe */,
+				13B07FAE1A68108700A75B9A /* Silo */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* LabyrintheTests */,
+				00E356EF1AD99517003FC87E /* SiloTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				295F635FFD186AC69B0B3908 /* Pods */,
@@ -234,10 +234,10 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* Labyrinthe.app */,
-				00E356EE1AD99517003FC87E /* LabyrintheTests.xctest */,
-				2D02E47B1E0B4A5D006451C7 /* Labyrinthe-tvOS.app */,
-				2D02E4901E0B4A5D006451C7 /* Labyrinthe-tvOSTests.xctest */,
+				13B07F961A680F5B00A75B9A /* Silo.app */,
+				00E356EE1AD99517003FC87E /* SiloTests.xctest */,
+				2D02E47B1E0B4A5D006451C7 /* Silo-tvOS.app */,
+				2D02E4901E0B4A5D006451C7 /* Silo-tvOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -276,9 +276,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* LabyrintheTests */ = {
+		00E356ED1AD99517003FC87E /* SiloTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "LabyrintheTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "SiloTests" */;
 			buildPhases = (
 				866A42FEF24CABE92BAD7BE6 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -292,14 +292,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = LabyrintheTests;
-			productName = LabyrintheTests;
-			productReference = 00E356EE1AD99517003FC87E /* LabyrintheTests.xctest */;
+			name = SiloTests;
+			productName = SiloTests;
+			productReference = 00E356EE1AD99517003FC87E /* SiloTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* Labyrinthe */ = {
+		13B07F861A680F5B00A75B9A /* Silo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Labyrinthe" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Silo" */;
 			buildPhases = (
 				EDA2D81A958507488D511D4C /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -315,14 +315,14 @@
 			);
 			dependencies = (
 			);
-			name = Labyrinthe;
-			productName = Labyrinthe;
-			productReference = 13B07F961A680F5B00A75B9A /* Labyrinthe.app */;
+			name = Silo;
+			productName = Silo;
+			productReference = 13B07F961A680F5B00A75B9A /* Silo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E47A1E0B4A5D006451C7 /* Labyrinthe-tvOS */ = {
+		2D02E47A1E0B4A5D006451C7 /* Silo-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Labyrinthe-tvOS" */;
+			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Silo-tvOS" */;
 			buildPhases = (
 				961108A4D14E43879BD5C2CB /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
@@ -335,14 +335,14 @@
 			);
 			dependencies = (
 			);
-			name = "Labyrinthe-tvOS";
-			productName = "Labyrinthe-tvOS";
-			productReference = 2D02E47B1E0B4A5D006451C7 /* Labyrinthe-tvOS.app */;
+			name = "Silo-tvOS";
+			productName = "Silo-tvOS";
+			productReference = 2D02E47B1E0B4A5D006451C7 /* Silo-tvOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E48F1E0B4A5D006451C7 /* Labyrinthe-tvOSTests */ = {
+		2D02E48F1E0B4A5D006451C7 /* Silo-tvOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Labyrinthe-tvOSTests" */;
+			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Silo-tvOSTests" */;
 			buildPhases = (
 				611124D4F643E2BCB527C2C1 /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
@@ -354,9 +354,9 @@
 			dependencies = (
 				2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */,
 			);
-			name = "Labyrinthe-tvOSTests";
-			productName = "Labyrinthe-tvOSTests";
-			productReference = 2D02E4901E0B4A5D006451C7 /* Labyrinthe-tvOSTests.xctest */;
+			name = "Silo-tvOSTests";
+			productName = "Silo-tvOSTests";
+			productReference = 2D02E4901E0B4A5D006451C7 /* Silo-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -386,7 +386,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Labyrinthe" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Silo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -399,10 +399,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* Labyrinthe */,
-				00E356ED1AD99517003FC87E /* LabyrintheTests */,
-				2D02E47A1E0B4A5D006451C7 /* Labyrinthe-tvOS */,
-				2D02E48F1E0B4A5D006451C7 /* Labyrinthe-tvOSTests */,
+				13B07F861A680F5B00A75B9A /* Silo */,
+				00E356ED1AD99517003FC87E /* SiloTests */,
+				2D02E47A1E0B4A5D006451C7 /* Silo-tvOS */,
+				2D02E48F1E0B4A5D006451C7 /* Silo-tvOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -419,7 +419,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F40FE838258846BB00DDCDEC /* Labyrinthe.entitlements in Resources */,
+				F40FE838258846BB00DDCDEC /* Silo.entitlements in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				F4C23A84252FF048004D50FA /* GoogleService-Info.plist in Resources */,
@@ -473,7 +473,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Labyrinthe-LabyrintheTests/Pods-Labyrinthe-LabyrintheTests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Silo-SiloTests/Pods-Silo-SiloTests-frameworks.sh",
 				"${PODS_XCFRAMEWORKS_BUILD_DIR}/OpenSSL/OpenSSL.framework/OpenSSL",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -482,7 +482,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Labyrinthe-LabyrintheTests/Pods-Labyrinthe-LabyrintheTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Silo-SiloTests/Pods-Silo-SiloTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
@@ -514,7 +514,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Labyrinthe-tvOSTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Silo-tvOSTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -536,7 +536,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Labyrinthe-LabyrintheTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Silo-SiloTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -558,7 +558,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Labyrinthe-tvOS-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Silo-tvOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -571,7 +571,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Labyrinthe-LabyrintheTests/Pods-Labyrinthe-LabyrintheTests-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Silo-SiloTests/Pods-Silo-SiloTests-resources.sh",
 				"${PODS_ROOT}/FBSDKCoreKit/FacebookSDKStrings.bundle",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
@@ -616,7 +616,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Labyrinthe-LabyrintheTests/Pods-Labyrinthe-LabyrintheTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Silo-SiloTests/Pods-Silo-SiloTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AB6EEAC8D91F5EAF8FAF2D2C /* [CP] Copy Pods Resources */ = {
@@ -625,7 +625,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Labyrinthe/Pods-Labyrinthe-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Silo/Pods-Silo-resources.sh",
 				"${PODS_ROOT}/FBSDKCoreKit/FacebookSDKStrings.bundle",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
@@ -670,7 +670,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Labyrinthe/Pods-Labyrinthe-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Silo/Pods-Silo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AEBF605C46B8FD6537125BE1 /* [CP] Embed Pods Frameworks */ = {
@@ -679,7 +679,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Labyrinthe/Pods-Labyrinthe-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Silo/Pods-Silo-frameworks.sh",
 				"${PODS_XCFRAMEWORKS_BUILD_DIR}/OpenSSL/OpenSSL.framework/OpenSSL",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -688,7 +688,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Labyrinthe/Pods-Labyrinthe-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Silo/Pods-Silo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EDA2D81A958507488D511D4C /* [CP] Check Pods Manifest.lock */ = {
@@ -706,7 +706,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Labyrinthe-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Silo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -768,7 +768,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* LabyrintheTests.m in Sources */,
+				00E356F31AD99517003FC87E /* SiloTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -795,7 +795,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DCD954D1E0B4F2C00145EB5 /* LabyrintheTests.m in Sources */,
+				2DCD954D1E0B4F2C00145EB5 /* SiloTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -804,12 +804,12 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* Labyrinthe */;
+			target = 13B07F861A680F5B00A75B9A /* Silo */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2D02E47A1E0B4A5D006451C7 /* Labyrinthe-tvOS */;
+			target = 2D02E47A1E0B4A5D006451C7 /* Silo-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -817,7 +817,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B59058470B87BB25E0D13473 /* Pods-Labyrinthe-LabyrintheTests.debug.xcconfig */;
+			baseConfigurationReference = B59058470B87BB25E0D13473 /* Pods-Silo-SiloTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -825,7 +825,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = LabyrintheTests/Info.plist;
+				INFOPLIST_FILE = SiloTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -835,18 +835,18 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Labyrinthe.app/Labyrinthe";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Silo.app/Silo";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 72E518AC05F6F698B53EE342 /* Pods-Labyrinthe-LabyrintheTests.release.xcconfig */;
+			baseConfigurationReference = 72E518AC05F6F698B53EE342 /* Pods-Silo-SiloTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = LabyrintheTests/Info.plist;
+				INFOPLIST_FILE = SiloTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -856,21 +856,21 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Labyrinthe.app/Labyrinthe";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Silo.app/Silo";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BD6CA789C170DA168F91FE13 /* Pods-Labyrinthe.debug.xcconfig */;
+			baseConfigurationReference = BD6CA789C170DA168F91FE13 /* Pods-Silo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = Labyrinthe/Labyrinthe.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Silo/Silo.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 99U3832H8V;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = Labyrinthe/Info.plist;
+				INFOPLIST_FILE = Silo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 4.5.0;
 				OTHER_LDFLAGS = (
@@ -878,9 +878,9 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.labyrinthe.app;
-				PRODUCT_NAME = Labyrinthe;
-				SWIFT_OBJC_BRIDGING_HEADER = "Labyrinthe-Bridging-Header.h";
+				PRODUCT_BUNDLE_IDENTIFIER = com.silo.app;
+				PRODUCT_NAME = Silo;
+				SWIFT_OBJC_BRIDGING_HEADER = "Silo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -889,14 +889,14 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E5FE56E0AA8B07F58A51C433 /* Pods-Labyrinthe.release.xcconfig */;
+			baseConfigurationReference = E5FE56E0AA8B07F58A51C433 /* Pods-Silo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = Labyrinthe/Labyrinthe.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Silo/Silo.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 99U3832H8V;
-				INFOPLIST_FILE = Labyrinthe/Info.plist;
+				INFOPLIST_FILE = Silo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 4.5.0;
 				OTHER_LDFLAGS = (
@@ -904,9 +904,9 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.labyrinthe.app;
-				PRODUCT_NAME = Labyrinthe;
-				SWIFT_OBJC_BRIDGING_HEADER = "Labyrinthe-Bridging-Header.h";
+				PRODUCT_BUNDLE_IDENTIFIER = com.silo.app;
+				PRODUCT_NAME = Silo;
+				SWIFT_OBJC_BRIDGING_HEADER = "Silo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -914,7 +914,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 13641641282C2675DD491414 /* Pods-Labyrinthe-tvOS.debug.xcconfig */;
+			baseConfigurationReference = 13641641282C2675DD491414 /* Pods-Silo-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -925,14 +925,14 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Labyrinthe-tvOS/Info.plist";
+				INFOPLIST_FILE = "Silo-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.Labyrinthe-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.Silo-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -942,7 +942,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1CFC932B5E47E39789E6B541 /* Pods-Labyrinthe-tvOS.release.xcconfig */;
+			baseConfigurationReference = 1CFC932B5E47E39789E6B541 /* Pods-Silo-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -953,14 +953,14 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Labyrinthe-tvOS/Info.plist";
+				INFOPLIST_FILE = "Silo-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.Labyrinthe-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.Silo-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -970,7 +970,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 40964D1B63D71D73EBFD4DDA /* Pods-Labyrinthe-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = 40964D1B63D71D73EBFD4DDA /* Pods-Silo-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -980,24 +980,24 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Labyrinthe-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "Silo-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.Labyrinthe-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.Silo-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Labyrinthe-tvOS.app/Labyrinthe-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Silo-tvOS.app/Silo-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Debug;
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ADF0A5B10E4BE8DD3E8FEB3D /* Pods-Labyrinthe-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = ADF0A5B10E4BE8DD3E8FEB3D /* Pods-Silo-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1007,17 +1007,17 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Labyrinthe-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "Silo-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.Labyrinthe-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.Silo-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Labyrinthe-tvOS.app/Labyrinthe-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Silo-tvOS.app/Silo-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Release;
@@ -1138,7 +1138,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "LabyrintheTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "SiloTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -1147,7 +1147,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Labyrinthe" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Silo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -1156,7 +1156,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Labyrinthe-tvOS" */ = {
+		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Silo-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4971E0B4A5E006451C7 /* Debug */,
@@ -1165,7 +1165,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Labyrinthe-tvOSTests" */ = {
+		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Silo-tvOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4991E0B4A5E006451C7 /* Debug */,
@@ -1174,7 +1174,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Labyrinthe" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Silo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

@@ -48,7 +48,7 @@ messaging().onMessage((message) => {
 stripe.setOptions({ publishableKey: STRIPE_PUBLISHABLE_KEY });
 
 const linking = {
-  prefixes: ['labyrinthe://', 'https://labyr.app.link'],
+  prefixes: ['silo://', 'https://silo.app.link'],
 
   // Custom function to get the URL which was used to open the app
   async getInitialURL() {
@@ -71,7 +71,7 @@ const linking = {
       if (error) {
         return;
       }
-      let uri = 'labyrinthe://';
+      let uri = 'silo://';
       if (params.id) {
         uri = `${uri}ref?id=${params.id}`;
       }

@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "Labyrinthe.app"
-               BlueprintName = "Labyrinthe"
-               ReferencedContainer = "container:Labyrinthe.xcodeproj">
+               BuildableName = "Silo.app"
+               BlueprintName = "Silo"
+               ReferencedContainer = "container:Silo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "Labyrinthe.app"
-            BlueprintName = "Labyrinthe"
-            ReferencedContainer = "container:Labyrinthe.xcodeproj">
+            BuildableName = "Silo.app"
+            BlueprintName = "Silo"
+            ReferencedContainer = "container:Silo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "Labyrinthe.app"
-            BlueprintName = "Labyrinthe"
-            ReferencedContainer = "container:Labyrinthe.xcodeproj">
+            BuildableName = "Silo.app"
+            BlueprintName = "Silo"
+            ReferencedContainer = "container:Silo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

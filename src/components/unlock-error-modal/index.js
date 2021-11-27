@@ -10,7 +10,7 @@ const UnlockErrorModal = ({ modalVisibility, setModalVisibility, message = 0 }) 
   const NoLocationPermissionContent = () => (
     <>
       <CustomText style={styles.description}>
-        Labyrinthe needs access to your location to ensure you are near the store to unlock the
+        Silo needs access to your location to ensure you are near the store to unlock the
         front door. Please enable location permissions on your device.
       </CustomText>
       <View>
