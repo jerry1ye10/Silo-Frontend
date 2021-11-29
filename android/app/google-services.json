@@ -1,34 +1,33 @@
 {
   "project_info": {
-    "project_number": "942155019886",
-    "firebase_url": "https://silo-72c11-default-rtdb.firebaseio.com"
-    "project_id": "silo-72c11",
-    "storage_bucket": "silo-72c11.appspot.com"
+    "project_number": "436141256020",
+    "project_id": "scenic-genre-333121",
+    "storage_bucket": "scenic-genre-333121.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:942155019886:android:f69877ea86e286aab0587f",
+        "mobilesdk_app_id": "1:436141256020:android:3297be0fba260df359acc1",
         "android_client_info": {
           "package_name": "com.silo"
         }
       },
       "oauth_client": [
         {
-          "client_id": "942155019886-r91eoms0fc3scolmlneqlujuivd3k9oe.apps.googleusercontent.com",
+          "client_id": "436141256020-6h8g1pcoe3jq70nop3s60pm9cp4r96hj.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyB4s_sjzCbfZnVofrBEWh5I3qPzdie7IjM"
+          "current_key": "AIzaSyCmaGasixB08mCXbJrZQMtyxXEODhUJI58"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "942155019886-r91eoms0fc3scolmlneqlujuivd3k9oe.apps.googleusercontent.com",
+              "client_id": "436141256020-6h8g1pcoe3jq70nop3s60pm9cp4r96hj.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
