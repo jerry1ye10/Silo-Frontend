@@ -65,8 +65,8 @@ const LandingScreen = () => {
         />
         <Button
           text="Register"
-          color={darkGreen}
-          backgroundColor={lightGreen}
+          color={lightGreen}
+          backgroundColor={darkGreen}
           onPress={() => {
             navigation.navigate('RegisterScreen');
           }}

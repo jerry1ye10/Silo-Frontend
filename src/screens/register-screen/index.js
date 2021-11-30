@@ -47,7 +47,7 @@ const RegisterScreen = ({ route }) => {
         const response = await minotaur.get(`/refferal?code=${refferalCode}`);
         if (!response.data.id) {
           setSubmitting(false);
-          setError('The refferal code you entered is invalid.');
+          setError('The referral code you entered is invalid.');
           return;
         }
         refferalId = response.data.id;
