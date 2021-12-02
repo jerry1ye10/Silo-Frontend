@@ -34,7 +34,7 @@ const RefferalScreen = () => {
             <CustomText style={styles.subheader}>SHARE YOUR LINK:</CustomText>
             <Button
               text={refferalLink}
-              color={eggshell}
+              color={black}
               backgroundColor={coral}
               onPress={onPress}
             />

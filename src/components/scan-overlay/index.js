@@ -10,13 +10,11 @@ import {
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { useSelector, useDispatch } from 'react-redux';
-import Geolocation from 'react-native-geolocation-service';
 
 import CustomText from '../../components/custom-text';
 import { black, coral, darkGreen, eggshell } from '../../utilities/colors';
 import { addCardError } from '../../redux/actions/user-actions';
 import { getActiveSessions } from '../../redux/actions/session-actions';
-import UnlockErrorModal from '../unlock-error-modal';
 import RectangleWithCornerBorders from '../rectangle-with-corner-borders';
 import minotaur from '../../api/minotaur';
 
@@ -71,7 +69,7 @@ const ScanOverlay = ({ headerText }) => {
 
   const [isUnlocking, setIsUnlocking] = React.useState(false);
   const [justUnlocked, setJustUnlocked] = React.useState(false);
-  const [unlockModalVisibility, setUnlockModalVisibility] = React.useState(false);
+  const [unlockModalVisibility, setUnlockModalVisibility] = React.useState(true);
   const [message, setMessage] = React.useState(0);
   const [showMarchPromo, setShowMarchPromo] = React.useState(false);
 
@@ -144,57 +142,6 @@ const ScanOverlay = ({ headerText }) => {
     </CustomText>
   );
 
-  const getCurrentPosition = () => {
-    Geolocation.getCurrentPosition(
-      // Called on success.
-      async (info) => {
-        try {
-          const { latitude, longitude } = info.coords;
-          await minotaur.post('/unlock', { latitude, longitude });
-          setIsUnlocking(false);
-          setJustUnlocked(true);
-        } catch (err) {
-          // These are minotaur errors
-          setIsUnlocking(false);
-          setJustUnlocked(false);
-          // No payment method
-          if (err?.response?.status === 400) {
-            setMessage(1);
-            setUnlockModalVisibility(true);
-          }
-          // Too far away from store
-          else if (err?.response?.status === 402) {
-            dispatch(addCardError('Please add a payment method'));
-            navigation.navigate('PaymentsScreen');
-          }
-          // General error, don't do anything.
-          else {
-            setMessage(2);
-            setUnlockModalVisibility(true);
-          }
-        }
-      },
-      // Called on failure, these are location permission errors.
-      () => {
-        setIsUnlocking(false);
-        setJustUnlocked(false);
-        setMessage(0);
-        setUnlockModalVisibility(true);
-      },
-    );
-  };
-
-  const onUnlockPress = async () => {
-    setIsUnlocking(true);
-    if (Platform.OS === 'ios') {
-      await Geolocation.requestAuthorization('whenInUse');
-      getCurrentPosition();
-    } else if (Platform.OS === 'android') {
-      await PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION);
-      getCurrentPosition();
-    }
-  };
-
   return (
     <View style={styles.container}>
       <TouchableOpacity
@@ -205,11 +152,6 @@ const ScanOverlay = ({ headerText }) => {
         disabled={numSessions === 0 && user.dayPass?.status !== 'ACTIVE'}>
         <CustomText style={styles.bannerText}>{bannerText}</CustomText>
       </TouchableOpacity>
-      <View style={styles.topOverlay}>
-        <TouchableOpacity style={styles.lockButton} onPress={onUnlockPress} disabled={justUnlocked}>
-          {buttonContent}
-        </TouchableOpacity>
-      </View>
       <View style={styles.middleContainer}>
         <View style={styles.leftAndRightOverlay} />
         <RectangleWithCornerBorders />
@@ -219,11 +161,6 @@ const ScanOverlay = ({ headerText }) => {
         <CustomText style={styles.footerText}>{headerText}</CustomText>
       </View>
       <View style={styles.bottomOverlay}>{showMarchPromo ? <MarchBanner /> : null}</View>
-      <UnlockErrorModal
-        modalVisibility={unlockModalVisibility}
-        setModalVisibility={setUnlockModalVisibility}
-        message={message}
-      />
     </View>
   );
 };

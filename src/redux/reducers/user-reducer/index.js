@@ -5,26 +5,17 @@ import {
   ADD_CARD_ERROR,
   ADD_CARD_REMOVING,
   ADD_CARD_SELECTING,
-  ADD_DAY_PASS,
-  ADD_DAY_PASS_ADDING,
-  ADD_DAY_PASS_ERROR,
   ADD_DEVICE_TOKEN,
   ADD_DEVICE_TOKEN_ADDING,
   ADD_DEVICE_TOKEN_ENDING,
-  ADD_MEMBERSHIP,
-  ADD_MEMBERSHIP_ADDING,
-  ADD_MEMBERSHIP_ERROR,
   ADD_STRIPE_ID_WITH_CARD,
   ADD_USER,
   ADD_USER_ERROR,
   ADD_USER_NAME_CHANGING,
   ADD_USER_SIGNING_IN,
-  CHANGE_MEMBERSHIP_RENEWAL,
   CHANGE_USER_NAME,
   LOG_OUT,
   REMOVE_CARD,
-  REMOVE_DAY_PASS,
-  REMOVE_MEMBERSHIP,
   SELECT_CARD,
 } from '../../actions/types';
 
@@ -39,22 +30,16 @@ const initialState = {
   deviceToken: null,
   baseRate: null,
   discount: null,
-  dayPass: { status: 'NO_PASS' },
-  membership: { status: 'NO_MEMBERSHIP' },
   // State which keeps track of loading.
   isSigningIn: false,
   isAddingCard: false,
   cardBeingRemoved: null,
   cardBeingSelected: null,
   isChangingName: false,
-  isAddingDayPass: false,
-  isAddingMembership: false,
   isAddingDeviceToken: false,
   // State which keeps track of errors.
   userError: ' ',
   cardError: ' ',
-  dayPassError: ' ',
-  membershipError: ' ',
 };
 
 export const userReducer = (state = initialState, action) => {
@@ -87,17 +72,6 @@ export const userReducer = (state = initialState, action) => {
       return Object.assign({}, state, { cardBeingRemoved: action.payload });
     case ADD_CARD_SELECTING:
       return Object.assign({}, state, { cardBeingSelected: action.payload });
-    case ADD_DAY_PASS:
-      return {
-        ...state,
-        dayPass: action.payload,
-        isAddingDayPass: false,
-        dayPassError: ' ',
-      };
-    case ADD_DAY_PASS_ADDING:
-      return { ...state, isAddingDayPass: true };
-    case ADD_DAY_PASS_ERROR:
-      return { ...state, isAddingDayPass: false, dayPassError: action.payload };
     case ADD_DEVICE_TOKEN:
       return Object.assign({}, state, {
         deviceToken: action.payload,
@@ -107,18 +81,6 @@ export const userReducer = (state = initialState, action) => {
       return Object.assign({}, state, { isAddingDeviceToken: true });
     case ADD_DEVICE_TOKEN_ENDING:
       return Object.assign({}, state, { isAddingDeviceToken: false });
-    case ADD_MEMBERSHIP: {
-      return {
-        ...state,
-        membership: action.payload,
-        isAddingMembership: false,
-        membershipError: ' ',
-      };
-    }
-    case ADD_MEMBERSHIP_ADDING:
-      return { ...state, isAddingMembership: true };
-    case ADD_MEMBERSHIP_ERROR:
-      return { ...state, isAddingMembership: false, membershipError: action.payload };
     case ADD_STRIPE_ID_WITH_CARD:
       return Object.assign({}, state, {
         cards: [...state.cards, action.payload.cardInfo],
@@ -143,8 +105,6 @@ export const userReducer = (state = initialState, action) => {
       });
     case ADD_USER_SIGNING_IN:
       return Object.assign({}, state, { isSigningIn: true });
-    case CHANGE_MEMBERSHIP_RENEWAL:
-      return { ...state, membership: { ...state.membership, shouldRenew: action.payload } };
     case CHANGE_USER_NAME:
       return Object.assign({}, state, {
         isChangingName: false,
@@ -186,10 +146,6 @@ export const userReducer = (state = initialState, action) => {
         cards: updatedCards,
         cardError: ' ',
       });
-    case REMOVE_DAY_PASS:
-      return { ...state, dayPass: initialState.dayPass };
-    case REMOVE_MEMBERSHIP:
-      return { ...state, membership: initialState.membership };
     default:
       return state;
   }

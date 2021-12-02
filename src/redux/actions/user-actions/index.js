@@ -7,26 +7,17 @@ import {
   ADD_CARD_ERROR,
   ADD_CARD_REMOVING,
   ADD_CARD_SELECTING,
-  ADD_DAY_PASS,
-  ADD_DAY_PASS_ADDING,
-  ADD_DAY_PASS_ERROR,
   ADD_DEVICE_TOKEN,
   ADD_DEVICE_TOKEN_ADDING,
   ADD_DEVICE_TOKEN_ENDING,
-  ADD_MEMBERSHIP,
-  ADD_MEMBERSHIP_ADDING,
-  ADD_MEMBERSHIP_ERROR,
   ADD_STRIPE_ID_WITH_CARD,
   ADD_USER,
   ADD_USER_ERROR,
   ADD_USER_NAME_CHANGING,
   ADD_USER_SIGNING_IN,
-  CHANGE_MEMBERSHIP_RENEWAL,
   CHANGE_USER_NAME,
   LOG_OUT,
   REMOVE_CARD,
-  REMOVE_DAY_PASS,
-  REMOVE_MEMBERSHIP,
   SELECT_CARD,
 } from '../types';
 
@@ -43,20 +34,6 @@ export const addUserError = (error) => {
   return { type: ADD_USER_ERROR, payload: error };
 };
 
-export const addMembershipError = (error) => {
-  return { type: ADD_USER_ERROR, payload: error };
-};
-
-export const changeMembershipRenewal = (membershipId, renewalCode) => {
-  return async (dispatch) => {
-    try {
-      await minotaur.put(`/memberships/${membershipId}`, { should_renew: renewalCode });
-      dispatch({ type: CHANGE_MEMBERSHIP_RENEWAL, payload: renewalCode });
-    } catch (err) {
-      dispatch(addMembershipError('Could not update membership.'));
-    }
-  };
-};
 
 // Removes a payment source from a user while making sure no current sessions
 // are currently using the card. If multiple payment sources exists while
@@ -135,58 +112,6 @@ export const getCards = (authToken) => {
   };
 };
 
-// TODO: This api is wack should change later
-export const getDayPass = (authToken) => {
-  return async (dispatch) => {
-    try {
-      // Retreive a valid day pass.
-      const currentMoment = moment();
-      const year = currentMoment.get('year');
-      const month = currentMoment.get('month') + 1;
-      const date = currentMoment.get('date');
-      const startTimeString = `${year}-${month}-${date} 00:00:00`;
-      const endTimeString = `${year}-${month}-${date} 23:59:59`;
-      const startTimeInUTC = moment(startTimeString, 'YYYY-M-D HH:mm:ss')
-        .utc()
-        .format('YYYY-MM-DD HH:mm:ss');
-      const endTimeInUTC = moment(endTimeString, 'YYYY-M-D HH:mm:ss')
-        .utc()
-        .format('YYYY-MM-DD HH:mm:ss');
-      const dayPassResponse = await minotaur.get(
-        `/day_passes?start_time_in_UTC=${startTimeInUTC}&end_time_in_UTC=${endTimeInUTC}`,
-        {
-          headers: { Authorization: `Bearer ${authToken}` },
-        },
-      );
-      dispatch(addDayPass(dayPassResponse.data.dayPass));
-    } catch (err) {
-      dispatch(addUserError('Server error'));
-    }
-  };
-};
-
-export const getMembership = () => {
-  return async (dispatch) => {
-    try {
-      const response = await minotaur.get('/memberships');
-      dispatch({ type: ADD_MEMBERSHIP, payload: response.data });
-    } catch (err) {
-      dispatch(addUserError('Server error'));
-    }
-  };
-};
-
-export const getWeeklyPass = () => {
-  return async (dispatch) => {
-    try {
-      const response = await minotaur.get('/weekly_passes');
-      dispatch({ type: ADD_DAY_PASS, payload: response.data });
-    } catch (err) {
-      dispatch(addUserError('Server error'));
-    }
-  };
-};
-
 // Communicates with minotaur to log in a user.
 export const login = (email, password, deviceToken, next) => {
   return async (dispatch) => {
@@ -232,29 +157,6 @@ export const logOut = () => {
   return { type: LOG_OUT };
 };
 
-export const purchaseMembership = (renewalType, noPaymentAction, successAction) => {
-  return async (dispatch) => {
-    try {
-      dispatch({ type: ADD_MEMBERSHIP_ADDING });
-      const response = await minotaur.post('/memberships', { renewal_type: renewalType });
-      dispatch({ type: ADD_MEMBERSHIP, payload: response.data });
-      successAction();
-    } catch (err) {
-      if (err.response.status === 403) {
-        noPaymentAction();
-        dispatch({
-          type: ADD_CARD_ERROR,
-          payload: 'Your card was declined. Please update your payment method.',
-        });
-      } else if (err.response.data === 'NO_CARD') {
-        noPaymentAction();
-        dispatch({ type: ADD_CARD_ERROR, payload: 'Please add a payment method.' });
-      } else {
-        dispatch({ type: ADD_MEMBERSHIP_ERROR, payload: 'Server error. Please try again later.' });
-      }
-    }
-  };
-};
 
 export const recordDeviceToken = (token, os) => {
   return async (dispatch) => {
@@ -397,17 +299,6 @@ const addCardSelecting = (cardId) => {
   return { type: ADD_CARD_SELECTING, payload: cardId };
 };
 
-export const addDayPass = (dayPass) => {
-  return { type: ADD_DAY_PASS, payload: dayPass };
-};
-
-const addDayPassAdding = () => {
-  return { type: ADD_DAY_PASS_ADDING };
-};
-
-const addDayPassError = (error) => {
-  return { type: ADD_DAY_PASS_ERROR, payload: error };
-};
 
 const addDeviceToken = (token, os) => {
   return { type: ADD_DEVICE_TOKEN, payload: { token, os } };
@@ -421,9 +312,6 @@ const addDeviceTokenEnding = () => {
   return { type: ADD_DEVICE_TOKEN_ENDING };
 };
 
-export const addMembership = (membership) => {
-  return { type: ADD_MEMBERSHIP, payload: membership };
-};
 
 const addStripeIdWithCard = (stripeId, cardInfo) => {
   return { type: ADD_STRIPE_ID_WITH_CARD, payload: { stripeId, cardInfo } };
@@ -453,14 +341,6 @@ const removeCard = (cardToBeRemovedId, cardToBeMadeDefaultId) => {
     type: REMOVE_CARD,
     payload: { cardToBeRemovedId, cardToBeMadeDefaultId },
   };
-};
-
-export const removeDayPass = () => {
-  return { type: REMOVE_DAY_PASS };
-};
-
-export const removeMembership = () => {
-  return { type: REMOVE_MEMBERSHIP };
 };
 
 const selectCard = (selectedCardId, cardToBeDeselectedId) => {

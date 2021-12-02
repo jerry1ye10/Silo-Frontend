@@ -14,14 +14,11 @@ import moment from 'moment';
 import { AppEventsLogger } from 'react-native-fbsdk-next';
 
 import CustomText from '../custom-text';
-import { darkGreen, eggshell } from '../../utilities/colors';
+import { darkGreen, eggshell,black } from '../../utilities/colors';
 import { fireBeginSessionNotification } from '../../utilities/notifications';
 import {
   clearSessionError,
   beginHourly,
-  beginMembership,
-  beginWeeklyPassWithPurchase,
-  beginWeeklyPassWithoutPurchase,
 } from '../../redux/actions/session-actions';
 import BottomModalBase from '../bottom-modal-base';
 import SelectionCard from '../selection-card';
@@ -37,11 +34,6 @@ const ConfirmationModal = ({
   lockId,
   promotionRecordId,
   baseRate,
-  dayRate,
-  membershipRateEffective,
-  membershipRateOriginal,
-  membershipCapacity,
-  membershipGuestCapacity,
   promotionValue,
   resetSessionInformation,
 }) => {
@@ -49,24 +41,6 @@ const ConfirmationModal = ({
   const user = useSelector((state) => state.user);
   const sessions = useSelector((state) => state.sessions);
   const dispatch = useDispatch();
-
-  let membershipCapacityEffective = user.membership.minutes || 0;
-  let membershipGuestCapacityEffective = user.membership.guestMinutes || 0;
-  let weeklyPassCapacityEffective = user.dayPass?.minutes || 0;
-  for (const s of sessions.activeSessions) {
-    const startMoment = moment.utc(s.timeCreated);
-    const currentMoment = moment();
-    const durationInMinutes = Math.ceil(
-      moment.duration(currentMoment.diff(startMoment)).asMinutes(),
-    );
-    if (s.membershipId != null && s.flags === 'guest') {
-      membershipGuestCapacityEffective -= durationInMinutes;
-    } else if (s.membershipId != null) {
-      membershipCapacityEffective -= durationInMinutes;
-    } else if (s.weeklyPassId != null) {
-      weeklyPassCapacityEffective -= durationInMinutes;
-    }
-  }
 
   const [selected, setSelected] = React.useState(null);
   const [selectionData, setSelectionData] = React.useState([]);
@@ -111,52 +85,7 @@ const ConfirmationModal = ({
     });
     return unsubscribe;
   }, [dispatch, navigation]);
-
-  // Is the current membership valid?
-  const membershipValid = user.membership.status === 'ACTIVE';
-
-  // Does the user have membership hours left?
-  const hasMembership = membershipValid && membershipCapacityEffective > 0;
-
-  // Does the user currently have an active membership session?
-  const membershipSessions = sessions.activeSessions.filter((e) => e.membershipId).length;
-  const hasOneMembershipSession = membershipValid && membershipSessions === 1;
-  const hasTwoOrMoreMembershipSessions = membershipValid && membershipSessions >= 2;
-
-  // Does the user have membership guest hours left?
-  const hasGuestHours = membershipValid && membershipGuestCapacityEffective > 0;
-
-  // Does the user currently have an active guest session?
-  const hasActiveGuestSession =
-    membershipValid &&
-    !(sessions.activeSessions.find((e) => e.membershipId && e.flags === 'guest') == null);
-
-  // Does the user have a day pass?
-  const hasDayPass = user.dayPass?.status === 'ACTIVE';
-
-  // Does the user currently have an active day pass session?
-  const hasActiveDayPassSession =
-    hasDayPass && !(sessions.activeSessions.find((e) => e.weeklyPassId) == null);
-
-  // Takes the hourly, daily, guest, and membership elements and sorts them by priority.
-  const sortEls = (hourlyEl, dailyEl, guestEl, membershipEl) => {
-    const els = [];
-    if (hourlyEl != null) {
-      els.push(hourlyEl);
-    }
-    if (dailyEl != null) {
-      els.push(dailyEl);
-    }
-    if (guestEl != null) {
-      els.push(guestEl);
-    }
-    if (membershipEl != null) {
-      els.push(membershipEl);
-    }
-    els.sort((e1, e2) => e1.priority > e2.priority);
-    return els;
-  };
-
+  
   const setupMembership = () => {
     const hourlyNormal = {
       id: 'HOURLY',
@@ -165,7 +94,6 @@ const ConfirmationModal = ({
       subtextColor: 'black',
       price: `$${baseRate / 100}`,
       priceColor: 'black',
-      priority: 3,
       discountedPrice: promotionValue
         ? `$${Math.round((baseRate * (100 - promotionValue)) / 100) / 100}`
         : null,
@@ -173,185 +101,10 @@ const ConfirmationModal = ({
       image: require('../../../assets/desk.png'),
       disabled: false,
     };
+    let hourly = [hourlyNormal];
 
-    const dayPassNormal = {
-      id: 'DAY_PASS',
-      title: '8 Hour Pass',
-      subtext: 'Valid for one week',
-      subtextColor: 'black',
-      price: `$${dayRate / 100}`,
-      priceColor: 'black',
-      priority: 4,
-      discountedPrice: promotionValue
-        ? `$${Math.round((dayRate * (100 - promotionValue)) / 100) / 100}`
-        : null,
-      priceText: 'does not renew',
-      image: require('../../../assets/ticket.png'),
-      disabled: false,
-    };
-
-    const dayPassDisabled = {
-      id: 'DAY_PASS_DISABLED',
-      title: 'Day Pass',
-      subtext: `Expires on ${getShortDateString(user.dayPass?.expiration)}`,
-      subtextColor: 'black',
-      price: 'IN USE',
-      priority: 6,
-      priceColor: 'gray',
-      discountedPrice: null,
-      priceText: `${(weeklyPassCapacityEffective / 60).toFixed(1)} Hours Left`,
-      image: require('../../../assets/ticket-gray.png'),
-      disabled: true,
-    };
-
-    const dayPassActive = {
-      id: 'DAY_PASS_ACTIVE',
-      title: 'Day Pass',
-      subtext: `Expires on ${getShortDateString(user.dayPass?.expiration)}`,
-      subtextColor: 'black',
-      price: 'NO CHARGE',
-      priceColor: darkGreen,
-      priority: 0,
-      discountedPrice: null,
-      priceText: `${(weeklyPassCapacityEffective / 60).toFixed(1)} Hours Left`,
-      image: require('../../../assets/ticket.png'),
-      disabled: false,
-    };
-
-    const membershipNormal = {
-      id: 'MEMBERSHIP',
-      title: 'Membership',
-      subtextColor: 'black',
-      subtext: '50 or 100 hour options',
-      price: `from $${membershipRateOriginal / 100}`,
-      priceColor: 'black',
-      priority: 5,
-      discountedPrice: null,
-      priceText: 'per month',
-      image: require('../../../assets/membership-transparent.png'),
-      disabled: false,
-    };
-
-    const membershipDisabled = {
-      id: 'MEMBERSHIP_DISABLED',
-      title: 'Membership',
-      subtext: 'Maximum desks reached',
-      subtextColor: 'black',
-      price: 'IN USE',
-      priceColor: 'gray',
-      priority: 7,
-      discountedPrice: null,
-      priceText: `${(membershipCapacityEffective / 60).toFixed(1)} Hours Left`,
-      image: require('../../../assets/membership-gray.png'),
-      disabled: true,
-    };
-
-    const membershipActive = {
-      id: 'MEMBERSHIP_ACTIVE',
-      title: 'Membership',
-      subtext: 'Available for use',
-      subtextColor: 'black',
-      price: 'NO CHARGE',
-      priceColor: darkGreen,
-      priority: 1,
-      discountedPrice: null,
-      priceText: `${(membershipCapacityEffective / 60).toFixed(1)} Hours Left`,
-      image: require('../../../assets/membership-transparent.png'),
-      disabled: false,
-    };
-
-    const guestActive = {
-      id: 'GUEST',
-      title: 'Guest Hours',
-      subtext: 'Available for use',
-      subtextColor: 'black',
-      price: 'NO CHARGE',
-      priceColor: darkGreen,
-      priority: 2,
-      discountedPrice: null,
-      priceText: `${(membershipGuestCapacityEffective / 60).toFixed(1)} Hours Left`,
-      image: require('../../../assets/friends.png'),
-      disabled: false,
-    };
-
-    const guestDisabledNotInUse = {
-      id: 'GUEST_DISABLED_NOT_IN_USE',
-      title: 'Guest Hours',
-      subtext: 'Unlock a desk to use',
-      subtextColor: 'black',
-      price: 'NOT IN USE',
-      priceColor: 'gray',
-      priority: 8,
-      color: 'gray',
-      discountedPrice: null,
-      priceText: `${(membershipGuestCapacityEffective / 60).toFixed(1)} Hours Left`,
-      image: require('../../../assets/friends-gray.png'),
-      disabled: true,
-    };
-
-    const guestDisabledInUse = {
-      id: 'GUEST_DISABLED_IN_USE',
-      title: 'Guest Hours',
-      subtext: 'Already in use',
-      subtextColor: 'black',
-      price: 'IN USE',
-      priceColor: 'gray',
-      priority: 9,
-      color: 'gray',
-      discountedPrice: null,
-      priceText: `${(membershipGuestCapacityEffective / 60).toFixed(1)} Hours Left`,
-      image: require('../../../assets/friends-gray.png'),
-      disabled: true,
-    };
-    // Configure the hourly element.
-    let hourlyEl = hourlyNormal;
-
-    // Configure the daily element.
-    let dailyEl = null;
-    if (hasDayPass && hasActiveDayPassSession) {
-      dailyEl = dayPassDisabled;
-    } else if (hasDayPass && !hasActiveDayPassSession) {
-      dailyEl = dayPassActive;
-    } else {
-      dailyEl = dayPassNormal;
-    }
-
-    // Configure the guest hour element.
-    let guestEl = null;
-    if (hasGuestHours && hasActiveGuestSession) {
-      guestEl = guestDisabledInUse;
-    } else if (hasOneMembershipSession && hasGuestHours && !hasActiveGuestSession) {
-      guestEl = guestActive;
-    } else if (
-      !hasOneMembershipSession &&
-      !hasTwoOrMoreMembershipSessions &&
-      !hasMembership &&
-      hasGuestHours &&
-      !hasActiveGuestSession
-    ) {
-      guestEl = guestActive;
-    } else if (
-      !hasOneMembershipSession &&
-      !hasTwoOrMoreMembershipSessions &&
-      hasGuestHours &&
-      !hasActiveGuestSession
-    ) {
-      guestEl = guestDisabledNotInUse;
-    }
-
-    // Configure the membership element.
-    let membershipEl = null;
-    if (hasMembership && hasTwoOrMoreMembershipSessions) {
-      membershipEl = membershipDisabled;
-    } else if (hasMembership && !hasTwoOrMoreMembershipSessions) {
-      membershipEl = membershipActive;
-    } else {
-      membershipEl = membershipNormal;
-    }
-
-    const els = sortEls(hourlyEl, dailyEl, guestEl, membershipEl);
-    setSelectionData(els);
-    setSelected(els[0].id);
+    setSelectionData(hourly);
+    setSelected(hourlyNormal.id);
   };
 
   const afterSessionCreationSucceeded = () => {
@@ -362,93 +115,21 @@ const ConfirmationModal = ({
   };
 
   const purchaseButtonPressed = () => {
-    if (selected === 'HOURLY') {
-      dispatch(
-        beginHourly(
-          lockId,
-          promotionRecordId,
-          () => {
-            setModalVisibility(false);
-            const sessionInformation = { lockId, baseRate, promotionRecordId, promotionValue };
-            navigation.navigate('PaymentsScreen', { sessionInformation });
-          },
-          () => {
-            afterSessionCreationSucceeded();
-            AppEventsLogger.logPurchase(baseRate / 100, 'USD');
-          },
-        ),
-      );
-    } else if (selected === 'DAY_PASS') {
-      dispatch(
-        beginWeeklyPassWithPurchase(
-          lockId,
-          promotionRecordId,
-          () => {
-            setModalVisibility(false);
-            const sessionInformation = { lockId, baseRate, dayRate, promotionRecordId };
-            navigation.navigate('PaymentsScreen', { sessionInformation });
-          },
-          () => {
-            afterSessionCreationSucceeded();
-            AppEventsLogger.logPurchase(dayRate / 100, 'USD');
-          },
-        ),
-      );
-    } else if (selected === 'DAY_PASS_ACTIVE') {
-      Alert.alert(
-        'Pass Hours Low',
-        'If you stay longer than the number of hours you have left, you agree to be charged an additional $5 for every extra hour.',
-        [
-          { text: 'Cancel', style: 'cancel' },
-          {
-            text: 'Confirm',
-            onPress: () => {
-              dispatch(beginWeeklyPassWithoutPurchase(lockId, afterSessionCreationSucceeded));
-            },
-          },
-        ],
-      );
-    } else if (selected === 'MEMBERSHIP') {
-      navigation.navigate('MembershipScreen');
-    } else if (selected === 'MEMBERSHIP_ACTIVE') {
-      // Promprt alert if less than 10 hours in total.
-      if (membershipCapacityEffective + membershipGuestCapacityEffective < 600) {
-        Alert.alert(
-          'Membership Hours Low',
-          'If you stay longer than the number of hours you have left, you agree to be charged an additional $3 for every extra hour.',
-          [
-            { text: 'Cancel', style: 'cancel' },
-            {
-              text: 'Confirm',
-              onPress: () => {
-                dispatch(beginMembership(lockId, afterSessionCreationSucceeded));
-              },
-            },
-          ],
-        );
-      } else {
-        dispatch(beginMembership(lockId, afterSessionCreationSucceeded));
-      }
-    } else if (selected === 'GUEST') {
-      // Promprt alert if less than 10 hours in total.
-      if (membershipCapacityEffective + membershipGuestCapacityEffective < 600) {
-        Alert.alert(
-          'Membership Hours Low',
-          'If you stay longer than the number of hours you have left, you agree to be charged an additional $3 for every extra hour.',
-          [
-            { text: 'Cancel', style: 'cancel' },
-            {
-              text: 'Confirm',
-              onPress: () => {
-                dispatch(beginMembership(lockId, afterSessionCreationSucceeded, 'guest'));
-              },
-            },
-          ],
-        );
-      } else {
-        dispatch(beginMembership(lockId, afterSessionCreationSucceeded, 'guest'));
-      }
-    }
+    dispatch(
+      beginHourly(
+        lockId,
+        promotionRecordId,
+        () => {
+          setModalVisibility(false);
+          const sessionInformation = { lockId, baseRate, promotionRecordId, promotionValue };
+          navigation.navigate('PaymentsScreen', { sessionInformation });
+        },
+        () => {
+          afterSessionCreationSucceeded();
+          AppEventsLogger.logPurchase(baseRate / 100, 'USD');
+        },
+      ),
+    );
   };
 
   const initialView = (
@@ -484,7 +165,7 @@ const ConfirmationModal = ({
       <CustomText style={styles.errorText}>{sessions.sessionError}</CustomText>
       <Button
         text={`Unlock Desk ${lockId}`}
-        color={eggshell}
+        color={black}
         backgroundColor={darkGreen}
         showActivityIndicator={sessions.isAddingSession && modalVisibility}
         disabled={sessions.isAddingSession && modalVisibility}

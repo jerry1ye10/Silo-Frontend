@@ -40,8 +40,8 @@ const borderLength = 50;
 const borderThickness = 3;
 const barThickness = 3;
 const borderRadius = 20;
-const squareColor = 'green';
-const scanBarColor = 'red';
+const squareColor = '#7a593f';
+const scanBarColor = '#ebdfcf';
 
 const styles = StyleSheet.create({
   container: {

@@ -11,8 +11,7 @@ import QRScanner from '../../components/qr-scanner';
 import CameraPermissionModal from '../../components/camera-permission-modal';
 import ScanOverlay from '../../components/scan-overlay';
 import minotaur from '../../api/minotaur';
-import { beginHourly, beginWeeklyPassWithPurchase } from '../../redux/actions/session-actions';
-import { getMembership, getWeeklyPass } from '../../redux/actions/user-actions';
+import { beginHourly } from '../../redux/actions/session-actions';
 import { fireBeginSessionNotification } from '../../utilities/notifications';
 
 const ScanScreen = ({ route }) => {
@@ -24,7 +23,7 @@ const ScanScreen = ({ route }) => {
   const [shouldReactivate, setShouldReactivate] = React.useState(false);
 
   // Controls the visibility of the confirmation modal.
-  const [confModalVisibility, setConfModalVisibility] = React.useState(false);
+  const [confModalVisibility, setConfModalVisibility] = React.useState(true); //TODO set to false, true for debug
 
   // Determines whether the screen is currently in focus to disable QR
   // scanner from activating in the background. This state cannot be avoided
@@ -46,29 +45,14 @@ const ScanScreen = ({ route }) => {
   const [lockId, setLockId] = React.useState(null);
   const [rates, setRates] = React.useState({
     baseRate: null,
-    dayRate: null,
     promotion: null,
-    membershipRateEffective: null,
-    membershipRateOriginal: null,
-    membershipActive: true,
-    membershipCapacity: null,
-    membershipGuestCapacity: null,
   });
 
   // Grabs session information if was redirected from the payments page.
   const sessionInformation = route.params ? route.params.sessionInformation : null;
   const prevLockId = sessionInformation ? sessionInformation.lockId : null;
   const prevBaseRate = sessionInformation ? sessionInformation.baseRate : null;
-  const prevDayRate = sessionInformation ? sessionInformation.dayRate : null;
-  const prevMembershipRateEffective = sessionInformation
-    ? sessionInformation.membershipRateEffective
-    : null;
-  const prevMembershipCapacity = sessionInformation
-    ? sessionInformation.prevMembershipCapacity
-    : null;
-  const prevMembershipGuestCapacity = sessionInformation
-    ? sessionInformation.prevMembershipGuestCapacity
-    : null;
+
   const prevPromotionRecordId = sessionInformation ? sessionInformation.promotionRecordId : null;
   const prevPromotionalValue = sessionInformation ? sessionInformation.promotionalValue : null;
 
@@ -91,31 +75,12 @@ const ScanScreen = ({ route }) => {
     }
   };
 
-  React.useEffect(() => {
-    dispatch(getMembership());
-    dispatch(getWeeklyPass());
-  }, [dispatch]);
 
   React.useEffect(() => {
     // Refreshes sessions if app was moved to the background.
-    const appChangeListener = AppState.addListener('appStateDidChange', (e) => {
-      const { app_state: appState } = e;
-      if (appState === 'active') {
-        dispatch(getMembership());
-        dispatch(getWeeklyPass());
-      }
-    });
-    return () => {
-      appChangeListener.remove();
-    };
   }, [dispatch]);
 
   React.useEffect(() => {
-    const unsubscribe = navigation.addListener('focus', () => {
-      dispatch(getMembership());
-      dispatch(getWeeklyPass());
-    });
-    return unsubscribe;
   }, [dispatch, navigation]);
 
   React.useEffect(() => {
@@ -134,10 +99,8 @@ const ScanScreen = ({ route }) => {
 
     if (sessionInformation) {
       setConfModalVisibility(true);
-      if (!prevDayRate && !prevMembershipRateEffective) {
+      if (!prevDayRate) {
         dispatch(beginHourly(prevLockId, prevPromotionRecordId, null, next));
-      } else if (!prevMembershipRateEffective) {
-        dispatch(beginWeeklyPassWithPurchase(prevLockId, prevPromotionRecordId, null, next));
       }
     }
   }, [sessionInformation]);
@@ -192,11 +155,6 @@ const ScanScreen = ({ route }) => {
       const promotions = promotionsReponse.data;
       setRates({
         baseRate: ratesRef.base_rate,
-        dayRate: ratesRef.day_rate,
-        membershipRateEffective: ratesRef.membership_rate_effective,
-        membershipRateOriginal: ratesRef.membership_rate_original,
-        membershipCapacity: ratesRef.membership_capacity,
-        membershipGuestCapacity: ratesRef.membership_guest_capacity,
         promotion: promotions.length === 0 ? null : promotions[0],
       });
     } catch (err) {
@@ -232,10 +190,7 @@ const ScanScreen = ({ route }) => {
 
   React.useEffect(() => {
     if (
-      rates.baseRate &&
-      rates.dayRate &&
-      rates.membershipRateEffective &&
-      rates.membershipRateOriginal
+      rates.baseRate
     ) {
       setConfModalVisibility(true);
     }
@@ -266,11 +221,6 @@ const ScanScreen = ({ route }) => {
         lockId={prevLockId || lockId}
         promotionRecordId={prevPromotionRecordId || (rates.promotion ? rates.promotion.id : null)}
         baseRate={prevBaseRate || rates.baseRate}
-        dayRate={prevDayRate || rates.dayRate}
-        membershipRateEffective={prevMembershipRateEffective || rates.membershipRateEffective}
-        membershipRateOriginal={rates.membershipRateOriginal}
-        membershipCapacity={prevMembershipCapacity || rates.membershipCapacity}
-        membershipGuestCapacity={prevMembershipGuestCapacity || rates.membershipGuestCapacity}
         promotionValue={
           prevPromotionalValue || (rates.promotion ? rates.promotion.promotionValue : null)
         }

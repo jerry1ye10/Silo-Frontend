@@ -45,24 +45,24 @@ const nStyles = StyleSheet.create({
 
 const SideMenu = () => {
   const data = [
-    {
+    /*{
       title: 'Membership',
       icon: <Icon name="badge-account-horizontal" size={30} color={black} />,
       screen: 'MembershipScreen',
       color: black,
-    },
+    },*/
     {
-      title: 'Active Desks',
+      title: 'Active Silos',
       icon: <Icon name="desk-lamp" size={30} color={black} />,
       screen: 'ActiveScreen',
       color: black,
     },
-    {
+    /*{
       title: 'Private Room',
       icon: <Icon name="sofa" size={30} color={black} />,
       screen: 'PrivateRoomScreen',
       color: black,
-    },
+    },*/
     {
       title: 'Account',
       icon: <Icon name="account" size={30} color={black} />,
@@ -89,9 +89,9 @@ const SideMenu = () => {
     },
     {
       title: 'Get a Free Visit',
-      icon: <Icon name="gift" size={30} color={darkGreen} />,
+      icon: <Icon name="gift" size={30} color={black} />,
       screen: 'RefferalScreen',
-      color: darkGreen,
+      color: black,
     },
   ];
 
