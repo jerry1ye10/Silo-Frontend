@@ -6,7 +6,7 @@ import minotaur from '../../../api/minotaur';
 import Button from '../../../components/button';
 import CustomText from '../../../components/custom-text';
 import CustomTextInput from '../../../components/custom-text-input';
-import { black, coral, eggshell } from '../../../utilities/colors';
+import { brown, cream, eggshell } from '../../../utilities/colors';
 import { cleanPhoneNumber, formatPhoneNumber } from '../../../utilities/strings';
 
 const PromptMobileNumberScreen = () => {
@@ -66,7 +66,7 @@ const PromptMobileNumberScreen = () => {
         <Button
           text="Continue"
           color={eggshell}
-          backgroundColor={coral}
+          backgroundColor={cream}
           onPress={proceed}
           disabled={phoneNumber.length !== 10 || submitting}
           disabledColor="black"
@@ -81,7 +81,7 @@ const PromptMobileNumberScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: black,
+    backgroundColor: brown,
   },
   header: {
     textAlign: 'center',
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
   textInputView: {
     width: '100%',
     borderWidth: 1,
-    borderColor: black,
+    borderColor: brown,
     borderBottomColor: eggshell,
     paddingVertical: 5,
     marginTop: 10,

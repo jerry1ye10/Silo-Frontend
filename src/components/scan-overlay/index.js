@@ -12,7 +12,7 @@ import { useNavigation } from '@react-navigation/native';
 import { useSelector, useDispatch } from 'react-redux';
 
 import CustomText from '../../components/custom-text';
-import { black, coral, darkGreen, eggshell } from '../../utilities/colors';
+import { brown, cream, darkGreen, eggshell } from '../../utilities/colors';
 import { addCardError } from '../../redux/actions/user-actions';
 import { getActiveSessions } from '../../redux/actions/session-actions';
 import RectangleWithCornerBorders from '../rectangle-with-corner-borders';
@@ -120,7 +120,7 @@ const ScanOverlay = ({ headerText }) => {
     numSessions !== 0
       ? { ...styles.banner, backgroundColor: darkGreen }
       : user.dayPass?.status === 'ACTIVE'
-      ? { ...styles.banner, backgroundColor: coral }
+      ? { ...styles.banner, backgroundColor: cream }
       : { ...styles.banner };
   const bannerText =
     numSessions === 1
@@ -130,7 +130,7 @@ const ScanOverlay = ({ headerText }) => {
       : user.dayPass?.status === 'ACTIVE'
       ? 'You Have a Pass Available'
       : null;
-  const buttonTextColor = justUnlocked ? darkGreen : black;
+  const buttonTextColor = justUnlocked ? darkGreen : brown;
   const buttonContent = justUnlocked ? (
     <CustomText style={{ ...styles.buttonSubText, color: buttonTextColor }}>Success!</CustomText>
   ) : isUnlocking ? (
@@ -199,7 +199,7 @@ const styles = StyleSheet.create({
     height: 50,
   },
   buttonSubText: {
-    color: black,
+    color: brown,
     fontWeight: 'bold',
   },
   footer: {

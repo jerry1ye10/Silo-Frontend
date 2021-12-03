@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-import { black, coral, eggshell } from '../../../utilities/colors';
+import { brown, cream, eggshell } from '../../../utilities/colors';
 import Button from '../../../components/button';
 import CustomText from '../../../components/custom-text';
 
@@ -14,7 +14,7 @@ const ChangePasswordConfirmationScreen = () => {
       <Button
         text="OK"
         color={eggshell}
-        backgroundColor={coral}
+        backgroundColor={cream}
         onPress={() => {
           navigation.navigate('LandingScreen');
           navigation.navigate('LoginScreen');
@@ -27,7 +27,7 @@ const ChangePasswordConfirmationScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: black,
+    backgroundColor: brown,
     paddingVertical: 20,
     paddingHorizontal: 40,
   },

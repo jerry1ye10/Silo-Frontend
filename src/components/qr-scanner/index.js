@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
 import QRCodeScanner from 'react-native-qrcode-scanner';
-import {black, co} from '../../utilities/colors/';
+import {brown, co} from '../../utilities/colors/';
 
 import ScanOverlay from '../scan-overlay';
 

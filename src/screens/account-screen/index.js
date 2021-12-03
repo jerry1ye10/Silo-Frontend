@@ -4,7 +4,7 @@ import { useNavigation } from '@react-navigation/native';
 import { useSelector, useDispatch } from 'react-redux';
 
 import CustomText from '../../components/custom-text';
-import { black, coral, darkGreen, eggshell } from '../../utilities/colors';
+import { brown, cream, darkGreen, eggshell } from '../../utilities/colors';
 import Button from '../../components/button';
 import InputCard from '../../components/input-card';
 
@@ -62,8 +62,8 @@ const AccountScreen = () => {
           <CustomText style={styles.errorMessage}>{user.userError}</CustomText>
           <Button
             text="Log Out"
-            color={eggshell}
-            backgroundColor={coral}
+            color={brown}
+            backgroundColor={cream}
             onPress={() => {
               dispatch(logOut());
               navigation.navigate('LandingScreen');
@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   titleText: {
-    color: black,
+    color: brown,
     fontWeight: 'bold',
     fontSize: 20,
   },

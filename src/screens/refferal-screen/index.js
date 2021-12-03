@@ -4,7 +4,7 @@ import { View, StyleSheet, Share, Image } from 'react-native';
 
 import CustomText from '../../components/custom-text';
 import Button from '../../components/button';
-import { black, coral, darkGreen, eggshell } from '../../utilities/colors';
+import { brown, cream, darkGreen, eggshell } from '../../utilities/colors';
 
 const RefferalScreen = () => {
   const user = useSelector((state) => state.user);
@@ -34,8 +34,8 @@ const RefferalScreen = () => {
             <CustomText style={styles.subheader}>SHARE YOUR LINK:</CustomText>
             <Button
               text={refferalLink}
-              color={black}
-              backgroundColor={coral}
+              color={brown}
+              backgroundColor={cream}
               onPress={onPress}
             />
           </View>
@@ -80,20 +80,20 @@ const styles = StyleSheet.create({
     aspectRatio: 1,
   },
   header: {
-    color: black,
+    color: brown,
     fontWeight: 'bold',
     fontSize: 30,
   },
   description: {
     marginTop: 20,
-    color: black,
+    color: brown,
     fontSize: 20,
   },
   subheader: {
     fontWeight: 'bold',
     fontSize: 20,
     marginBottom: 10,
-    color: black,
+    color: brown,
   },
 });
 

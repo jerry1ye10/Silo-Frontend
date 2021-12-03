@@ -9,7 +9,7 @@ import minotaur from '../../api/minotaur';
 import Button from '../../components/button';
 import CustomText from '../../components/custom-text';
 import CustomTextInput from '../../components/custom-text-input';
-import { black, darkGreen, eggshell, lightGreen } from '../../utilities/colors';
+import { brown, darkGreen, eggshell, lightGreen } from '../../utilities/colors';
 import { addUser } from '../../redux/actions/user-actions';
 import { formatPhoneNumber } from '../../utilities/strings';
 
@@ -101,7 +101,7 @@ const VerificationScreen = ({ route }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: black,
+    backgroundColor: brown,
     paddingHorizontal: 30,
     paddingBottom: 10,
   },

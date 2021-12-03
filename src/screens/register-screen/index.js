@@ -9,7 +9,7 @@ import CustomText from '../../components/custom-text';
 import CustomTextInput from '../../components/custom-text-input';
 import Button from '../../components/button';
 import { isEmailValid } from '../../utilities/strings';
-import { black, darkGreen, eggshell, lightGreen } from '../../utilities/colors';
+import { brown, darkGreen, eggshell, lightGreen } from '../../utilities/colors';
 
 const RegisterScreen = ({ route }) => {
   const navigation = useNavigation();
@@ -164,7 +164,7 @@ const RegisterScreen = ({ route }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: black,
+    backgroundColor: brown,
     paddingBottom: 10,
     paddingHorizontal: 30,
   },

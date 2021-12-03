@@ -6,7 +6,6 @@ import {
   ADD_SESSION_ADDING,
   ADD_SESSION_ERROR,
   ADD_CARD_ERROR,
-  ADD_DAY_PASS,
 } from '../types';
 import configureMockStore from 'redux-mock-store';
 
@@ -333,100 +332,5 @@ describe('SessionActions', () => {
     expect(noPaymentAction).toHaveBeenCalled();
     expect(store.getActions()).toEqual(expectedActions);
   });
-
-  it('purchaseDayPassAndBeginSession no payment', () => {
-    const store = mockStore({});
-    const spy = jest.spyOn(SessionActions, 'beginSession');
-    const noPaymentAction = jest.fn();
-    const next = jest.fn();
-    const expectedActions = [
-      {type: ADD_CARD_ERROR, payload: 'Please add a payment method'},
-    ];
-    return store
-      .dispatch(
-        SessionActions.purchaseDayPassAndBeginSession(
-          {isAdmin: false, cards: []},
-          4,
-          499,
-          1999,
-          noPaymentAction,
-          next,
-        ),
-      )
-      .then(() => {
-        expect(noPaymentAction).toHaveBeenCalled();
-        expect(next).not.toHaveBeenCalled();
-        expect(spy).not.toHaveBeenCalled();
-        expect(store.getActions()).toEqual(expectedActions);
-        spy.mockRestore();
-      });
-  });
-
-  it('purchaseDayPassAndBeginSession success', () => {
-    const store = mockStore({});
-    const purchaseDayPassSpy = jest.spyOn(UserActions, 'purchaseDayPass');
-    purchaseDayPassSpy.mockReturnValue({dayPass: 'data'});
-    const beginSessionSpy = jest.spyOn(SessionActions, 'beginSession');
-    beginSessionSpy.mockReturnValue({session: 'placeholder'});
-    const noPaymentAction = jest.fn();
-    const next = jest.fn();
-    const expectedActions = [
-      {type: ADD_SESSION_ADDING},
-      {type: ADD_DAY_PASS, payload: {dayPass: 'data'}},
-      {type: ADD_SESSION, payload: {session: 'placeholder'}},
-    ];
-    return store
-      .dispatch(
-        SessionActions.purchaseDayPassAndBeginSession(
-          {isAdmin: false, cards: [{isDefault: true}]},
-          4,
-          499,
-          1999,
-          noPaymentAction,
-          next,
-        ),
-      )
-      .then(() => {
-        expect(noPaymentAction).not.toHaveBeenCalled();
-        expect(next).toHaveBeenCalled();
-        expect(purchaseDayPassSpy).toHaveBeenCalled();
-        expect(beginSessionSpy).toHaveBeenCalled();
-        expect(store.getActions()).toEqual(expectedActions);
-        purchaseDayPassSpy.mockRestore();
-        beginSessionSpy.mockRestore();
-      });
-  });
-
-  it('purchaseDayPassAndBeginSession failure', () => {
-    const store = mockStore({});
-    const spy = jest.spyOn(UserActions, 'purchaseDayPass');
-    spy.mockRejectedValue();
-    const noPaymentAction = jest.fn();
-    const next = jest.fn();
-    const expectedActions = [
-      {type: ADD_SESSION_ADDING},
-      {
-        type: ADD_SESSION_ERROR,
-        payload: 'Could not purchase day pass or unlock lock',
-      },
-    ];
-    return store
-      .dispatch(
-        SessionActions.purchaseDayPassAndBeginSession(
-          {isAdmin: false, cards: [{isDefault: true}]},
-          4,
-          499,
-          1999,
-          noPaymentAction,
-          next,
-        ),
-      )
-      .then(() => {
-        expect(noPaymentAction).not.toHaveBeenCalled();
-        expect(next).not.toHaveBeenCalled();
-        expect(spy).toHaveBeenCalled();
-        expect(store.getActions()).toEqual(expectedActions);
-        spy.mockRestore();
-      });
-  });
+  
 });

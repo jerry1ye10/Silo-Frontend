@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useNavigation } from '@react-navigation/native';
 
 import CustomText from '../../components/custom-text';
-import { black, darkGreen, eggshell } from '../../utilities/colors';
+import { brown, eggshell } from '../../utilities/colors';
 import { addCardError, getCards } from '../../redux/actions/user-actions';
 import CardList from '../../components/card-list';
 
@@ -39,7 +39,7 @@ const PaymentsScreen = ({ route }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: darkGreen,
+    backgroundColor: brown,
     padding: 20,
   },
   topView: {
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
   titleText: {
     fontWeight: 'bold',
     fontSize: 20,
-    color: black,
+    color: brown,
   },
 });
 

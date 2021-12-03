@@ -4,7 +4,7 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { useSelector, useDispatch } from 'react-redux';
 
 import CustomText from '../../components/custom-text';
-import { coral, darkGreen, eggshell, lightGreen } from '../../utilities/colors';
+import { cream, darkGreen, eggshell, lightGreen } from '../../utilities/colors';
 import BottomModalBase from '../bottom-modal-base';
 import Button from '../button';
 import { finishSession } from '../../redux/actions/session-actions';
@@ -68,7 +68,7 @@ const RenewWeeklyPassModal = ({
           <Button
             text="Add Time"
             color={eggshell}
-            backgroundColor={coral}
+            backgroundColor={cream}
             marginBottom={10}
             onPress={async () => {
               setModalVisibility(false);

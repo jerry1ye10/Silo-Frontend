@@ -6,7 +6,7 @@ import stripe from 'tipsi-stripe';
 
 import CustomText from '../custom-text';
 import { updatePaymentProfile } from '../../redux/actions/user-actions';
-import { coral, eggshell } from '../../utilities/colors';
+import { cream, eggshell,brown } from '../../utilities/colors';
 import Button from '../../components/button';
 import CardCard from '../card-card';
 import LoadingCardCard from '../loading-card-card';
@@ -40,8 +40,8 @@ const CardList = ({ sessionInformation }) => {
       <CustomText style={styles.errorMessage}>{user.cardError}</CustomText>
       <Button
         text="Add Payment Method"
-        color={eggshell}
-        backgroundColor={coral}
+        color={brown}
+        backgroundColor={cream}
         onPress={async () => {
           try {
             const paymentToken = await stripe.paymentRequestWithCardForm({});

@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useNavigation } from '@react-navigation/native';
 
 import CustomText from '../../components/custom-text';
-import { coral, darkGreen, eggshell, lightGreen } from '../../utilities/colors';
+import { cream, darkGreen, eggshell, lightGreen } from '../../utilities/colors';
 import BottomModalBase from '../bottom-modal-base';
 import Button from '../button';
 import { finishSession } from '../../redux/actions/session-actions';
@@ -70,7 +70,7 @@ const RenewMembershipModal = ({
           <Button
             text="Add Time"
             color={eggshell}
-            backgroundColor={coral}
+            backgroundColor={cream}
             marginBottom={10}
             onPress={async () => {
               navigation.navigate('MembershipScreen');

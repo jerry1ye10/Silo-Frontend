@@ -7,7 +7,7 @@ import minotaur from '../../../api/minotaur';
 import Button from '../../../components/button';
 import CustomText from '../../../components/custom-text';
 import CustomTextInput from '../../../components/custom-text-input';
-import { black, coral, eggshell } from '../../../utilities/colors';
+import { brown, cream, eggshell } from '../../../utilities/colors';
 import { formatPhoneNumber } from '../../../utilities/strings';
 
 const ForgotPasswordVerificationScreen = ({ route }) => {
@@ -67,7 +67,7 @@ const ForgotPasswordVerificationScreen = ({ route }) => {
       <Button
         text="Verify"
         color={eggshell}
-        backgroundColor={coral}
+        backgroundColor={cream}
         onPress={proceed}
         showActivityIndicator={submitting}
         disabled={submitting}
@@ -79,7 +79,7 @@ const ForgotPasswordVerificationScreen = ({ route }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: black,
+    backgroundColor: brown,
     paddingHorizontal: 30,
     paddingBottom: 10,
   },

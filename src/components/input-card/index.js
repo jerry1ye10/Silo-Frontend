@@ -10,7 +10,7 @@ import {
 
 import CustomText from '../custom-text';
 import CustomTextInput from '../custom-text-input';
-import { black, darkGreen, eggshell } from '../../utilities/colors';
+import { brown, darkGreen, eggshell } from '../../utilities/colors';
 
 const InputCard = ({ inputInfo }) => {
   const [didEditText, setDidEditText] = React.useState(false);
@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
   },
   titleText: {
     flex: 1,
-    color: black,
+    color: brown,
     marginVertical: 5,
     fontSize: 16,
   },
@@ -125,7 +125,7 @@ const styles = StyleSheet.create({
   },
   textInput: {
     flex: 1,
-    color: black,
+    color: brown,
     paddingHorizontal: 0,
   },
   button: {

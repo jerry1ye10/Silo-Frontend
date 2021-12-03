@@ -3,7 +3,7 @@ import { StyleSheet, View } from 'react-native';
 import Modal from 'react-native-modal';
 import { SafeAreaView } from 'react-navigation';
 
-import { eggshell } from '../../utilities/colors';
+import { brown } from '../../utilities/colors';
 
 const BottomModalBase = ({children,
   modalVisibility,
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
   },
   modalView: {
     width: '100%',
-    backgroundColor: eggshell,
+    backgroundColor: brown,
     alignItems: 'center',
     overflow: 'hidden',
     borderTopLeftRadius: 25,

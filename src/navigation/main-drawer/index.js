@@ -23,9 +23,8 @@ import RewardsScreen from '../../screens/rewards-screen';
 import ScanScreen from '../../screens/scan-screen';
 
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import OccupancyIndicator from '../../components/occupancy-indicator';
 import SideMenu from '../../components/side-menu';
-import { black, eggshell } from '../../utilities/colors';
+import { brown, eggshell } from '../../utilities/colors';
 
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
@@ -45,7 +44,7 @@ const MainStack = () => {
           paddingRight: 20,
         },
         headerStyle: {
-          backgroundColor: black,
+          backgroundColor: brown,
           shadowColor: 'transparent',
         },
         headerTintColor: eggshell,
@@ -86,11 +85,10 @@ const MainStack = () => {
                 style={styles.button}
                 size={35}
                 color={eggshell}
-                backgroundColor={black}
+                backgroundColor={brown}
               />
             </TouchableOpacity>
           ),
-          headerRight: () => <OccupancyIndicator />,
         }}
       />
     </Stack.Navigator>

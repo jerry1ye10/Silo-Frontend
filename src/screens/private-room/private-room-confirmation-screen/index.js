@@ -7,7 +7,7 @@ import moment from 'moment';
 import minotaur from '../../../api/minotaur';
 import CustomText from '../../../components/custom-text';
 import Button from '../../../components/button';
-import { coral, darkGreen, eggshell } from '../../../utilities/colors';
+import { cream, darkGreen, eggshell } from '../../../utilities/colors';
 import { getMembership } from '../../../redux/actions/user-actions';
 import { ADD_CARD_ERROR } from '../../../redux/actions/types';
 
@@ -113,7 +113,7 @@ const PrivateRoomConfirmationScreen = ({ route }) => {
             <CustomText style={styles.error}>{error}</CustomText>
             <Button
               text="Proceed"
-              backgroundColor={coral}
+              backgroundColor={cream}
               color={eggshell}
               showActivityIndicator={booking}
               onPress={makeBooking}

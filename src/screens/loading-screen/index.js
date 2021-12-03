@@ -1,13 +1,13 @@
 import React from 'react';
 import { View, Image, StyleSheet } from 'react-native';
-import { black } from '../../utilities/colors';
+import { brown } from '../../utilities/colors';
 
 const LoadingScreen = () => {
   return (
     <View style={styles.container}>
       <Image
         style={styles.image}
-        source={require('../../../assets/app-logo-with-text-transparent.png')}
+        source={require('../../../assets/app-logo.png')}
       />
     </View>
   );
@@ -16,7 +16,7 @@ const LoadingScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: black,
+    backgroundColor: brown,
     alignItems: 'center',
     justifyContent: 'center',
   },

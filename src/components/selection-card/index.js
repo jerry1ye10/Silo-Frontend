@@ -2,7 +2,7 @@ import React from 'react';
 import { Image, StyleSheet, TouchableOpacity, View } from 'react-native';
 
 import CustomText from '../../components/custom-text';
-import { darkGreen } from '../../utilities/colors';
+import { brown, cream } from '../../utilities/colors';
 
 const SelectionCard = ({
   id,
@@ -20,7 +20,7 @@ const SelectionCard = ({
 }) => {
   const buttonStyle =
     id === selected
-      ? { ...styles.button, borderColor: darkGreen }
+      ? { ...styles.button, borderColor: cream }
       : { ...styles.button, borderColor: 'rgba(0, 0, 0, 0)' };
   const subTextStyle = {
     color: subtextColor,
@@ -67,11 +67,13 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     paddingHorizontal: 10,
     paddingVertical: 10,
+    backgroundColor: cream,
   },
   title: {
     fontWeight: 'bold',
     fontSize: 16,
     marginBottom: 3,
+    color: brown,
   },
   descriptionView: {
     flexDirection: 'row',
@@ -96,6 +98,7 @@ const styles = StyleSheet.create({
   },
   priceTextContainer: {
     textAlign: 'right',
+    color: brown,
   },
   price: {
     fontSize: 16,

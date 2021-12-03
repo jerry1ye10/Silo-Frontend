@@ -7,7 +7,7 @@ import CustomText from '../custom-text';
 import moment from 'moment';
 
 import Button from '../../components/button';
-import { black, coral, darkGreen, eggshell } from '../../utilities/colors';
+import { brown, cream, darkGreen, eggshell } from '../../utilities/colors';
 import { fireEndSessionNotification } from '../../utilities/notifications';
 import { endSession, finishSession } from '../../redux/actions/session-actions';
 import { socket } from '../../utilities/socket-connection';
@@ -118,7 +118,7 @@ export const ActiveSpaceCard = ({
         </View>
       </View>
       <View style={styles.bottomContent}>
-        <Button text="Lock Desk" color={eggshell} backgroundColor={coral} onPress={onEndPressed} />
+        <Button text="Lock Desk" color={eggshell} backgroundColor={cream} onPress={onEndPressed} />
       </View>
     </View>
   );
@@ -152,11 +152,11 @@ const styles = StyleSheet.create({
   topLeftText: {
     fontWeight: 'bold',
     fontSize: 16,
-    color: black,
+    color: brown,
     marginBottom: 5,
   },
   bottomLeftText: {
-    color: black,
+    color: brown,
   },
   bottomContent: {
     height: 50,

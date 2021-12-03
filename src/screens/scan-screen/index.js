@@ -11,7 +11,7 @@ import QRScanner from '../../components/qr-scanner';
 import CameraPermissionModal from '../../components/camera-permission-modal';
 import ScanOverlay from '../../components/scan-overlay';
 import minotaur from '../../api/minotaur';
-import { beginHourly } from '../../redux/actions/session-actions';
+import { beginSession } from '../../redux/actions/session-actions';
 import { fireBeginSessionNotification } from '../../utilities/notifications';
 
 const ScanScreen = ({ route }) => {
@@ -100,7 +100,7 @@ const ScanScreen = ({ route }) => {
     if (sessionInformation) {
       setConfModalVisibility(true);
       if (!prevDayRate) {
-        dispatch(beginHourly(prevLockId, prevPromotionRecordId, null, next));
+        dispatch(beginSession(prevLockId, prevPromotionRecordId, null, next));
       }
     }
   }, [sessionInformation]);
@@ -245,7 +245,7 @@ const enabledStyles = StyleSheet.create({
 
 const disabledStyles = StyleSheet.create({
   container: {
-    backgroundColor: 'black',
+    backgroundColor: 'brown',
     flex: 1,
   },
 });

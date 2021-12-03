@@ -4,7 +4,7 @@ import { useNavigation } from '@react-navigation/native';
 
 import CustomText from '../../../components/custom-text';
 import Button from '../../../components/button';
-import { coral, darkGreen, eggshell, lightGreen } from '../../../utilities/colors';
+import { cream, darkGreen, eggshell, lightGreen } from '../../../utilities/colors';
 
 const MembershipDecisionScreen = () => {
   const navigation = useNavigation();
@@ -14,7 +14,7 @@ const MembershipDecisionScreen = () => {
       <Button
         text="Add More Time"
         color={eggshell}
-        backgroundColor={coral}
+        backgroundColor={cream}
         onPress={() => {
           navigation.navigate('AddTimeScreen');
         }}

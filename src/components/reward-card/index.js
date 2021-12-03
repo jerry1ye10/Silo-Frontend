@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 
 import CustomText from '../../components/custom-text';
-import { coral, eggshell } from '../../utilities/colors';
+import { cream, eggshell } from '../../utilities/colors';
 import HoursProgressTracker from '../hours-progress-tracker';
 import { getShortDateFromSqlDate } from '../../utilities/strings';
 
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
   titleView: {
     padding: 20,
     alignItems: 'flex-end',
-    backgroundColor: coral,
+    backgroundColor: cream,
   },
   promotionView: {
     flex: 1,

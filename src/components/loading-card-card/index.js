@@ -4,7 +4,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import { useSelector } from 'react-redux';
 
 import CustomText from '../custom-text';
-import { black, eggshell } from '../../utilities/colors';
+import { brown, eggshell } from '../../utilities/colors';
 
 const LoadingCardCard = ({ isActive }) => {
   const user = useSelector((state) => state.user);
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     backgroundColor: eggshell,
   },
   text: {
-    color: black,
+    color: brown,
   },
   bottomBorder: {
     borderColor: 'lightgray',

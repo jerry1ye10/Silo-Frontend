@@ -6,7 +6,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import CustomText from '../../components/custom-text';
 import CustomTextInput from '../../components/custom-text-input';
 import Button from '../../components/button';
-import { black, coral, darkGreen, eggshell } from '../../utilities/colors';
+import { brown, cream, darkGreen, eggshell } from '../../utilities/colors';
 import RewardCard from '../../components/reward-card';
 import {
   getRelevantPromotions,
@@ -75,8 +75,8 @@ const RewardsScreen = () => {
         <CustomText style={styles.codeErrorMessage}>{promotions.promotionError}</CustomText>
         <Button
           text="Submit"
-          color={eggshell}
-          backgroundColor={coral}
+          color={brown}
+          backgroundColor={cream}
           onPress={() => {
             dispatch(checkPromotion(user.token, textInput));
           }}
@@ -90,7 +90,7 @@ const RewardsScreen = () => {
 const styles = StyleSheet.create({
   textInput: {
     paddingVertical: 10,
-    color: black,
+    color: brown,
   },
   container: {
     flex: 1,
@@ -129,7 +129,7 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   titleText: {
-    color: black,
+    color: brown,
     fontWeight: 'bold',
     fontSize: 20,
   },

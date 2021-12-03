@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, TouchableOpacity, View } from 'react-native';
 
 import CustomText from '../../../components/custom-text';
-import { black, coral, eggshell } from '../../../utilities/colors';
+import { brown, cream, eggshell } from '../../../utilities/colors';
 
 const AddTimeCard = ({ membershipInfo, onPress, selected = false }) => {
   const { name, capacity: minutes, roomCapacity: roomCredits, price } = membershipInfo;
@@ -49,16 +49,16 @@ const styles = StyleSheet.create({
     elevation: 10,
   },
   headerText: {
-    color: black,
+    color: brown,
     fontWeight: 'bold',
     fontSize: 20,
     marginBottom: 5,
   },
   offeringText: {
-    color: black,
+    color: brown,
   },
   priceText: {
-    color: coral,
+    color: cream,
     fontWeight: 'bold',
     fontSize: 22,
   },

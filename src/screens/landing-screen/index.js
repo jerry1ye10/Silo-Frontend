@@ -6,8 +6,7 @@ import messaging from '@react-native-firebase/messaging';
 import SplashScreen from 'react-native-splash-screen';
 
 import Button from '../../components/button';
-import { black, coral, darkGreen, eggshell, lightGreen } from '../../utilities/colors';
-import OccupancyIndicator from '../../components/occupancy-indicator';
+import { brown, cream, darkGreen, eggshell, lightGreen } from '../../utilities/colors';
 import { recordDeviceToken } from '../../redux/actions/user-actions';
 
 const LandingScreen = () => {
@@ -44,20 +43,17 @@ const LandingScreen = () => {
   return (
     <View style={styles.container}>
       <SafeAreaView />
-      <View>
-        <OccupancyIndicator />
-      </View>
       <View style={styles.imageContainer}>
         <Image
           style={styles.image}
-          source={require('../../../assets/app-logo-with-text-transparent.png')}
+          source={require('../../../assets/app-logo.png')}
         />
       </View>
       <View style={styles.buttonContainer}>
         <Button
           text="Sign In"
           color={eggshell}
-          backgroundColor={coral}
+          backgroundColor={cream}
           onPress={() => {
             navigation.navigate('LoginScreen');
           }}
@@ -79,7 +75,7 @@ const LandingScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: black,
+    backgroundColor: brown,
     justifyContent: 'space-between',
     padding: 20,
   },

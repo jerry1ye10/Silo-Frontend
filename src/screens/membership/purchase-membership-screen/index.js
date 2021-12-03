@@ -4,7 +4,7 @@ import { useNavigation } from '@react-navigation/native';
 
 import MembershipCard from '../membership-card';
 import CustomText from '../../../components/custom-text';
-import { black, darkGreen, eggshell } from '../../../utilities/colors';
+import { brown, darkGreen, eggshell } from '../../../utilities/colors';
 
 import minotaur from '../../../api/minotaur';
 
@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
     elevation: 10,
   },
   noticeText: {
-    color: black,
+    color: brown,
     fontWeight: 'bold',
   },
   list: {

@@ -6,7 +6,7 @@ import { AppEventsLogger } from 'react-native-fbsdk-next';
 
 import CustomText from '../../../components/custom-text';
 import Button from '../../../components/button';
-import { black, coral, darkGreen, eggshell } from '../../../utilities/colors';
+import { brown, cream, darkGreen, eggshell } from '../../../utilities/colors';
 import { getShortDateString } from '../../../utilities/strings';
 
 import moment from 'moment';
@@ -159,7 +159,7 @@ const CurrentMembershipScreen = ({ membershipOptions }) => {
           )}
           <Button
             color={eggshell}
-            backgroundColor={coral}
+            backgroundColor={cream}
             text={'Renew Early'}
             onPress={onRenewalPress}
             disabled={user.membership.shouldRenew === 0 || isPurchasing}
@@ -210,7 +210,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   headerText: {
-    color: black,
+    color: brown,
   },
   contentText: {
     color: darkGreen,

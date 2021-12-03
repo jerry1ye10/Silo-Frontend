@@ -7,7 +7,7 @@ import minotaur from '../../api/minotaur';
 import Button from '../../components/button';
 import CustomText from '../../components/custom-text';
 import CustomTextInput from '../../components/custom-text-input';
-import { black, darkGreen, eggshell, lightGreen } from '../../utilities/colors';
+import { brown, darkGreen, eggshell, lightGreen } from '../../utilities/colors';
 import { cleanPhoneNumber, isPhoneNumberValid, formatPhoneNumber } from '../../utilities/strings';
 
 const PhoneNumberScreen = ({ route }) => {
@@ -95,7 +95,7 @@ const PhoneNumberScreen = ({ route }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: black,
+    backgroundColor: brown,
     paddingHorizontal: 30,
     paddingBottom: 10,
   },

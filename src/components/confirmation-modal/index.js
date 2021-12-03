@@ -14,15 +14,14 @@ import moment from 'moment';
 import { AppEventsLogger } from 'react-native-fbsdk-next';
 
 import CustomText from '../custom-text';
-import { darkGreen, eggshell,black } from '../../utilities/colors';
+import { cream,brown } from '../../utilities/colors';
 import { fireBeginSessionNotification } from '../../utilities/notifications';
 import {
   clearSessionError,
-  beginHourly,
+  beginSession,
 } from '../../redux/actions/session-actions';
 import BottomModalBase from '../bottom-modal-base';
 import SelectionCard from '../selection-card';
-import { getShortDateString } from '../../utilities/strings';
 import Button from '../button';
 
 const { width } = Dimensions.get('window');
@@ -91,9 +90,9 @@ const ConfirmationModal = ({
       id: 'HOURLY',
       title: 'Hourly',
       subtext: 'A flat hourly rate',
-      subtextColor: 'black',
+      subtextColor: brown,
       price: `$${baseRate / 100}`,
-      priceColor: 'black',
+      priceColor: brown,
       discountedPrice: promotionValue
         ? `$${Math.round((baseRate * (100 - promotionValue)) / 100) / 100}`
         : null,
@@ -116,7 +115,7 @@ const ConfirmationModal = ({
 
   const purchaseButtonPressed = () => {
     dispatch(
-      beginHourly(
+      beginSession(
         lockId,
         promotionRecordId,
         () => {
@@ -164,9 +163,9 @@ const ConfirmationModal = ({
       />
       <CustomText style={styles.errorText}>{sessions.sessionError}</CustomText>
       <Button
-        text={`Unlock Desk ${lockId}`}
-        color={black}
-        backgroundColor={darkGreen}
+        text={`Unlock Silo ${lockId}`}
+        color={brown}
+        backgroundColor={cream}
         showActivityIndicator={sessions.isAddingSession && modalVisibility}
         disabled={sessions.isAddingSession && modalVisibility}
         onPress={purchaseButtonPressed}

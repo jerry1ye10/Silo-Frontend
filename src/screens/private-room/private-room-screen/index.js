@@ -8,7 +8,7 @@ import minotaur from '../../../api/minotaur';
 import Button from '../../../components/button';
 import CustomText from '../../../components/custom-text';
 import CalendarStrip from '../calendar-strip';
-import { coral, darkGreen, eggshell } from '../../../utilities/colors';
+import { cream, darkGreen, eggshell } from '../../../utilities/colors';
 
 const TimeSlot = ({ price, startTime, endTime, booked, setBooked, selected }) => {
   const slotStyle = selected
@@ -192,7 +192,7 @@ const BookingTab = ({ metadataFetched, available, dayRange }) => {
                     <Button
                       text="Continue"
                       color={eggshell}
-                      backgroundColor={coral}
+                      backgroundColor={cream}
                       onPress={() => {
                         navigation.navigate('PrivateRoomDisclaimerScreen', { booked, price });
                       }}

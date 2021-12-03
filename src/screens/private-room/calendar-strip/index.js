@@ -34,7 +34,7 @@ const _month = _today.getMonth();
 const _day = _today.getDate();
 const TODAY = new Date(_year, _month, _day); // FORMAT: Wed May 16 2018 00:00:00 GMT+0800 (CST)
 
-const coral = '#db7f67';
+const cream = '#db7f67';
 const darkGreen = '#2e5339';
 const eggshell = '#f1e9db';
 
@@ -42,7 +42,7 @@ class DateItem extends PureComponent {
   render() {
     const { item, highlight, onItemPress, fontFamily, disabled } = this.props;
     const solar = format(item, 'D');
-    const highlightBgColor = coral;
+    const highlightBgColor = cream;
     const normalBgColor = darkGreen;
     const hightlightTextColor = eggshell;
     const normalTextColor = eggshell;

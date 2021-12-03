@@ -12,7 +12,7 @@ import {
 } from '../types';
 import minotaur from '../../../api/minotaur';
 
-export const beginHourly = (lockId, promotionRecordId, noPaymentAction, next) => {
+export const beginSession = (lockId, promotionRecordId, noPaymentAction, next) => {
   return async (dispatch) => {
     // Make sure that card information is present.
     try {

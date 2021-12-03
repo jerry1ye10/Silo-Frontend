@@ -6,7 +6,7 @@ import minotaur from '../../../api/minotaur';
 import Button from '../../../components/button';
 import CustomText from '../../../components/custom-text';
 import CustomTextInput from '../../../components/custom-text-input';
-import { black, coral, eggshell } from '../../../utilities/colors';
+import { brown, cream, eggshell } from '../../../utilities/colors';
 
 const ChangePasswordScreen = ({ route }) => {
   const { token } = route.params;
@@ -82,7 +82,7 @@ const ChangePasswordScreen = ({ route }) => {
       <Button
         text="Submit"
         color={eggshell}
-        backgroundColor={coral}
+        backgroundColor={cream}
         onPress={proceed}
         disabled={submitting}
         disabledColor="black"
@@ -95,7 +95,7 @@ const ChangePasswordScreen = ({ route }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: black,
+    backgroundColor: brown,
     paddingHorizontal: 40,
   },
   headerText: {
@@ -119,7 +119,7 @@ const styles = StyleSheet.create({
   textInputView: {
     width: '100%',
     borderWidth: 1,
-    borderColor: black,
+    borderColor: brown,
     borderBottomColor: eggshell,
     paddingVertical: 5,
     marginTop: 10,

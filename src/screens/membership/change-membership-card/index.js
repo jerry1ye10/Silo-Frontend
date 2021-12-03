@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, TouchableOpacity } from 'react-native';
 
 import CustomText from '../../../components/custom-text';
-import { black, coral, eggshell } from '../../../utilities/colors';
+import { brown, cream, eggshell } from '../../../utilities/colors';
 
 const ChangeMembershipCard = ({ membershipInfo, onPress }) => {
   const {
@@ -48,23 +48,23 @@ const styles = StyleSheet.create({
     elevation: 10,
   },
   headerText: {
-    color: black,
+    color: brown,
     fontWeight: 'bold',
     fontSize: 20,
     marginBottom: 3,
   },
   offeringText: {
-    color: black,
+    color: brown,
     marginBottom: 3,
   },
   priceText: {
-    color: coral,
+    color: cream,
     fontWeight: 'bold',
     fontSize: 22,
     marginBottom: 5,
   },
   subtext: {
-    color: black,
+    color: brown,
   },
 });
 

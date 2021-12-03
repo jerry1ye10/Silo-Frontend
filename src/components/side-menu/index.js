@@ -6,7 +6,7 @@ import { SafeAreaView } from 'react-navigation';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import CustomText from '../../components/custom-text';
-import { black, darkGreen, eggshell } from '../../utilities/colors';
+import { brown, darkGreen, eggshell, black } from '../../utilities/colors';
 
 const NavigationCard = ({ icon, title, screen, color }) => {
   const navigation = useNavigation();
@@ -47,51 +47,51 @@ const SideMenu = () => {
   const data = [
     /*{
       title: 'Membership',
-      icon: <Icon name="badge-account-horizontal" size={30} color={black} />,
+      icon: <Icon name="badge-account-horizontal" size={30} color={brown} />,
       screen: 'MembershipScreen',
-      color: black,
+      color: brown,
     },*/
     {
       title: 'Active Silos',
       icon: <Icon name="desk-lamp" size={30} color={black} />,
       screen: 'ActiveScreen',
-      color: black,
+      color: brown,
     },
     /*{
       title: 'Private Room',
-      icon: <Icon name="sofa" size={30} color={black} />,
+      icon: <Icon name="sofa" size={30} color={brown} />,
       screen: 'PrivateRoomScreen',
-      color: black,
+      color: brown,
     },*/
     {
       title: 'Account',
       icon: <Icon name="account" size={30} color={black} />,
       screen: 'AccountScreen',
-      color: black,
+      color: brown,
     },
     {
       title: 'Payment',
       icon: <Icon name="credit-card" size={30} color={black} />,
       screen: 'PaymentsScreen',
-      color: black,
+      color: brown,
     },
     {
       title: 'Promotions',
       icon: <Icon name="wallet-giftcard" size={30} color={black} />,
       screen: 'RewardsScreen',
-      color: black,
+      color: brown,
     },
     {
       title: 'History',
       icon: <Icon name="history" size={30} color={black} />,
       screen: 'HistoryScreen',
-      color: black,
+      color: brown,
     },
     {
       title: 'Get a Free Visit',
       icon: <Icon name="gift" size={30} color={black} />,
       screen: 'RefferalScreen',
-      color: black,
+      color: brown,
     },
   ];
 
@@ -99,7 +99,7 @@ const SideMenu = () => {
     <View style={styles.container}>
       <View style={styles.imageContainer}>
         <SafeAreaView forceInset={{ top: 'always' }} />
-        <Image style={styles.image} source={require('../../../assets/app-logo-transparent.png')} />
+        <Image style={styles.image} source={require('../../../assets/app-logo.png')} />
       </View>
       <FlatList
         style={styles.list}
@@ -127,7 +127,7 @@ const styles = StyleSheet.create({
     backgroundColor: eggshell,
   },
   imageContainer: {
-    backgroundColor: black,
+    backgroundColor: brown,
   },
   image: {
     height: 120,

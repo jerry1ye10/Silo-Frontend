@@ -6,7 +6,7 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { AppEventsLogger } from 'react-native-fbsdk-next';
 
 import CustomText from '../../../components/custom-text';
-import { black, coral, darkGreen, eggshell, lightGreen } from '../../../utilities/colors';
+import { brown, cream, darkGreen, eggshell, lightGreen } from '../../../utilities/colors';
 import Button from '../../../components/button';
 
 import { purchaseMembership } from '../../../redux/actions/user-actions';
@@ -47,7 +47,7 @@ const ConfirmMembershipScreen = ({ route }) => {
           <Button
             text="Purchase"
             color={eggshell}
-            backgroundColor={coral}
+            backgroundColor={cream}
             onPress={() => {
               Alert.alert('Membership Purchase', `Are you sure you want to purchase a ${name}?`, [
                 { text: 'Cancel', style: 'cancel' },
@@ -137,12 +137,12 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
   },
   footerNameText: {
-    color: black,
+    color: brown,
     fontSize: 18,
     fontWeight: 'bold',
   },
   footerPriceText: {
-    color: coral,
+    color: cream,
     fontSize: 26,
     fontWeight: 'bold',
   },

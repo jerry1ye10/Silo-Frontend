@@ -5,7 +5,7 @@ import DisclaimerText from '../disclaimer-text';
 import Button from '../../../components/button';
 import CustomText from '../../../components/custom-text';
 import { useNavigation } from '@react-navigation/native';
-import { coral, darkGreen, eggshell } from '../../../utilities/colors';
+import { cream, darkGreen, eggshell } from '../../../utilities/colors';
 
 const PrivateRoomDisclaimerScreen = ({ route }) => {
   const navigation = useNavigation();
@@ -23,7 +23,7 @@ const PrivateRoomDisclaimerScreen = ({ route }) => {
       <Button
         text="Continue"
         color={eggshell}
-        backgroundColor={coral}
+        backgroundColor={cream}
         onPress={() => {
           navigation.navigate('PrivateRoomConfirmationScreen', { booked, price });
         }}

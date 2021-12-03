@@ -2,11 +2,11 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 
 import CustomText from '../custom-text';
-import { black, coral, eggshell } from '../../utilities/colors';
+import { brown, cream, eggshell } from '../../utilities/colors';
 
 export const HoursProgressTracker = ({ totalHours, hoursUsed }) => {
   const bars = [];
-  const usedBarStyle = { ...styles.singleBar, backgroundColor: coral };
+  const usedBarStyle = { ...styles.singleBar, backgroundColor: cream };
   const unusedBarStyle = { ...styles.singleBar, backgroundColor: eggshell };
   for (let i = 0; i < totalHours; i++) {
     if (i < hoursUsed) {
@@ -17,7 +17,7 @@ export const HoursProgressTracker = ({ totalHours, hoursUsed }) => {
   }
 
   const digits = [];
-  const selectedDigitStyle = { ...styles.digit, color: coral };
+  const selectedDigitStyle = { ...styles.digit, color: cream };
   const regularDigitStyle = { ...styles.digit, color: eggshell };
   for (let i = totalHours; i >= 0; i--) {
     if (i === totalHours - hoursUsed) {
@@ -51,7 +51,7 @@ export const HoursProgressTracker = ({ totalHours, hoursUsed }) => {
 const styles = StyleSheet.create({
   container: {
     height: 60,
-    backgroundColor: black,
+    backgroundColor: brown,
     paddingVertical: 5,
     paddingHorizontal: 7,
   },
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
   singleBar: {
     flex: 1,
     borderWidth: 1,
-    borderColor: black,
+    borderColor: brown,
   },
   numberContainer: {
     flex: 1,

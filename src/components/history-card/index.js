@@ -3,7 +3,7 @@ import { StyleSheet, View, Alert } from 'react-native';
 import { useSelector } from 'react-redux';
 
 import CustomText from '../custom-text';
-import { coral, black, eggshell } from '../../utilities/colors';
+import { cream, brown, eggshell } from '../../utilities/colors';
 import { getCardBrandIcon } from '../../utilities/cards';
 import { getShortDateString } from '../../utilities/strings';
 
@@ -106,7 +106,7 @@ const HourlyCard = ({ sessionInfo, user }) => {
         <Button
           text={didRequestReceiptSuccessfully ? 'Sent!' : 'Request Email Receipt'}
           color={eggshell}
-          backgroundColor={coral}
+          backgroundColor={cream}
           disabled={didRequestReceiptSuccessfully}
           showActivityIndicator={isRequestingReceipt}
           onPress={() => {
@@ -187,7 +187,7 @@ const DayPassCard = ({ sessionInfo, user }) => {
         <Button
           text={didRequestReceiptSuccessfully ? 'Sent!' : 'Request Email Receipt'}
           color={eggshell}
-          backgroundColor={coral}
+          backgroundColor={cream}
           disabled={didRequestReceiptSuccessfully}
           showActivityIndicator={isRequestingReceipt}
           onPress={() => {
@@ -272,7 +272,7 @@ const MembershipCard = ({ sessionInfo, user }) => {
         <Button
           text={didRequestReceiptSuccessfully ? 'Sent!' : 'Request Email Receipt'}
           color={eggshell}
-          backgroundColor={coral}
+          backgroundColor={cream}
           disabled={didRequestReceiptSuccessfully}
           showActivityIndicator={isRequestingReceipt}
           onPress={() => {
@@ -357,7 +357,7 @@ const WeeklyPassCard = ({ sessionInfo, user }) => {
         <Button
           text={didRequestReceiptSuccessfully ? 'Sent!' : 'Request Email Receipt'}
           color={eggshell}
-          backgroundColor={coral}
+          backgroundColor={cream}
           disabled={didRequestReceiptSuccessfully}
           showActivityIndicator={isRequestingReceipt}
           onPress={() => {
@@ -431,7 +431,7 @@ const PrivateRoomCard = ({ sessionInfo, user }) => {
         <Button
           text={didRequestReceiptSuccessfully ? 'Sent!' : 'Request Email Receipt'}
           color={eggshell}
-          backgroundColor={coral}
+          backgroundColor={cream}
           disabled={didRequestReceiptSuccessfully}
           showActivityIndicator={isRequestingReceipt}
           onPress={() => {
@@ -487,11 +487,11 @@ const styles = StyleSheet.create({
   historyTitle: {
     fontWeight: 'bold',
     fontSize: 16,
-    color: black,
+    color: brown,
   },
   historySubtitle: {
     marginBottom: 10,
-    color: black,
+    color: brown,
   },
   lineItem: {
     flexDirection: 'row',
@@ -499,7 +499,7 @@ const styles = StyleSheet.create({
   },
   bold: {
     fontWeight: 'bold',
-    color: black,
+    color: brown,
   },
   sessionsElContainer: {
     marginBottom: 10,
@@ -515,7 +515,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   text: {
-    color: black,
+    color: brown,
   },
 });
 
