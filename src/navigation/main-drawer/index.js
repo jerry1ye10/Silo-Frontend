@@ -7,17 +7,8 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import ActiveScreen from '../../screens/active-screen';
 import AccountScreen from '../../screens/account-screen';
 import AddTimeScreen from '../../screens/membership/add-time-screen';
-import ChangeMembershipScreen from '../../screens/membership/change-membership-screen';
-import ConfirmMembershipScreen from '../../screens/membership/confirm-membership-screen';
 import HistoryScreen from '../../screens/history-screen';
-import MembershipDecisionScreen from '../../screens/membership/membership-decision-screen';
-import ManageMembershipScreen from '../../screens/membership/manage-membership-screen';
-import MembershipScreen from '../../screens/membership/membership-screen';
-import NeedHelpScreen from '../../screens/private-room/need-help-screen';
 import PaymentsScreen from '../../screens/payments-screen';
-import PrivateRoomScreen from '../../screens/private-room/private-room-screen';
-import PrivateRoomConfirmationScreen from '../../screens/private-room/private-room-confirmation-screen';
-import PrivateRoomDisclaimerScreen from '../../screens/private-room/private-room-disclaimer-screen';
 import RefferalScreen from '../../screens/refferal-screen';
 import RewardsScreen from '../../screens/rewards-screen';
 import ScanScreen from '../../screens/scan-screen';
@@ -53,20 +44,8 @@ const MainStack = () => {
       <Stack.Screen name="AccountScreen" component={AccountScreen} />
       <Stack.Screen name="ActiveScreen" component={ActiveScreen} />
       <Stack.Screen name="AddTimeScreen" component={AddTimeScreen} />
-      <Stack.Screen name="ChangeMembershipScreen" component={ChangeMembershipScreen} />
-      <Stack.Screen name="ConfirmMembershipScreen" component={ConfirmMembershipScreen} />
       <Stack.Screen name="HistoryScreen" component={HistoryScreen} />
-      <Stack.Screen name="ManageMembershipScreen" component={ManageMembershipScreen} />
-      <Stack.Screen name="MembershipDecisionScreen" component={MembershipDecisionScreen} />
-      <Stack.Screen name="MembershipScreen" component={MembershipScreen} />
-      <Stack.Screen name="NeedHelpScreen" component={NeedHelpScreen} />
       <Stack.Screen name="PaymentsScreen" component={PaymentsScreen} />
-      <Stack.Screen name="PrivateRoomScreen" component={PrivateRoomScreen} />
-      <Stack.Screen
-        name="PrivateRoomConfirmationScreen"
-        component={PrivateRoomConfirmationScreen}
-      />
-      <Stack.Screen name="PrivateRoomDisclaimerScreen" component={PrivateRoomDisclaimerScreen} />
       <Stack.Screen name="RefferalScreen" component={RefferalScreen} />
       <Stack.Screen name="RewardsScreen" component={RewardsScreen} />
       <Stack.Screen

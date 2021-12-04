@@ -69,43 +69,12 @@ const ScanOverlay = ({ headerText }) => {
 
   const [isUnlocking, setIsUnlocking] = React.useState(false);
   const [justUnlocked, setJustUnlocked] = React.useState(false);
-  const [unlockModalVisibility, setUnlockModalVisibility] = React.useState(true);
-  const [message, setMessage] = React.useState(0);
-  const [showMarchPromo, setShowMarchPromo] = React.useState(false);
-
-  const getPromo = async () => {
-    try {
-      const response = await minotaur.get('/constants/MARCH_MAYHEM');
-      if (response.data.value === '1') {
-        setShowMarchPromo(true);
-      } else {
-        setShowMarchPromo(false);
-      }
-    } catch (err) {
-      setShowMarchPromo(false);
-    }
-  };
-
-  React.useEffect(() => {
-    // Refreshes sessions if app was moved to the background.
-    const appChangeListener = AppState.addListener('appStateDidChange', (e) => {
-      const { app_state: appState } = e;
-      if (appState === 'active') {
-        getPromo();
-      }
-    });
-    return () => {
-      appChangeListener.remove();
-    };
-  }, []);
-
-  React.useEffect(() => {
-    getPromo();
-  }, []);
 
   React.useEffect(() => {
     dispatch(getActiveSessions());
   }, [dispatch]);
+
+  
 
   React.useEffect(() => {
     if (justUnlocked) {
@@ -160,7 +129,6 @@ const ScanOverlay = ({ headerText }) => {
       <View style={styles.footer}>
         <CustomText style={styles.footerText}>{headerText}</CustomText>
       </View>
-      <View style={styles.bottomOverlay}>{showMarchPromo ? <MarchBanner /> : null}</View>
     </View>
   );
 };
