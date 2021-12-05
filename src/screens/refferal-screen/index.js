@@ -23,12 +23,11 @@ const RefferalScreen = () => {
         <View style={styles.body}>
           <View>
             <CustomText style={styles.header}>Refer a Friend.</CustomText>
-            <CustomText style={styles.header}>Get a Free Visit</CustomText>
+            <CustomText style={styles.header}>Get 30 minutes Free</CustomText>
             <CustomText style={styles.header}>(for you & a friend)</CustomText>
             <CustomText style={styles.description}>
-              Get a free visit when someone signs up using your referral link and makes a purchase.
+              Get 30 minutes free when someone signs up using your referral link and makes a purchase.
             </CustomText>
-            <CustomText style={styles.description}>You'll both get a free visit.</CustomText>
           </View>
           <View>
             <CustomText style={styles.subheader}>SHARE YOUR LINK:</CustomText>

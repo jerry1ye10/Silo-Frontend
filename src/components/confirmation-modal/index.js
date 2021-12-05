@@ -32,8 +32,11 @@ const ConfirmationModal = ({
   versionValid,
   lockId,
   promotionRecordId,
-  baseRate,
+  baseRateFirst,
+  baseRateSecond,
   promotionValue,
+  promotionType,
+  promotionRemaining,
   resetSessionInformation,
 }) => {
   const navigation = useNavigation();
@@ -87,16 +90,17 @@ const ConfirmationModal = ({
   
   const setupMembership = () => {
     const hourlyNormal = {
-      id: 'HOURLY',
-      title: 'Hourly',
-      subtext: 'A flat hourly rate',
+      id: 'FLAT',
+      title: 'Flat',
+      subtext: `$${baseRateSecond / 100} every 5 minutes after`,
       subtextColor: brown,
-      price: `$${baseRate / 100}`,
+      price: `$${baseRateFirst / 100}`,
       priceColor: brown,
       discountedPrice: promotionValue
-        ? `$${Math.round((baseRate * (100 - promotionValue)) / 100) / 100}`
+        ? promotionType === 'minutes'
+        ? promotionRemaining + 'free minutes' :  `$${Math.round((baseRateFirst * (100 - promotionValue)) / 100) / 100}`
         : null,
-      priceText: 'per hour',
+      priceText: '15 minutes',
       image: require('../../../assets/desk.png'),
       disabled: false,
     };
@@ -105,6 +109,14 @@ const ConfirmationModal = ({
     setSelectionData(hourly);
     setSelected(hourlyNormal.id);
   };
+
+  const successView = (
+    <View style={popupStyles.container}>
+      <View style={popupStyles.topView}>
+        <CustomText style={popupStyles.titleText}>Payment Methods</CustomText>
+      </View>
+    </View>
+  );
 
   const afterSessionCreationSucceeded = () => {
     setModalVisibility(false);
@@ -120,7 +132,7 @@ const ConfirmationModal = ({
         promotionRecordId,
         () => {
           setModalVisibility(false);
-          const sessionInformation = { lockId, baseRate, promotionRecordId, promotionValue };
+          const sessionInformation = { lockId, baseRateFirst,baseRateSecond, promotionRecordId, promotionValue };
           navigation.navigate('PaymentsScreen', { sessionInformation });
         },
         () => {
@@ -227,6 +239,31 @@ const styles = StyleSheet.create({
   errorText: {
     color: 'red',
     marginBottom: 10,
+  },
+});
+
+const popupStyles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: brown,
+    padding: 20,
+  },
+  topView: {
+    backgroundColor: cream,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 5,
+    },
+    shadowOpacity: 0.34,
+    shadowRadius: 6.27,
+    elevation: 10,
+    padding: 20,
+  },
+  titleText: {
+    fontWeight: 'bold',
+    fontSize: 20,
+    color: brown,
   },
 });
 

@@ -39,7 +39,7 @@ const SelectionCard = ({
       <View style={styles.descriptionView}>
         <View style={styles.leftContent}>
           <CustomText style={styles.title}>{title}</CustomText>
-          <CustomText style={subTextStyle}>{subtext}</CustomText>
+          <CustomText style={styles.subTextStyle}>{subtext}</CustomText>
         </View>
         <View style={styles.rightContent}>
           <View style={styles.priceLineContainer}>
@@ -109,6 +109,9 @@ const styles = StyleSheet.create({
     textDecorationColor: 'red',
     fontSize: 16,
   },
+  subTextStyle: {
+    fontSize: 14,
+  }
 });
 
 export default SelectionCard;

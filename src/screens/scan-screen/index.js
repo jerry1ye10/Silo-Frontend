@@ -23,7 +23,7 @@ const ScanScreen = ({ route }) => {
   const [shouldReactivate, setShouldReactivate] = React.useState(false);
 
   // Controls the visibility of the confirmation modal.
-  const [confModalVisibility, setConfModalVisibility] = React.useState(false); //TODO set to false, true for debug
+  const [confModalVisibility, setConfModalVisibility] = React.useState(true); //TODO set to false, true for debug
 
   // Determines whether the screen is currently in focus to disable QR
   // scanner from activating in the background. This state cannot be avoided
@@ -44,7 +44,8 @@ const ScanScreen = ({ route }) => {
   // State that contains session information.
   const [lockId, setLockId] = React.useState(null);
   const [rates, setRates] = React.useState({
-    baseRate: null,
+    baseRateFirst: null,
+    baseRateSecond: null,
     promotion: null,
   });
 
@@ -149,11 +150,13 @@ const ScanScreen = ({ route }) => {
 
   const getRates = async () => {
     try {
-      const rateResponse = await minotaur.get('/constants/FIFTHTEEN_RATES');
+      const rateResponseFirst = await minotaur.get('/constants/FIFTHTEEN_RATES');
+      const rateResponseSecond = await minotaur.get('/constants/FIVE_RATE');
       const promotionsReponse = await minotaur.get('/promotion-records');
       const promotions = promotionsReponse.data;
       setRates({
-        baseRate: rateResponse.data.value,
+        baseRateFirst: rateResponseFirst.data.value,
+        baseRateSecond: rateResponseSecond.data.value,
         promotion: promotions.length === 0 ? null : promotions[0],
       });
     } catch (err) {
@@ -203,7 +206,6 @@ const ScanScreen = ({ route }) => {
       />
     </View>
   );
-  console.log(rates)
 
   const cameraEnabledScreen = (
     <View style={enabledStyles.container}>
@@ -219,10 +221,13 @@ const ScanScreen = ({ route }) => {
         sessionInformation={sessionInformation}
         lockId={prevLockId || lockId}
         promotionRecordId={prevPromotionRecordId || (rates.promotion ? rates.promotion.id : null)}
-        baseRate={prevBaseRate || rates.baseRate}
+        baseRate={rates.baseRateFirst}
+        baseRateSecond={rates.baseRateSecond}
         promotionValue={
           prevPromotionalValue || (rates.promotion ? rates.promotion.promotionValue : null)
         }
+        promotionType={rates.promotion ? rates.promotion.promotionType : null}
+        promotionRemaining={rates.promotion ? rates.promotion.promotionRemaining : null}
         resetSessionInformation={() => {
           if (sessionInformation) {
             route.params.sessionInformation = null;

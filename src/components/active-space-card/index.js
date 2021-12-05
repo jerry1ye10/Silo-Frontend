@@ -15,11 +15,7 @@ import { socket } from '../../utilities/socket-connection';
 export const ActiveSpaceCard = ({
   session,
   setEndModalVisibility,
-  setRenewMonthlyVisibility,
-  setRenewWeeklyVisiblity,
   setSelectedSession,
-  setMonthlyOvertime,
-  setWeeklyOvertime,
 }) => {
   const user = useSelector((state) => state.user);
   const dispatch = useDispatch();
@@ -34,8 +30,6 @@ export const ActiveSpaceCard = ({
         dispatch(endSession(session.id));
         fireEndSessionNotification(
           session.lockId,
-          session.weeklyPassId,
-          session.membershipId,
           price,
         );
       }
@@ -58,37 +52,9 @@ export const ActiveSpaceCard = ({
   };
 
   const onEndPressed = async () => {
-    // If this is a membership session, make sure hour balance is positive.
-    if (session.membershipId != null) {
-      let totalMembershipMinutes = user.membership.minutes + user.membership.guestMinutes;
-      const currentMoment = moment();
-      const durationInMinutes = Math.ceil(
-        moment.duration(currentMoment.diff(startMoment)).asMinutes(),
-      );
-      if (totalMembershipMinutes < durationInMinutes) {
-        setSelectedSession(session);
-        setMonthlyOvertime(Math.abs(totalMembershipMinutes - durationInMinutes));
-        setRenewMonthlyVisibility(true);
-        return;
-      }
-    }
-    // If this is a membership session, make sure hour balance is positive.
-    if (session.weeklyPassId != null) {
-      let totalWeeklyMinutes = user.dayPass.minutes;
-      const currentMoment = moment();
-      const durationInMinutes = Math.ceil(
-        moment.duration(currentMoment.diff(startMoment)).asMinutes(),
-      );
-      if (totalWeeklyMinutes < durationInMinutes) {
-        setSelectedSession(session);
-        setWeeklyOvertime(Math.abs(totalWeeklyMinutes - durationInMinutes));
-        setRenewWeeklyVisiblity(true);
-        return;
-      }
-    }
     Alert.alert(
       'Ending Session',
-      `Are you sure you want to end your session on Desk ${session.lockId}?`,
+      `Don't forget to take all belongings, trash, and clean the whiteboard before exiting. Make sure to leave the Silo before pressing lock`,
       [
         { text: 'Cancel', style: 'cancel' },
         { text: 'Confirm', onPress: onEnd },
@@ -102,24 +68,21 @@ export const ActiveSpaceCard = ({
         <View style={styles.leftContent}>
           <CustomText
             style={styles.topLeftText}
-            testID="top-left-text">{`Desk ${session.lockId}`}</CustomText>
+            testID="top-left-text">{`Silo ${session.lockId}`}</CustomText>
           <CustomText style={styles.bottomLeftText} testID="bottom-left-text">
             {`Start Time: ${startTimeWithoutSeconds}`}
           </CustomText>
-          {session.weeklyPassId ? (
-            <CustomText style={styles.typeText}>8 Hour Pass In Use</CustomText>
-          ) : null}
-          {session.membershipId && session.flags === null ? (
-            <CustomText style={styles.typeText}>Membership In Use</CustomText>
-          ) : null}
-          {session.membershipId && session.flags === 'guest' ? (
-            <CustomText style={styles.typeText}>Guest Hours In Use</CustomText>
-          ) : null}
         </View>
       </View>
       <View style={styles.bottomContent}>
-        <Button text="Lock Desk" color={eggshell} backgroundColor={cream} onPress={onEndPressed} />
+        <Button text="Lock Silo" color={brown} backgroundColor={cream} onPress={onEndPressed} />
       </View>
+
+      <View style={styles.bottomContent}>
+        <CustomText style={styles.bottomLeftText}>
+          {`Don't forget to log out when you're done or you'll continue to be charged!`}
+        </CustomText>
+      </View>        
     </View>
   );
 };
@@ -136,7 +99,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.34,
     shadowRadius: 6.27,
     elevation: 10,
-    backgroundColor: eggshell,
+    backgroundColor: cream,
     width: '90%',
     borderRadius: 2,
   },
@@ -168,6 +131,9 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: darkGreen,
     marginTop: 3,
+  },
+  bottomExtraContent: {
+    
   },
 });
 

@@ -9,6 +9,7 @@ import TallModalBase from '../tall-modal-base';
 import CustomText from '../custom-text';
 import { deactivateLock, removeSessionEndingCompleted } from '../../redux/actions/session-actions';
 import { socket } from '../../utilities/socket-connection';
+import { brown, cream } from '../../utilities/colors';
 
 const EndSessionModal = ({ session, modalVisibility, setModalVisibility }) => {
   const navigation = useNavigation();
@@ -58,11 +59,7 @@ const EndSessionModal = ({ session, modalVisibility, setModalVisibility }) => {
   }, [closeTransition]);
 
   const pendingView = (
-    <Animated.View
-      style={[
-        pendingStyles.container,
-        { transform: [{ translateX: Animated.add(xPos, xPosFail) }] },
-      ]}>
+    <View style={pendingStyles.container}>
       <View style={pendingStyles.topContainer}>
         <TouchableOpacity
           style={pendingStyles.dismissButton}
@@ -73,11 +70,7 @@ const EndSessionModal = ({ session, modalVisibility, setModalVisibility }) => {
           <Icon name="close" size={30} color="gray" />
         </TouchableOpacity>
       </View>
-      <FastImage
-        source={require('../../../assets/locking-animation.gif')}
-        style={pendingStyles.gif}
-      />
-    </Animated.View>
+    </View>
   );
 
   const completedView = (
@@ -145,6 +138,7 @@ const pendingStyles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-end',
     width: '100%',
+    backgroundColor: brown,
   },
   container: {
     position: 'absolute',
@@ -153,10 +147,7 @@ const pendingStyles = StyleSheet.create({
     width: 280,
     height: 400,
     alignItems: 'center',
-  },
-  gif: {
-    aspectRatio: 844 / 1045,
-    height: 340,
+    backgroundColor: brown,
   },
   dismissButton: {
     alignSelf: 'flex-end',
@@ -172,6 +163,7 @@ const completedStyles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     width: '100%',
+    backgroundColor: brown,
   },
   icon: {
     padding: 5,
@@ -185,6 +177,7 @@ const completedStyles = StyleSheet.create({
     width: 280,
     height: 400,
     alignItems: 'center',
+    backgroundColor: brown,
   },
   completedImage: {
     aspectRatio: 844 / 1045,
@@ -205,6 +198,7 @@ const failedStyles = StyleSheet.create({
     justifyContent: 'space-between',
     width: '100%',
     marginBottom: 10,
+    backgroundColor: brown,
   },
   closeButton: {
     alignSelf: 'flex-end',
@@ -219,6 +213,7 @@ const failedStyles = StyleSheet.create({
     width: 280,
     height: 400,
     alignItems: 'center',
+    backgroundColor: brown,
   },
   failureText: {
     textAlign: 'center',

@@ -2,6 +2,7 @@ import React from 'react';
 import Modal from 'react-native-modal';
 import { View, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-navigation';
+import {brown} from '../../utilities/colors/index.js'
 
 const TallModalBase = ({ children, modalVisibility, onModalHide }) => {
   return (
@@ -22,7 +23,7 @@ const styles = StyleSheet.create({
   modalView: {
     width: 300,
     height: 440,
-    backgroundColor: '#f8f8f8',
+    backgroundColor: brown,
     alignItems: 'center',
     borderRadius: 2,
     paddingHorizontal: 20,

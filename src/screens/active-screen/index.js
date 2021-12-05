@@ -9,11 +9,23 @@ import {
   getActiveSessions,
 } from '../../redux/actions/session-actions';
 import CustomText from '../../components/custom-text';
-import { darkGreen, eggshell, lightGreen } from '../../utilities/colors';
+import { cream, brown, lightGreen } from '../../utilities/colors';
+
+const sessionInfo1 = {
+  cardId: 'card_1FrawOEuGNwXiyj3ciyJNOEK',
+  id: '73608ba6a3a0f38d0b8d79285f93eaa04feef1a1',
+  location: '262MET',
+  lockId: 3,
+  promotionRecordId: null,
+  rate: 499,
+  timeCreated: '2020-01-03 21:08:45',
+  userId: '180efe93f1978bc3ffad43b256d5b32ddc0ecf99',
+};
 
 const ActiveScreen = () => {
   const sessions = useSelector((state) => state.sessions);
   const dispatch = useDispatch();
+  const test = 1;
 
   const [minutes] = React.useState(0);
   const [endModalVisibility, setEndModalVisibility] = React.useState(false);
@@ -46,22 +58,17 @@ const ActiveScreen = () => {
         {sessions.activeSessions.length === 0 ? (
           <CustomText style={styles.emptyText}>You have no active spaces.</CustomText>
         ) : (
-          <FlatList
-            style={styles.list}
-            contentContainerStyle={styles.listContentContainer}
-            data={sessions.activeSessions}
-            renderItem={({ item }) => {
-              return (
-                <ActiveSpaceCard
-                  session={item}
-                  setEndModalVisibility={setEndModalVisibility}
-                  setSelectedSession={setSelectedSession}
-                />
-              );
-            }}
-            keyExtractor={(item) => item.id.toString()}
-            testID="list"
-          />
+          <View style={styles.container}> 
+            <ActiveSpaceCard
+              session={sessions.activeSessions} 
+              setEndModalVisibility={setEndModalVisibility}
+              setSelectedSession={setSelectedSession}
+
+            />
+            <View style={styles.extraContainer}>
+            <CustomText style={styles.contentText}>To get wifi, show the barista your Silo app and receive a receipt with the code, good for 2 hours. If you're still using Silo in 2 hours, just show them the app to get a new code.</CustomText>
+            </View>
+          </View>
         )}
       </View>
       <EndSessionModal
@@ -74,13 +81,13 @@ const ActiveScreen = () => {
 };
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: darkGreen,
+    backgroundColor: brown,
     flex: 1,
   },
   emptyText: {
     textAlign: 'center',
     marginTop: 20,
-    color: eggshell,
+    color: cream,
   },
   list: {
     flex: 1,
@@ -91,7 +98,7 @@ const styles = StyleSheet.create({
   summaryView: {
     marginTop: 20,
     marginHorizontal: 20,
-    backgroundColor: lightGreen,
+    backgroundColor: cream,
     padding: 20,
     marginBottom: 10,
     borderRadius: 2,
@@ -106,7 +113,7 @@ const styles = StyleSheet.create({
   },
   summaryTitle: {
     fontSize: 16,
-    color: darkGreen,
+    color: cream,
     textAlign: 'center',
     fontWeight: 'bold',
     marginBottom: 5,
@@ -116,10 +123,10 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   headerText: {
-    color: darkGreen,
+    color: brown,
   },
   contentText: {
-    color: darkGreen,
+    color: brown,
     fontWeight: 'bold',
   },
   errorText: {
@@ -127,6 +134,22 @@ const styles = StyleSheet.create({
     color: 'red',
     marginVertical: 5,
   },
+  extraContainer: {
+    marginTop: 20,
+    marginHorizontal: 20,
+    backgroundColor: cream,
+    padding: 20,
+    marginBottom: 10,
+    borderRadius: 2,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 5,
+    },
+    shadowOpacity: 0.34,
+    shadowRadius: 6.27,
+    elevation: 10,
+  }
 });
 
 export default ActiveScreen;

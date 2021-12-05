@@ -21,7 +21,7 @@ export const CameraPermissionModal = ({ modalVisibility, setModalVisibility }) =
       <View style={styles.content}>
         <CustomText style={styles.title}>Enable Camera</CustomText>
         <CustomText style={styles.description}>
-          Silo needs access to your{'\n'}camera to unlock desks in store.
+          Silo needs access to your{'\n'}camera to unlock silos in store.
         </CustomText>
         <View style={styles.buttonContainer}>
           <TouchableOpacity

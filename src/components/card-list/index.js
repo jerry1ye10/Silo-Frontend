@@ -45,6 +45,7 @@ const CardList = ({ sessionInformation }) => {
         onPress={async () => {
           try {
             const paymentToken = await stripe.paymentRequestWithCardForm({});
+            console.log(paymentToken);
             dispatch(
               updatePaymentProfile(user, paymentToken.tokenId, () => {
                 if (sessionInformation) {

@@ -6,7 +6,6 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 
 import ActiveScreen from '../../screens/active-screen';
 import AccountScreen from '../../screens/account-screen';
-import AddTimeScreen from '../../screens/membership/add-time-screen';
 import HistoryScreen from '../../screens/history-screen';
 import PaymentsScreen from '../../screens/payments-screen';
 import RefferalScreen from '../../screens/refferal-screen';
@@ -43,7 +42,6 @@ const MainStack = () => {
       }}>
       <Stack.Screen name="AccountScreen" component={AccountScreen} />
       <Stack.Screen name="ActiveScreen" component={ActiveScreen} />
-      <Stack.Screen name="AddTimeScreen" component={AddTimeScreen} />
       <Stack.Screen name="HistoryScreen" component={HistoryScreen} />
       <Stack.Screen name="PaymentsScreen" component={PaymentsScreen} />
       <Stack.Screen name="RefferalScreen" component={RefferalScreen} />

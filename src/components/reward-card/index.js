@@ -2,12 +2,33 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 
 import CustomText from '../../components/custom-text';
-import { cream, eggshell } from '../../utilities/colors';
-import HoursProgressTracker from '../hours-progress-tracker';
+import { cream, brown } from '../../utilities/colors';
+import MinutesProgressTracker from '../hours-progress-tracker';
 import { getShortDateFromSqlDate } from '../../utilities/strings';
 
 const RewardCard = ({ rewardInfo }) => {
   return (
+    rewardInfo.type === 'minutes' ? 
+    <View style={styles.container}>
+      <View>
+        <View style={styles.titleView}>
+          <View style={styles.promotionView}>
+            <CustomText style={styles.promotionValue}>{rewardInfo.promotionValue}</CustomText>
+            <CustomText style={styles.promotionTitle}>
+              minutes free!
+            </CustomText>
+          </View>
+          <CustomText style={styles.expirationText}>
+            expires on {getShortDateFromSqlDate(rewardInfo.promotionExpiration)}
+          </CustomText>
+        </View>
+      </View>
+      <MinutesProgressTracker
+        totalMinutes={rewardInfo.promotionCapacity}
+        minutesUsed={rewardInfo.promotionCapacity - rewardInfo.remainingValue}
+        type={rewardInfo.type}
+      />
+    </View> :
     <View style={styles.container}>
       <View>
         <View style={styles.titleView}>
@@ -26,9 +47,10 @@ const RewardCard = ({ rewardInfo }) => {
           </CustomText>
         </View>
       </View>
-      <HoursProgressTracker
-        totalHours={rewardInfo.promotionCapacity}
-        hoursUsed={rewardInfo.promotionCapacity - rewardInfo.remainingValue}
+      <MinutesProgressTracker
+        totalMinutes={rewardInfo.promotionCapacity}
+        minutesUsed={rewardInfo.promotionCapacity - rewardInfo.remainingValue}
+        type={rewardInfo.type}
       />
     </View>
   );
@@ -38,7 +60,7 @@ const styles = StyleSheet.create({
   container: {
     alignSelf: 'center',
     width: '100%',
-    backgroundColor: eggshell,
+    backgroundColor: cream,
     borderRadius: 2,
     marginBottom: 20,
     shadowColor: '#000',
@@ -65,15 +87,16 @@ const styles = StyleSheet.create({
   promotionValue: {
     fontWeight: 'bold',
     fontSize: 32,
-    color: eggshell,
+    color: brown,
+    marginRight: 5,
   },
   promotionTitle: {
     fontWeight: 'bold',
     fontSize: 18,
-    color: eggshell,
+    color: brown,
   },
   expirationText: {
-    color: eggshell,
+    color: brown,
     fontSize: 12,
   },
 });

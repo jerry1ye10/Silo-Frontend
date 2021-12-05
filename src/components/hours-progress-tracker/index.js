@@ -4,45 +4,35 @@ import { View, StyleSheet } from 'react-native';
 import CustomText from '../custom-text';
 import { brown, cream, eggshell } from '../../utilities/colors';
 
-export const HoursProgressTracker = ({ totalHours, hoursUsed }) => {
+export const MinutesProgressTracker = ({ totalMinutes, minutesUsed, type }) => {
   const bars = [];
   const usedBarStyle = { ...styles.singleBar, backgroundColor: cream };
   const unusedBarStyle = { ...styles.singleBar, backgroundColor: eggshell };
-  for (let i = 0; i < totalHours; i++) {
-    if (i < hoursUsed) {
+  for (let i = 0; i < totalMinutes; i++) {
+    if (i < minutesUsed) {
       bars.push(<View style={usedBarStyle} key={i} testID="bar" />);
     } else {
       bars.push(<View style={unusedBarStyle} key={i} testID="bar" />);
     }
   }
-
-  const digits = [];
-  const selectedDigitStyle = { ...styles.digit, color: cream };
-  const regularDigitStyle = { ...styles.digit, color: eggshell };
-  for (let i = totalHours; i >= 0; i--) {
-    if (i === totalHours - hoursUsed) {
-      digits.push(
-        <CustomText style={selectedDigitStyle} key={i} testID="digit">
-          {i}
-        </CustomText>,
-      );
-    } else {
-      digits.push(
-        <CustomText style={regularDigitStyle} key={i} testID="digit">
-          {i}
-        </CustomText>,
-      );
-    }
-  }
-
   return (
+    type === 'minutes' ?
+     <View style={styles.container}>
+      <CustomText style={styles.title}>Minutes Remaining:</CustomText>
+      <View style={styles.progressBarContainer} testID="bars-container">
+        {bars}
+      </View>
+      <View style={styles.numberContainer} testID="digits-container">
+      <CustomText style={styles.title}>{minutesUsed}</CustomText>
+      </View>
+     </View> :
     <View style={styles.container}>
       <CustomText style={styles.title}>Visits Remaining:</CustomText>
       <View style={styles.progressBarContainer} testID="bars-container">
         {bars}
       </View>
       <View style={styles.numberContainer} testID="digits-container">
-        {digits}
+      <CustomText style={styles.title}>{minutesUsed}</CustomText>
       </View>
     </View>
   );
@@ -85,4 +75,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HoursProgressTracker;
+export default MinutesProgressTracker;
