@@ -7,7 +7,7 @@ import Ionicon from 'react-native-vector-icons/Ionicons';
 import CustomText from '../custom-text';
 import { deletePaymentSource, selectPaymentSource } from '../../redux/actions/user-actions';
 import { getCardBrandIcon } from '../../utilities/cards';
-import { eggshell } from '../../utilities/colors';
+import { cream } from '../../utilities/colors';
 
 const CardCard = ({ cardInfo, onSelect }) => {
   const user = useSelector((state) => state.user);
@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: eggshell,
+    backgroundColor: cream,
   },
   bottomBorder: {
     borderBottomWidth: 1,

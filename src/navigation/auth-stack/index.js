@@ -11,7 +11,7 @@ import PromptMobileNumberScreen from '../../screens/forgot-password/prompt-mobil
 import RegisterScreen from '../../screens/register-screen';
 import VerificationScreen from '../../screens/verification-screen';
 import MainDrawer from '../main-drawer';
-import { brown, eggshell } from '../../utilities/colors';
+import { brown, cream } from '../../utilities/colors';
 
 const Stack = createStackNavigator();
 
@@ -22,7 +22,7 @@ const AuthStack = () => (
         backgroundColor: brown,
         shadowColor: 'transparent',
       },
-      headerTintColor: eggshell,
+      headerTintColor: cream,
       headerTitle: null,
       headerBackTitleVisible: false,
       headerLeftContainerStyle: {

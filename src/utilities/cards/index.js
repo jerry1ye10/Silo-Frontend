@@ -27,8 +27,8 @@ export const getCardBrandIcon = (brand, style) => {
 
 // Helper function to make card object from Stripe smaller.
 export const getTrimmedCard = (verboseCard) => {
-  return (({ id, exp_month: expMonth, exp_year: expYear, last4, brand }) => ({
-    id,
+  return (({ cardId, expMonth, expYear, last4, brand }) => ({
+    cardId,
     expMonth,
     expYear,
     last4,

@@ -3,7 +3,7 @@ import { View, StyleSheet, ActivityIndicator, FlatList } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 
 import CustomText from '../../components/custom-text';
-import { darkGreen, eggshell } from '../../utilities/colors';
+import { brown, cream } from '../../utilities/colors';
 import HistoryCard from '../../components/history-card';
 import { getSessionHistory } from '../../redux/actions/session-actions';
 
@@ -23,7 +23,7 @@ const HistoryScreen = () => {
     );
   } else if (sessions.isAddingSessionHistory) {
     elementOnDisplay = (
-      <ActivityIndicator style={styles.activityIndicator} size="small" color={eggshell} />
+      <ActivityIndicator style={styles.activityIndicator} size="small" color={cream} />
     );
   } else if (sessions.sessionHistory.length === 0) {
     elementOnDisplay = (
@@ -49,7 +49,7 @@ const HistoryScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: darkGreen,
+    backgroundColor: brown,
   },
   list: {
     flex: 1,
@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
   placeholderText: {
     textAlign: 'center',
     marginTop: 20,
-    color: eggshell,
+    color: cream,
   },
   activityIndicator: {
     paddingTop: 20,

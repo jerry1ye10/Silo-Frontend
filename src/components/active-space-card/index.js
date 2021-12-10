@@ -7,7 +7,7 @@ import CustomText from '../custom-text';
 import moment from 'moment';
 
 import Button from '../../components/button';
-import { brown, cream, darkGreen, eggshell } from '../../utilities/colors';
+import { brown, cream} from '../../utilities/colors';
 import { fireEndSessionNotification } from '../../utilities/notifications';
 import { endSession, finishSession } from '../../redux/actions/session-actions';
 import { socket } from '../../utilities/socket-connection';
@@ -129,7 +129,7 @@ const styles = StyleSheet.create({
   },
   typeText: {
     fontWeight: 'bold',
-    color: darkGreen,
+    color: brown,
     marginTop: 3,
   },
   bottomExtraContent: {

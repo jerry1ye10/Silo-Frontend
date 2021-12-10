@@ -7,7 +7,7 @@ import minotaur from '../../api/minotaur';
 import Button from '../../components/button';
 import CustomText from '../../components/custom-text';
 import CustomTextInput from '../../components/custom-text-input';
-import { brown, darkGreen, eggshell, lightGreen } from '../../utilities/colors';
+import { brown, cream } from '../../utilities/colors';
 import { cleanPhoneNumber, isPhoneNumberValid, formatPhoneNumber } from '../../utilities/strings';
 
 const PhoneNumberScreen = ({ route }) => {
@@ -69,7 +69,7 @@ const PhoneNumberScreen = ({ route }) => {
               onSubmitEditing={requestValidation}
               placeholderTextColor="gray"
               placeholder="(718) 123-4567"
-              selectionColor={eggshell}
+              selectionColor={cream}
               style={styles.phoneNumberInput}
               value={formattedPhoneNumber}
             />
@@ -79,8 +79,8 @@ const PhoneNumberScreen = ({ route }) => {
       </View>
       <Button
         text="Get Code"
-        color={darkGreen}
-        backgroundColor={lightGreen}
+        color={brown}
+        backgroundColor={cream}
         onPress={requestValidation}
         showActivityIndicator={submitting}
         disabled={submitting}
@@ -113,11 +113,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     marginLeft: 20,
-    borderColor: eggshell,
+    borderColor: cream,
     borderBottomWidth: 1,
   },
   numberPrefixText: {
-    color: eggshell,
+    color: cream,
     fontSize: 18,
     textAlign: 'center',
     paddingVertical: 5,
@@ -125,7 +125,7 @@ const styles = StyleSheet.create({
   phoneNumberInput: {
     flex: 1,
     marginLeft: 5,
-    color: eggshell,
+    color: cream,
     fontSize: 18,
     paddingVertical: 5,
   },
@@ -140,7 +140,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   disclaimerText: {
-    color: eggshell,
+    color: cream,
     fontSize: 12,
     marginTop: 10,
     marginBottom: 20,

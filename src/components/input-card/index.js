@@ -10,7 +10,7 @@ import {
 
 import CustomText from '../custom-text';
 import CustomTextInput from '../custom-text-input';
-import { brown, darkGreen, eggshell } from '../../utilities/colors';
+import { brown, cream } from '../../utilities/colors';
 
 const InputCard = ({ inputInfo }) => {
   const [didEditText, setDidEditText] = React.useState(false);
@@ -136,19 +136,19 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   saveButtonColor: {
-    backgroundColor: darkGreen,
+    backgroundColor: brown,
   },
   loadingButtonColor: {
     backgroundColor: 'gray',
   },
   hiddenButtonColor: {
-    color: eggshell,
+    color: cream,
   },
   buttonText: {
-    color: eggshell,
+    color: cream,
   },
   hiddenButtonText: {
-    color: eggshell,
+    color: cream,
   },
 });
 

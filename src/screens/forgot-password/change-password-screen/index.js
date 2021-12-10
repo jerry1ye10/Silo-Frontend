@@ -6,7 +6,7 @@ import minotaur from '../../../api/minotaur';
 import Button from '../../../components/button';
 import CustomText from '../../../components/custom-text';
 import CustomTextInput from '../../../components/custom-text-input';
-import { brown, cream, eggshell } from '../../../utilities/colors';
+import { brown, cream } from '../../../utilities/colors';
 
 const ChangePasswordScreen = ({ route }) => {
   const { token } = route.params;
@@ -55,9 +55,9 @@ const ChangePasswordScreen = ({ route }) => {
             autoCapitalize="none"
             autoCorrect={false}
             onChangeText={setNewPassword}
-            placeholderTextColor={eggshell}
+            placeholderTextColor={cream}
             secureTextEntry
-            selectionColor={eggshell}
+            selectionColor={cream}
             style={styles.input}
             value={newPassword}
           />
@@ -70,9 +70,9 @@ const ChangePasswordScreen = ({ route }) => {
             autoCapitalize="none"
             autoCorrect={false}
             onChangeText={setConfirmPassword}
-            placeholderTextColor={eggshell}
+            placeholderTextColor={cream}
             secureTextEntry
-            selectionColor={eggshell}
+            selectionColor={cream}
             style={styles.input}
             value={confirmPassword}
           />
@@ -81,7 +81,7 @@ const ChangePasswordScreen = ({ route }) => {
       <CustomText style={styles.errorMessage}>{error}</CustomText>
       <Button
         text="Submit"
-        color={eggshell}
+        color={brown}
         backgroundColor={cream}
         onPress={proceed}
         disabled={submitting}
@@ -100,14 +100,14 @@ const styles = StyleSheet.create({
   },
   headerText: {
     textAlign: 'center',
-    color: eggshell,
+    color: cream,
     fontWeight: 'bold',
     fontSize: 16,
     marginBottom: 10,
   },
   descriptionText: {
     textAlign: 'center',
-    color: eggshell,
+    color: cream,
     marginBottom: 20,
   },
   errorMessage: {
@@ -120,12 +120,12 @@ const styles = StyleSheet.create({
     width: '100%',
     borderWidth: 1,
     borderColor: brown,
-    borderBottomColor: eggshell,
+    borderBottomColor: cream,
     paddingVertical: 5,
     marginTop: 10,
   },
   fieldTitle: {
-    color: eggshell,
+    color: cream,
     marginBottom: 5,
     fontWeight: 'bold',
   },
@@ -136,7 +136,7 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingVertical: 5,
     paddingHorizontal: 0,
-    color: eggshell,
+    color: cream,
   },
 });
 

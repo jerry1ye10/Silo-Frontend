@@ -9,7 +9,7 @@ export const fireBeginSessionNotification = (lockId) => {
   PushNotification.localNotification(notificationData);
 };
 
-export const fireEndSessionNotification = (lockId, weeklyPassId, membershipId, price) => {
+export const fireEndSessionNotification = (lockId, price) => {
   const notificationData = {
     id: 2,
     title: 'Session Ended',

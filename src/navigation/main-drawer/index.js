@@ -14,7 +14,7 @@ import ScanScreen from '../../screens/scan-screen';
 
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import SideMenu from '../../components/side-menu';
-import { brown, eggshell } from '../../utilities/colors';
+import { brown, cream } from '../../utilities/colors';
 
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
@@ -37,7 +37,7 @@ const MainStack = () => {
           backgroundColor: brown,
           shadowColor: 'transparent',
         },
-        headerTintColor: eggshell,
+        headerTintColor: cream,
         headerTitle: null,
       }}>
       <Stack.Screen name="AccountScreen" component={AccountScreen} />
@@ -61,7 +61,7 @@ const MainStack = () => {
                 name="menu"
                 style={styles.button}
                 size={35}
-                color={eggshell}
+                color={cream}
                 backgroundColor={brown}
               />
             </TouchableOpacity>

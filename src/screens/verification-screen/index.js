@@ -9,7 +9,7 @@ import minotaur from '../../api/minotaur';
 import Button from '../../components/button';
 import CustomText from '../../components/custom-text';
 import CustomTextInput from '../../components/custom-text-input';
-import { brown, darkGreen, eggshell, lightGreen } from '../../utilities/colors';
+import { brown, cream, lightGreen } from '../../utilities/colors';
 import { addUser } from '../../redux/actions/user-actions';
 import { formatPhoneNumber } from '../../utilities/strings';
 
@@ -39,6 +39,8 @@ const VerificationScreen = ({ route }) => {
       // Check if there is device token information present.
       if (user.deviceToken !== null) {
         // If nothing exists, create it.
+        console.log("I ran");
+        console.log(response.data.id);
         await minotaur.post('/devices', {
           token: user.deviceToken.token,
           os: user.deviceToken.os,
@@ -78,7 +80,7 @@ const VerificationScreen = ({ route }) => {
         <CustomTextInput
           autoFocus
           style={styles.digitInput}
-          selectionColor={eggshell}
+          selectionColor={cream}
           maxLength={6}
           keyboardType="number-pad"
           value={verificationField}
@@ -88,8 +90,8 @@ const VerificationScreen = ({ route }) => {
       <CustomText style={styles.errorMessage}>{error}</CustomText>
       <Button
         text="Verify"
-        color={darkGreen}
-        backgroundColor={lightGreen}
+        color={brown}
+        backgroundColor={cream}
         onPress={register}
         showActivityIndicator={submitting}
         disabled={submitting}
@@ -107,14 +109,14 @@ const styles = StyleSheet.create({
   },
   headerText: {
     fontSize: 16,
-    color: eggshell,
+    color: cream,
     textAlign: 'center',
     fontWeight: 'bold',
     marginBottom: 10,
   },
   descriptionText: {
     textAlign: 'center',
-    color: eggshell,
+    color: cream,
     marginBottom: 20,
   },
   codeInputView: {
@@ -122,9 +124,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   digitInput: {
-    borderColor: eggshell,
+    borderColor: cream,
     borderBottomWidth: 1,
-    color: eggshell,
+    color: cream,
     width: 100,
     fontSize: 20,
     textAlign: 'center',

@@ -6,7 +6,7 @@ import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view
 
 import CustomText from '../../components/custom-text';
 import CustomTextInput from '../../components/custom-text-input';
-import { brown, cream, eggshell } from '../../utilities/colors';
+import { brown, cream} from '../../utilities/colors';
 import Button from '../../components/button';
 import { login, addUserError } from '../../redux/actions/user-actions';
 
@@ -79,7 +79,7 @@ const LoginScreen = () => {
       <CustomText style={styles.errorMessage}>{user.userError}</CustomText>
       <Button
         text="Sign In"
-        color={eggshell}
+        color={brown}
         backgroundColor={cream}
         onPress={() => {
           dispatch(
@@ -113,12 +113,12 @@ const styles = StyleSheet.create({
     width: '100%',
     borderWidth: 1,
     borderColor: brown,
-    borderBottomColor: eggshell,
+    borderBottomColor: cream,
     paddingVertical: 5,
     marginTop: 10,
   },
   fieldTitle: {
-    color: eggshell,
+    color: cream,
     marginBottom: 5,
     fontWeight: 'bold',
   },
@@ -129,7 +129,7 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingVertical: 5,
     paddingHorizontal: 0,
-    color: eggshell,
+    color: cream,
   },
   errorMessage: {
     marginVertical: 10,
@@ -143,7 +143,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   buttonText: {
-    color: eggshell,
+    color: cream,
     fontWeight: 'bold',
   },
 });

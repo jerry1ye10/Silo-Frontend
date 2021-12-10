@@ -6,7 +6,7 @@ import messaging from '@react-native-firebase/messaging';
 import SplashScreen from 'react-native-splash-screen';
 
 import Button from '../../components/button';
-import { brown, cream, darkGreen, eggshell, lightGreen } from '../../utilities/colors';
+import { brown, cream } from '../../utilities/colors';
 import { recordDeviceToken } from '../../redux/actions/user-actions';
 
 const LandingScreen = () => {
@@ -52,7 +52,7 @@ const LandingScreen = () => {
       <View style={styles.buttonContainer}>
         <Button
           text="Sign In"
-          color={eggshell}
+          color={brown}
           backgroundColor={cream}
           onPress={() => {
             navigation.navigate('LoginScreen');
@@ -61,8 +61,8 @@ const LandingScreen = () => {
         />
         <Button
           text="Register"
-          color={lightGreen}
-          backgroundColor={darkGreen}
+          color={brown}
+          backgroundColor={cream}
           onPress={() => {
             navigation.navigate('RegisterScreen');
           }}

@@ -7,7 +7,7 @@ import minotaur from '../../../api/minotaur';
 import Button from '../../../components/button';
 import CustomText from '../../../components/custom-text';
 import CustomTextInput from '../../../components/custom-text-input';
-import { brown, cream, eggshell } from '../../../utilities/colors';
+import { brown, cream } from '../../../utilities/colors';
 import { formatPhoneNumber } from '../../../utilities/strings';
 
 const ForgotPasswordVerificationScreen = ({ route }) => {
@@ -56,7 +56,7 @@ const ForgotPasswordVerificationScreen = ({ route }) => {
         <CustomTextInput
           autoFocus
           style={styles.digitInput}
-          selectionColor={eggshell}
+          selectionColor={cream}
           maxLength={6}
           keyboardType="number-pad"
           value={verificationField}
@@ -66,7 +66,7 @@ const ForgotPasswordVerificationScreen = ({ route }) => {
       <CustomText style={styles.errorMessage}>{error}</CustomText>
       <Button
         text="Verify"
-        color={eggshell}
+        color={brown}
         backgroundColor={cream}
         onPress={proceed}
         showActivityIndicator={submitting}
@@ -85,14 +85,14 @@ const styles = StyleSheet.create({
   },
   headerText: {
     fontSize: 16,
-    color: eggshell,
+    color: cream,
     textAlign: 'center',
     fontWeight: 'bold',
     marginBottom: 10,
   },
   descriptionText: {
     textAlign: 'center',
-    color: eggshell,
+    color: cream,
     marginBottom: 20,
   },
   codeInputView: {
@@ -100,9 +100,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   digitInput: {
-    borderColor: eggshell,
+    borderColor: cream,
     borderBottomWidth: 1,
-    color: eggshell,
+    color: cream,
     width: 100,
     fontSize: 20,
     textAlign: 'center',

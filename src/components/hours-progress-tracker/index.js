@@ -2,12 +2,12 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 
 import CustomText from '../custom-text';
-import { brown, cream, eggshell } from '../../utilities/colors';
+import { brown, cream } from '../../utilities/colors';
 
 export const MinutesProgressTracker = ({ totalMinutes, minutesUsed, type }) => {
   const bars = [];
   const usedBarStyle = { ...styles.singleBar, backgroundColor: cream };
-  const unusedBarStyle = { ...styles.singleBar, backgroundColor: eggshell };
+  const unusedBarStyle = { ...styles.singleBar, backgroundColor: cream };
   for (let i = 0; i < totalMinutes; i++) {
     if (i < minutesUsed) {
       bars.push(<View style={usedBarStyle} key={i} testID="bar" />);
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 7,
   },
   title: {
-    color: eggshell,
+    color: cream,
     fontWeight: 'bold',
     fontSize: 12,
     marginHorizontal: 3,

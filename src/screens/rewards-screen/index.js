@@ -6,7 +6,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import CustomText from '../../components/custom-text';
 import CustomTextInput from '../../components/custom-text-input';
 import Button from '../../components/button';
-import { brown, cream, darkGreen, eggshell } from '../../utilities/colors';
+import { brown, cream } from '../../utilities/colors';
 import RewardCard from '../../components/reward-card';
 import {
   getRelevantPromotions,
@@ -94,12 +94,12 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    backgroundColor: darkGreen,
+    backgroundColor: brown,
     padding: 20,
   },
   content: {
     flex: 1,
-    backgroundColor: darkGreen,
+    backgroundColor: brown,
     marginTop: 20,
   },
   list: {
@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
   },
   placeholderText: {
     textAlign: 'center',
-    color: eggshell,
+    color: cream,
   },
   codeErrorMessage: {
     marginVertical: 10,
@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   topView: {
-    backgroundColor: eggshell,
+    backgroundColor: cream,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,

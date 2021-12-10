@@ -9,7 +9,7 @@ import CustomText from '../../components/custom-text';
 import CustomTextInput from '../../components/custom-text-input';
 import Button from '../../components/button';
 import { isEmailValid } from '../../utilities/strings';
-import { brown, darkGreen, eggshell, lightGreen } from '../../utilities/colors';
+import { brown, cream, lightGreen } from '../../utilities/colors';
 
 const RegisterScreen = ({ route }) => {
   const navigation = useNavigation();
@@ -132,8 +132,8 @@ const RegisterScreen = ({ route }) => {
       <CustomText style={styles.errorMessage}>{error}</CustomText>
       <Button
         text="Register"
-        color={darkGreen}
-        backgroundColor={lightGreen}
+        color={brown}
+        backgroundColor={cream}
         onPress={proceed}
         showActivityIndicator={submitting}
         disabled={submitting || !email || !password}
@@ -172,12 +172,12 @@ const styles = StyleSheet.create({
     width: '100%',
     borderBottomWidth: 1,
     borderColor: 'black',
-    borderBottomColor: eggshell,
+    borderBottomColor: cream,
     paddingVertical: 5,
     marginTop: 10,
   },
   fieldTitle: {
-    color: eggshell,
+    color: cream,
     marginBottom: 5,
     fontWeight: 'bold',
   },
@@ -188,7 +188,7 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingVertical: 10,
     paddingHorizontal: 0,
-    color: eggshell,
+    color: cream,
   },
   errorMessage: {
     marginVertical: 10,
@@ -197,13 +197,13 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   disclaimerText: {
-    color: eggshell,
+    color: cream,
     fontSize: 12,
     marginBottom: 20,
     marginTop: 10,
   },
   hyperlinkText: {
-    color: lightGreen,
+    color: cream,
   },
 });
 

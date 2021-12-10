@@ -128,8 +128,10 @@ export const login = (email, password, deviceToken, next) => {
         });
         const user = { ...loginResponse.data, email };
         // Check if there is device token information present.
+        console.log(deviceToken);
         if (deviceToken !== null) {
           // If nothing exists, create it.
+          
           await minotaur.post('/devices', {
             token: deviceToken.token,
             os: deviceToken.os,
@@ -201,7 +203,15 @@ export const selectPaymentSource = (user, selectedCardId) => {
 
 // Communicates with minotaur to add a card to the user through stripe. A JWT
 // token is required to perform this action.
-export const updatePaymentProfile = (user, cardToken, next) => {
+export const updatePaymentProfile = (user, userCard, next) => {
+  const cardToken = userCard.tokenId;
+  console.log(66);
+  console.log(cardToken);
+  console.log(67)
+  console.log(userCard.card);
+  console.log(68);
+  console.log(user);
+  console.log(69);
   return async (dispatch) => {
     dispatch(addCardAdding());
     // First, see if current card is already marked default, it there is
@@ -218,6 +228,10 @@ export const updatePaymentProfile = (user, cardToken, next) => {
     // user with the card object. If a stripe customer already exists, update
     // card onto the user.
     try {
+      console.log(0);
+      console.log(user.stripeId);
+      console.log(1);
+      console.log(user.stripe_id);
       if (!user.stripeId) {
         const createCustomerResponse = await minotaur.post(
           '/stripe-customers',
@@ -230,10 +244,17 @@ export const updatePaymentProfile = (user, cardToken, next) => {
           { stripeId: freshStripeId },
           { headers: { Authorization: `Bearer ${user.token}` } },
         );
+        console.log(1);
+        console.log(createCustomerResponse.data);
+        //console.log(createCustomerResponse.card);
+        console.log(3);
+        //console.log(createCustomerResponse.data);
+        console.log(4)
         // If the customer is created successfully, update mintotaur with all
         // relevant information.
         // Trim the card down to only what's necessary for the database.
-        const card = getTrimmedCard(createCustomerResponse.data.card);
+        const card = getTrimmedCard(userCard.card);
+        //console.log(card)
         // Now add card to database.
         await minotaur.post(
           '/cards',

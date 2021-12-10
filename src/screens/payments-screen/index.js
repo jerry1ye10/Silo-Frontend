@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useNavigation } from '@react-navigation/native';
 
 import CustomText from '../../components/custom-text';
-import { brown, eggshell } from '../../utilities/colors';
+import { brown, cream } from '../../utilities/colors';
 import { addCardError, getCards } from '../../redux/actions/user-actions';
 import CardList from '../../components/card-list';
 
@@ -15,6 +15,7 @@ const PaymentsScreen = ({ route }) => {
 
   const sessionInformation = route.params ? route.params.sessionInformation : null;
 
+  console.log(user.token);
   React.useEffect(() => {
     dispatch(getCards(user.token));
   }, [dispatch, user.token]);
@@ -43,7 +44,7 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   topView: {
-    backgroundColor: eggshell,
+    backgroundColor: cream,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,

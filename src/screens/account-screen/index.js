@@ -4,7 +4,7 @@ import { useNavigation } from '@react-navigation/native';
 import { useSelector, useDispatch } from 'react-redux';
 
 import CustomText from '../../components/custom-text';
-import { brown, cream, darkGreen, eggshell } from '../../utilities/colors';
+import { brown, cream } from '../../utilities/colors';
 import Button from '../../components/button';
 import InputCard from '../../components/input-card';
 
@@ -79,10 +79,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: darkGreen,
+    backgroundColor: brown,
   },
   topView: {
-    backgroundColor: eggshell,
+    backgroundColor: cream,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,

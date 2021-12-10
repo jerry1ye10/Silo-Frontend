@@ -12,7 +12,7 @@ import { useNavigation } from '@react-navigation/native';
 import { useSelector, useDispatch } from 'react-redux';
 
 import CustomText from '../../components/custom-text';
-import { brown, cream, darkGreen, eggshell } from '../../utilities/colors';
+import { brown, cream } from '../../utilities/colors';
 import { addCardError } from '../../redux/actions/user-actions';
 import { getActiveSessions } from '../../redux/actions/session-actions';
 import RectangleWithCornerBorders from '../rectangle-with-corner-borders';
@@ -87,7 +87,7 @@ const ScanOverlay = ({ headerText }) => {
   const numSessions = sessions.activeSessions.length;
   const bannerStyle =
     numSessions !== 0
-      ? { ...styles.banner, backgroundColor: darkGreen }
+      ? { ...styles.banner, backgroundColor: brown }
       : user.dayPass?.status === 'ACTIVE'
       ? { ...styles.banner, backgroundColor: cream }
       : { ...styles.banner };
@@ -99,17 +99,6 @@ const ScanOverlay = ({ headerText }) => {
       : user.dayPass?.status === 'ACTIVE'
       ? 'You Have a Pass Available'
       : null;
-  const buttonTextColor = justUnlocked ? darkGreen : brown;
-  const buttonContent = justUnlocked ? (
-    <CustomText style={{ ...styles.buttonSubText, color: buttonTextColor }}>Success!</CustomText>
-  ) : isUnlocking ? (
-    <ActivityIndicator />
-  ) : (
-    // <ActivityIndicator color={black} size={30} />
-    <CustomText style={{ ...styles.buttonSubText, color: buttonTextColor }}>
-      Unlock Front Door
-    </CustomText>
-  );
 
   return (
     <View style={styles.container}>
@@ -147,7 +136,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   bannerText: {
-    color: eggshell,
+    color: cream,
     fontSize: 14,
     fontWeight: 'bold',
     textAlign: 'center',
@@ -159,7 +148,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   lockButton: {
-    backgroundColor: eggshell,
+    backgroundColor: cream,
     borderRadius: 2,
     alignItems: 'center',
     justifyContent: 'center',
@@ -176,7 +165,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   footerText: {
-    color: eggshell,
+    color: cream,
     fontWeight: 'bold',
     textAlign: 'center',
     textAlignVertical: 'center',

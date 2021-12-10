@@ -4,7 +4,7 @@ import { View, StyleSheet, Share, Image } from 'react-native';
 
 import CustomText from '../../components/custom-text';
 import Button from '../../components/button';
-import { brown, cream, darkGreen, eggshell } from '../../utilities/colors';
+import { brown, cream } from '../../utilities/colors';
 
 const RefferalScreen = () => {
   const user = useSelector((state) => state.user);
@@ -48,11 +48,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: darkGreen,
+    backgroundColor: brown,
   },
   content: {
     flex: 1,
-    backgroundColor: eggshell,
+    backgroundColor: cream,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,

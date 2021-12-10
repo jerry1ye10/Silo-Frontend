@@ -6,7 +6,7 @@ import minotaur from '../../../api/minotaur';
 import Button from '../../../components/button';
 import CustomText from '../../../components/custom-text';
 import CustomTextInput from '../../../components/custom-text-input';
-import { brown, cream, eggshell } from '../../../utilities/colors';
+import { brown, cream } from '../../../utilities/colors';
 import { cleanPhoneNumber, formatPhoneNumber } from '../../../utilities/strings';
 
 const PromptMobileNumberScreen = () => {
@@ -55,8 +55,8 @@ const PromptMobileNumberScreen = () => {
               keyboardType="number-pad"
               maxLength={14}
               onChangeText={onChangeText}
-              placeholderTextColor={eggshell}
-              selectionColor={eggshell}
+              placeholderTextColor={cream}
+              selectionColor={cream}
               style={styles.input}
               value={formattedPhoneNumber}
             />
@@ -65,7 +65,7 @@ const PromptMobileNumberScreen = () => {
         <CustomText style={styles.errorMessage}>{error}</CustomText>
         <Button
           text="Continue"
-          color={eggshell}
+          color={brown}
           backgroundColor={cream}
           onPress={proceed}
           disabled={phoneNumber.length !== 10 || submitting}
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
   },
   header: {
     textAlign: 'center',
-    color: eggshell,
+    color: cream,
     fontWeight: 'bold',
     fontSize: 16,
   },
@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   fieldTitle: {
-    color: eggshell,
+    color: cream,
     marginBottom: 5,
     fontWeight: 'bold',
   },
@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
     width: '100%',
     borderWidth: 1,
     borderColor: brown,
-    borderBottomColor: eggshell,
+    borderBottomColor: cream,
     paddingVertical: 5,
     marginTop: 10,
   },
@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingVertical: 5,
     paddingHorizontal: 0,
-    color: eggshell,
+    color: cream,
   },
   errorMessage: {
     textAlign: 'center',

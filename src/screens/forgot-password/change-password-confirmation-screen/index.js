@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-import { brown, cream, eggshell } from '../../../utilities/colors';
+import { brown, cream } from '../../../utilities/colors';
 import Button from '../../../components/button';
 import CustomText from '../../../components/custom-text';
 
@@ -13,7 +13,7 @@ const ChangePasswordConfirmationScreen = () => {
       <CustomText style={styles.headerText}>Your Password was Succesfully Changed</CustomText>
       <Button
         text="OK"
-        color={eggshell}
+        color={brown}
         backgroundColor={cream}
         onPress={() => {
           navigation.navigate('LandingScreen');
@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 16,
     marginBottom: 20,
-    color: eggshell,
+    color: cream,
     fontWeight: 'bold',
   },
 });

@@ -45,9 +45,11 @@ const CardList = ({ sessionInformation }) => {
         onPress={async () => {
           try {
             const paymentToken = await stripe.paymentRequestWithCardForm({});
+            console.log(9)
             console.log(paymentToken);
+            console.log(10);
             dispatch(
-              updatePaymentProfile(user, paymentToken.tokenId, () => {
+              updatePaymentProfile(user, paymentToken, () => {
                 if (sessionInformation) {
                   navigation.navigate('ScanScreen', { sessionInformation });
                 }
@@ -62,10 +64,10 @@ const CardList = ({ sessionInformation }) => {
 
 const styles = StyleSheet.create({
   cardBlock: {
-    backgroundColor: eggshell,
+    backgroundColor: cream,
   },
   list: {
-    backgroundColor: eggshell,
+    backgroundColor: cream,
   },
   errorMessage: {
     marginVertical: 10,

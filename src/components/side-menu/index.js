@@ -6,7 +6,7 @@ import { SafeAreaView } from 'react-navigation';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import CustomText from '../../components/custom-text';
-import { brown, darkGreen, eggshell, black } from '../../utilities/colors';
+import { brown, cream, black } from '../../utilities/colors';
 
 const NavigationCard = ({ icon, title, screen, color }) => {
   const navigation = useNavigation();
@@ -124,7 +124,7 @@ const SideMenu = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: eggshell,
+    backgroundColor: cream,
   },
   imageContainer: {
     backgroundColor: brown,

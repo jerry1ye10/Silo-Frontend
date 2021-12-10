@@ -70,6 +70,7 @@ const EndSessionModal = ({ session, modalVisibility, setModalVisibility }) => {
           <Icon name="close" size={30} color="gray" />
         </TouchableOpacity>
       </View>
+      
     </View>
   );
 
@@ -80,10 +81,6 @@ const EndSessionModal = ({ session, modalVisibility, setModalVisibility }) => {
         <CustomText style={completedStyles.successText}>SUCCESS!</CustomText>
         <Icon name="close" size={30} color="transparent" style={completedStyles.icon} />
       </View>
-      <Image
-        source={require('../../../assets/locking-animation-final.png')}
-        style={completedStyles.completedImage}
-      />
     </Animated.View>
   );
 

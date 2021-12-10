@@ -17,7 +17,7 @@ export const beginSession = (lockId, promotionRecordId, noPaymentAction, next) =
     // Make sure that card information is present.
     try {
       dispatch(addSessionAdding());
-      await minotaur.post('/hourly_session', {
+      await minotaur.post('/minute_session', {
         lock_id: lockId,
         promotion_record_id: promotionRecordId,
       });
