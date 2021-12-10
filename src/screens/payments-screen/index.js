@@ -15,7 +15,6 @@ const PaymentsScreen = ({ route }) => {
 
   const sessionInformation = route.params ? route.params.sessionInformation : null;
 
-  console.log(user.token);
   React.useEffect(() => {
     dispatch(getCards(user.token));
   }, [dispatch, user.token]);

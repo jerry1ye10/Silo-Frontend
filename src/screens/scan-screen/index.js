@@ -100,9 +100,7 @@ const ScanScreen = ({ route }) => {
 
     if (sessionInformation) {
       setConfModalVisibility(true);
-      if (!prevDayRate) {
-        dispatch(beginSession(prevLockId, prevPromotionRecordId, null, next));
-      }
+      dispatch(beginSession(prevLockId, prevPromotionRecordId, null, next));
     }
   }, [sessionInformation]);
 
@@ -192,7 +190,7 @@ const ScanScreen = ({ route }) => {
   };
 
   React.useEffect(() => {
-    if (rates.baseRate) {
+    if (rates.baseRateFirst && rates.baseRateSecond) {
       setConfModalVisibility(true);
     }
   }, [rates]);
@@ -221,7 +219,7 @@ const ScanScreen = ({ route }) => {
         sessionInformation={sessionInformation}
         lockId={prevLockId || lockId}
         promotionRecordId={prevPromotionRecordId || (rates.promotion ? rates.promotion.id : null)}
-        baseRate={rates.baseRateFirst}
+        baseRateFirst={rates.baseRateFirst}
         baseRateSecond={rates.baseRateSecond}
         promotionValue={
           prevPromotionalValue || (rates.promotion ? rates.promotion.promotionValue : null)

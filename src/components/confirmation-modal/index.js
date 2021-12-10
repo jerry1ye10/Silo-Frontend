@@ -91,7 +91,7 @@ const ConfirmationModal = ({
   const setupMembership = () => {
     const hourlyNormal = {
       id: 'FLAT',
-      title: 'Flat',
+      title: 'Pass',
       subtext: `$${baseRateSecond / 100} every 5 minutes after`,
       subtextColor: brown,
       price: `$${baseRateFirst / 100}`,
@@ -175,7 +175,7 @@ const ConfirmationModal = ({
       />
       <CustomText style={styles.errorText}>{sessions.sessionError}</CustomText>
       <Button
-        text={`Unlock Silo ${lockId}`}
+        text={`Unlock Silo`}
         color={brown}
         backgroundColor={cream}
         showActivityIndicator={sessions.isAddingSession && modalVisibility}

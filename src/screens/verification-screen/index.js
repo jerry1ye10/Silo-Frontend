@@ -39,8 +39,6 @@ const VerificationScreen = ({ route }) => {
       // Check if there is device token information present.
       if (user.deviceToken !== null) {
         // If nothing exists, create it.
-        console.log("I ran");
-        console.log(response.data.id);
         await minotaur.post('/devices', {
           token: user.deviceToken.token,
           os: user.deviceToken.os,
