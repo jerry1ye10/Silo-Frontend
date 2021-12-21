@@ -6,7 +6,7 @@ import stripe from 'tipsi-stripe';
 
 import CustomText from '../custom-text';
 import { updatePaymentProfile } from '../../redux/actions/user-actions';
-import { cream, eggshell,brown } from '../../utilities/colors';
+import { cream,brown } from '../../utilities/colors';
 import Button from '../../components/button';
 import CardCard from '../card-card';
 import LoadingCardCard from '../loading-card-card';

@@ -9,7 +9,7 @@ import {
   getActiveSessions,
 } from '../../redux/actions/session-actions';
 import CustomText from '../../components/custom-text';
-import { cream, brown, lightGreen } from '../../utilities/colors';
+import { cream, brown } from '../../utilities/colors';
 
 const sessionInfo1 = {
   cardId: 'card_1FrawOEuGNwXiyj3ciyJNOEK',

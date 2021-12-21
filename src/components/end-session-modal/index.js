@@ -2,7 +2,6 @@ import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { StyleSheet, Animated, TouchableOpacity, Image, View } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
-import FastImage from 'react-native-fast-image';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import TallModalBase from '../tall-modal-base';

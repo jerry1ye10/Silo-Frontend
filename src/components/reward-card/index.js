@@ -24,8 +24,8 @@ const RewardCard = ({ rewardInfo }) => {
         </View>
       </View>
       <MinutesProgressTracker
-        totalMinutes={rewardInfo.promotionCapacity}
-        minutesUsed={rewardInfo.promotionCapacity - rewardInfo.remainingValue}
+        totalMinutes={rewardInfo.promotionValue}
+        minutesUsed={rewardInfo.remainingValue}
         type={rewardInfo.type}
       />
     </View> :

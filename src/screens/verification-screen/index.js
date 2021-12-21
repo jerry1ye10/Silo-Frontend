@@ -9,7 +9,7 @@ import minotaur from '../../api/minotaur';
 import Button from '../../components/button';
 import CustomText from '../../components/custom-text';
 import CustomTextInput from '../../components/custom-text-input';
-import { brown, cream, lightGreen } from '../../utilities/colors';
+import { brown, cream } from '../../utilities/colors';
 import { addUser } from '../../redux/actions/user-actions';
 import { formatPhoneNumber } from '../../utilities/strings';
 

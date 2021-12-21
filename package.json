@@ -1,6 +1,6 @@
 {
-  "name": "Silo",
-  "version": "3.1.0",
+  "name": "silo",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "android": "react-native run-android",

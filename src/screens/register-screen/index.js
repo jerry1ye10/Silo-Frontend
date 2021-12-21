@@ -9,7 +9,7 @@ import CustomText from '../../components/custom-text';
 import CustomTextInput from '../../components/custom-text-input';
 import Button from '../../components/button';
 import { isEmailValid } from '../../utilities/strings';
-import { brown, cream, lightGreen } from '../../utilities/colors';
+import { brown, cream } from '../../utilities/colors';
 
 const RegisterScreen = ({ route }) => {
   const navigation = useNavigation();
