@@ -143,7 +143,7 @@ const RegisterScreen = ({ route }) => {
         <CustomText
           style={styles.hyperlinkText}
           onPress={() => {
-            Linking.openURL('https://silo.co/privacy-policy');
+            Linking.openURL('https://www.booksilo.co/terms-and-conditions');
           }}>
           Privacy Policy
         </CustomText>{' '}
@@ -151,7 +151,7 @@ const RegisterScreen = ({ route }) => {
         <CustomText
           style={styles.hyperlinkText}
           onPress={() => {
-            Linking.openURL('https://silo.co/terms-conditions');
+            Linking.openURL('https://www.booksilo.co/terms-and-conditions');
           }}>
           Terms of Use
         </CustomText>
