@@ -98,14 +98,13 @@ const ConfirmationModal = ({
       priceColor: brown,
       discountedPrice: promotionValue
         ? promotionType === 'minutes'
-        ? promotionRemaining + 'free minutes' :  `$${Math.round((baseRateFirst * (100 - promotionValue)) / 100) / 100}`
+        ? promotionRemaining + ' minutes free' :  `$${Math.round((baseRateFirst * (100 - promotionValue)) / 100) / 100}`
         : null,
       priceText: '15 minutes',
       image: require('../../../assets/desk.png'),
       disabled: false,
     };
     let hourly = [hourlyNormal];
-
     setSelectionData(hourly);
     setSelected(hourlyNormal.id);
   };
@@ -137,7 +136,7 @@ const ConfirmationModal = ({
         },
         () => {
           afterSessionCreationSucceeded();
-          AppEventsLogger.logPurchase(baseRate / 100, 'USD');
+          AppEventsLogger.logPurchase(baseRateFirst / 100, 'USD');
         },
       ),
     );

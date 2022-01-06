@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
 import QRCodeScanner from 'react-native-qrcode-scanner';
-import {brown, co} from '../../utilities/colors/';
+import {brown} from '../../utilities/colors/';
 
 import ScanOverlay from '../scan-overlay';
 
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
   containerStyle: {
     flex: 1,
     alignItems: 'center',
-    borderColor: '#7a593f',
+    borderColor: brown,
   },
 });
 

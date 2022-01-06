@@ -23,7 +23,7 @@ const ScanScreen = ({ route }) => {
   const [shouldReactivate, setShouldReactivate] = React.useState(false);
 
   // Controls the visibility of the confirmation modal.
-  const [confModalVisibility, setConfModalVisibility] = React.useState(true); //TODO set to false, true for debug
+  const [confModalVisibility, setConfModalVisibility] = React.useState(false);
 
   // Determines whether the screen is currently in focus to disable QR
   // scanner from activating in the background. This state cannot be avoided
@@ -148,7 +148,7 @@ const ScanScreen = ({ route }) => {
 
   const getRates = async () => {
     try {
-      const rateResponseFirst = await minotaur.get('/constants/FIFTHTEEN_RATES');
+      const rateResponseFirst = await minotaur.get('/constants/FIFTEEN_RATE');
       const rateResponseSecond = await minotaur.get('/constants/FIVE_RATE');
       const promotionsReponse = await minotaur.get('/promotion-records');
       const promotions = promotionsReponse.data;
@@ -189,6 +189,7 @@ const ScanScreen = ({ route }) => {
     }
   };
 
+  
   React.useEffect(() => {
     if (rates.baseRateFirst && rates.baseRateSecond) {
       setConfModalVisibility(true);
@@ -224,8 +225,8 @@ const ScanScreen = ({ route }) => {
         promotionValue={
           prevPromotionalValue || (rates.promotion ? rates.promotion.promotionValue : null)
         }
-        promotionType={rates.promotion ? rates.promotion.promotionType : null}
-        promotionRemaining={rates.promotion ? rates.promotion.promotionRemaining : null}
+        promotionType={rates.promotion ? rates.promotion.type : null}
+        promotionRemaining={rates.promotion ? rates.promotion.remainingValue : null}
         resetSessionInformation={() => {
           if (sessionInformation) {
             route.params.sessionInformation = null;
@@ -234,7 +235,6 @@ const ScanScreen = ({ route }) => {
       />
     </View>
   );
-
   return cameraEnabled ? cameraEnabledScreen : cameraDisabledScreen;
 };
 
