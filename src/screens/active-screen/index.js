@@ -11,21 +11,11 @@ import {
 import CustomText from '../../components/custom-text';
 import { cream, brown } from '../../utilities/colors';
 
-const sessionInfo1 = {
-  cardId: 'card_1FrawOEuGNwXiyj3ciyJNOEK',
-  id: '73608ba6a3a0f38d0b8d79285f93eaa04feef1a1',
-  location: '262MET',
-  lockId: 3,
-  promotionRecordId: null,
-  rate: 499,
-  timeCreated: '2020-01-03 21:08:45',
-  userId: '180efe93f1978bc3ffad43b256d5b32ddc0ecf99',
-};
+
 
 const ActiveScreen = () => {
   const sessions = useSelector((state) => state.sessions);
   const dispatch = useDispatch();
-  const test = 1;
 
   const [minutes] = React.useState(0);
   const [endModalVisibility, setEndModalVisibility] = React.useState(false);
@@ -60,7 +50,7 @@ const ActiveScreen = () => {
         ) : (
           <View style={styles.container}> 
             <ActiveSpaceCard
-              session={sessions.activeSessions} 
+              session={sessions.activeSessions[0]} 
               setEndModalVisibility={setEndModalVisibility}
               setSelectedSession={setSelectedSession}
 

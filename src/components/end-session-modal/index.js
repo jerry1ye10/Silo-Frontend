@@ -68,6 +68,7 @@ const EndSessionModal = ({ session, modalVisibility, setModalVisibility }) => {
           }}>
           <Icon name="close" size={30} color="gray" />
         </TouchableOpacity>
+        <CustomText style={completedStyles.successText}>PENDING!</CustomText>
       </View>
       
     </View>

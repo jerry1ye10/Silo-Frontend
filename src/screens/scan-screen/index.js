@@ -205,7 +205,7 @@ const ScanScreen = ({ route }) => {
       />
     </View>
   );
-
+  
   const cameraEnabledScreen = (
     <View style={enabledStyles.container}>
       <QRScanner
@@ -218,7 +218,7 @@ const ScanScreen = ({ route }) => {
         setModalVisibility={setConfModalVisibility}
         versionValid={versionValid}
         sessionInformation={sessionInformation}
-        lockId={prevLockId || lockId}
+        lockId={lockId || prevLockId}
         promotionRecordId={prevPromotionRecordId || (rates.promotion ? rates.promotion.id : null)}
         baseRateFirst={rates.baseRateFirst}
         baseRateSecond={rates.baseRateSecond}

@@ -22,7 +22,6 @@ export const ActiveSpaceCard = ({
 
   const startMoment = moment.utc(session.timeCreated);
   const startTimeWithoutSeconds = startMoment.local().format('MMM D, h:mm A');
-
   React.useEffect(() => {
     const confirmListener = async (data) => {
       const { lock_id: lockId, price } = data;
