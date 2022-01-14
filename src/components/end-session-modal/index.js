@@ -33,6 +33,7 @@ const EndSessionModal = ({ session, modalVisibility, setModalVisibility }) => {
     };
   });
 
+  
   React.useEffect(() => {
     if (sessions.sessionError === 'CARD_DECLINED' && modalVisibility) {
       Animated.timing(xPosFail, { toValue: -300, duration: 0 }).start();
@@ -68,9 +69,8 @@ const EndSessionModal = ({ session, modalVisibility, setModalVisibility }) => {
           }}>
           <Icon name="close" size={30} color="gray" />
         </TouchableOpacity>
-        <CustomText style={completedStyles.successText}>PENDING!</CustomText>
       </View>
-      
+      <CustomText style={completedStyles.successText}>PENDING!</CustomText>
     </View>
   );
 
@@ -85,7 +85,7 @@ const EndSessionModal = ({ session, modalVisibility, setModalVisibility }) => {
   );
 
   const failedView = (
-    <Animated.View style={[failedStyles.container, { transform: [{ translateX: xPosFail }] }]}>
+    <View style={failedStyles.container}>
       <View style={failedStyles.topContainer}>
         <Icon name="close" size={30} color="transparent" style={completedStyles.icon} />
         <CustomText style={failedStyles.failureText}>Card Declined</CustomText>
@@ -112,15 +112,13 @@ const EndSessionModal = ({ session, modalVisibility, setModalVisibility }) => {
         }}>
         <CustomText style={failedStyles.dismissButtonText}>DISMISS</CustomText>
       </TouchableOpacity>
-    </Animated.View>
+    </View>
   );
 
   return (
     <TallModalBase
       modalVisibility={modalVisibility}
       onModalHide={() => {
-        xPos.setValue(0);
-        xPosFail.setValue(0);
       }}>
       {pendingView}
       {completedView}
@@ -176,13 +174,9 @@ const completedStyles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: brown,
   },
-  completedImage: {
-    aspectRatio: 844 / 1045,
-    height: 340,
-  },
   successText: {
     textAlign: 'center',
-    color: 'green',
+    color: cream,
     fontWeight: 'bold',
     fontSize: 16,
   },
