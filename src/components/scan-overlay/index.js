@@ -93,9 +93,9 @@ const ScanOverlay = ({ headerText }) => {
       : { ...styles.banner };
   const bannerText =
     numSessions === 1
-      ? 'You Have 1 Active Desk'
+      ? 'You Have 1 Active Silo'
       : numSessions > 1
-      ? `You Have ${numSessions} Active Desks`
+      ? `You Have ${numSessions} Active Silos`
       : user.dayPass?.status === 'ACTIVE'
       ? 'You Have a Pass Available'
       : null;

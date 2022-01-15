@@ -39,20 +39,16 @@ const SelectionCard = ({
       <View style={styles.descriptionView}>
         <View style={styles.leftContent}>
           <CustomText style={styles.title}>{title}</CustomText>
-          <CustomText style={styles.subTextStyle}>{subtext}</CustomText>
-        </View>
-        <View style={styles.rightContent}>
           <View style={styles.priceLineContainer}>
             {discountedPrice !== null ? (
-              <>
-                <CustomText style={styles.oldPrice}>{price}</CustomText>
-                <CustomText style={styles.price}> {discountedPrice}</CustomText>
-              </>
+              <View>
+                <CustomText style={{ ...styles.oldPrice, color: priceColor}}>{price}{"\n"}{subtext}</CustomText>
+                <CustomText style={{ ...styles.subTextStyle, color: priceColor}}>{discountedPrice}</CustomText>
+              </View>
             ) : (
-              <CustomText style={{ ...styles.price, color: priceColor }}>{price}</CustomText>
+              <CustomText style={{ ...styles.price, color: priceColor }}>{price}{"\n"}{subtext}</CustomText>
             )}
           </View>
-          <CustomText style={styles.priceTextContainer}>{priceText}</CustomText>
         </View>
       </View>
     </TouchableOpacity>
@@ -63,7 +59,7 @@ const styles = StyleSheet.create({
   button: {
     flexDirection: 'row',
     alignItems: 'center',
-    borderWidth: 3,
+    borderWidth: 9,
     borderRadius: 5,
     paddingHorizontal: 10,
     paddingVertical: 10,
@@ -90,18 +86,18 @@ const styles = StyleSheet.create({
   },
   image: {
     aspectRatio: 1,
-    width: 40,
+    width: 60,
   },
   priceLineContainer: {
     flexDirection: 'row',
     marginBottom: 3,
   },
   priceTextContainer: {
-    textAlign: 'right',
+    textAlign: 'center',
     color: brown,
   },
   price: {
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: 'bold',
   },
   oldPrice: {

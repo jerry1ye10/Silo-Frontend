@@ -91,17 +91,16 @@ const ConfirmationModal = ({
   const setupMembership = () => {
     const hourlyNormal = {
       id: 'FLAT',
-      title: 'Pass',
-      subtext: `$${baseRateSecond / 100} every 5 minutes after`,
+      title: 'Pay per use',
+      subtext: `$${baseRateSecond / 100}, every 5 mins after`,
       subtextColor: brown,
-      price: `$${baseRateFirst / 100}`,
+      price: `$${baseRateFirst / 100}, first 15 mins`,
       priceColor: brown,
       discountedPrice: promotionValue
         ? promotionType === 'minutes'
         ? promotionRemaining + ' minutes free' :  `$${Math.round((baseRateFirst * (100 - promotionValue)) / 100) / 100}`
         : null,
-      priceText: '15 minutes',
-      image: require('../../../assets/desk.png'),
+      image: require('../../../assets/silo.png'),
       disabled: false,
     };
     let hourly = [hourlyNormal];
@@ -160,7 +159,6 @@ const ConfirmationModal = ({
               price={item.price}
               priceColor={item.priceColor}
               discountedPrice={item.discountedPrice}
-              priceText={item.priceText}
               image={item.image}
               disabled={item.disabled}
               selected={selected}
