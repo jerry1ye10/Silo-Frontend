@@ -87,6 +87,7 @@ const styles = StyleSheet.create({
   image: {
     aspectRatio: 1,
     width: 60,
+    resizeMode: 'contain',
   },
   priceLineContainer: {
     flexDirection: 'row',
