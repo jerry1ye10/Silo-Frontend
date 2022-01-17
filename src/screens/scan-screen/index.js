@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, Platform, AppState } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { useDispatch } from 'react-redux';
+import { useDispatch,useSelector } from 'react-redux';
 import { request, PERMISSIONS, RESULTS } from 'react-native-permissions';
 import DeviceInfo from 'react-native-device-info';
 import semver from 'semver';
@@ -11,12 +11,13 @@ import QRScanner from '../../components/qr-scanner';
 import CameraPermissionModal from '../../components/camera-permission-modal';
 import ScanOverlay from '../../components/scan-overlay';
 import minotaur from '../../api/minotaur';
-import { beginSession } from '../../redux/actions/session-actions';
+import { beginSession, getActiveSessions } from '../../redux/actions/session-actions';
 import { fireBeginSessionNotification } from '../../utilities/notifications';
 
 const ScanScreen = ({ route }) => {
   const navigation = useNavigation();
   const dispatch = useDispatch();
+  const sessions = useSelector((state) => state.sessions);
 
   // Reference to camera that needs to be manipulated to deactivate when not
   // needed.
@@ -56,7 +57,7 @@ const ScanScreen = ({ route }) => {
 
   const prevPromotionRecordId = sessionInformation ? sessionInformation.promotionRecordId : null;
   const prevPromotionalValue = sessionInformation ? sessionInformation.promotionalValue : null;
-
+  const numSessions = sessions.activeSessions.length;
   // If the camera is not enabled, display a different page.
   const checkPermissions = async () => {
     try {
@@ -166,6 +167,9 @@ const ScanScreen = ({ route }) => {
   // Function executed when QR scan is successful. Shows the confirmation modal.
   const onScanSuccess = async (e) => {
     // Screen has to be focused since the camera can be active in the background.
+    if(numSessions >= 1){
+      return;
+    }
     if (screenFocus) {
       try {
         // First make a check to the version to make sure the app is up to date.
